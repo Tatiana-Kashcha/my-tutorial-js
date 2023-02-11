@@ -289,7 +289,8 @@
 // const value = result || defaultValue;
 // console.log(value);
 
-// -----------------------------------------
+
+// Це вже моє заняття по 1 модулю-----------------------------------------
 
 // const productName = "Droid";
 // const pricePerItem = 3500;
@@ -650,23 +651,23 @@
 // checkForName("Egor Kolbasov", "egor");
 
 
-function checkForSpam(message) {
-  let result;
+// function checkForSpam(message) {
+//   let result;
  
-    if (
-      message.toLowerCase().includes("spam") ||
-      message.toUpperCase().includes("spam")) {
-      result = true;
-    } else if (
-      message.toLowerCase().includes("sale") ||
-      message.toUpperCase().includes("sale")) {
-      result = true;
-    } else result = false;
+//     if (
+//       message.toLowerCase().includes("spam") ||
+//       message.toUpperCase().includes("spam")) {
+//       result = true;
+//     } else if (
+//       message.toLowerCase().includes("sale") ||
+//       message.toUpperCase().includes("sale")) {
+//       result = true;
+//     } else result = false;
   
-  console.log(result);
-  return result;
-}
-checkForSpam("JavaScript weekly newsletter");
-checkForSpam("Get best sale offers now!");
-checkForSpam("Get rid of sPaM emails. Our book in on sale!");
-checkForSpam("Amazing SalE, only tonight!");
+//   console.log(result);
+//   return result;
+// }
+// checkForSpam("JavaScript weekly newsletter");
+// checkForSpam("Get best sale offers now!");
+// checkForSpam("Get rid of sPaM emails. Our book in on sale!");
+// checkForSpam("Amazing SalE, only tonight!");
