@@ -132,7 +132,7 @@
 //     console.log('in',value);
 // }
 
-// // console.log('out',value);
+// console.log('out',value);
 
 // let value = 10;
 
@@ -164,6 +164,7 @@
 //     value = 22;
 // }
 // console.log(b);
+
 // if(true){
 //      value = 15;
 //     if(true){
@@ -191,7 +192,6 @@
 
 // let value = 10;
 // let test = 11;
-
 
 // if (true) {
 //     value = 1;
@@ -348,7 +348,7 @@
 // let link = 'https://my-site.com/about';
 // // if (link.includes('my-site') && !link.endsWith('/')) {
 // //   link += '/';
-// // }                                                  //true       false  
+// // }                                                  //true       false
 // link = link.includes('my-site') && !link.endsWith('/') ? link += '/' : link;
 // console.log(link);
 
@@ -463,7 +463,8 @@
 // }
 
          //  012345678910
-const str = 'Hello world';
+         
+// const str = 'Hello world';
 
-const result = str.slice(0,5);
-console.log(result);
+// const result = str.slice(0,5);
+// console.log(result);

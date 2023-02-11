@@ -407,7 +407,6 @@
 // function checkPassword(password) {
 //   const ADMIN_PASSWORD = "jqueryismyjam";
 //   let message;
-
 //   if (password === null) {
 //     message = "Canceled by user!";
 //   } else if (password === ADMIN_PASSWORD) {
