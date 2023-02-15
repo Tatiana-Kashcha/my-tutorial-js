@@ -468,3 +468,85 @@
 
 // const result = str.slice(0,5);
 // console.log(result);
+
+// ----------------------------my stady----------
+
+// function checkAge(age) {
+//   if (age >= 18) {
+//     console.log("You are an adult");
+//     return ;
+//   }
+//    console.log("You are a minor");
+//    return ;
+// }
+// checkAge(37);
+// checkAge(17);
+
+// function checkAge(age) {
+//   let message;
+
+//   if (age >= 18) {
+//     message = "You are an adult";
+//   } else {
+//     message = "You are a minor";
+//   }
+//   console.log(message);
+//   return message;
+// }
+// checkAge(17);
+// checkAge(27);
+
+// function checkPassword(password) {
+//   const ADMIN_PASSWORD = "jqueryismyjam";
+
+//   if (password === ADMIN_PASSWORD) {
+//     console.log("Welcome!");
+//     return ;
+//   }
+//     console.log("Access denied, wrong password!");
+//   return;
+// }
+// checkPassword("jqueryismyjam");
+// checkPassword("jque");
+
+// function checkStorage(available, ordered) {
+
+//   if (ordered === 0) {
+//     console.log("Your order is empty!");
+//     return ;
+//   } if (ordered > available) {
+//     console.log("Your order is too large, not enough goods in stock!");
+//     return;
+//   }
+//     console.log("The order is accepted, our manager will contact you");
+//   return;
+// }
+// checkStorage(100, 0);
+// checkStorage(100, 200);
+// checkStorage(100, 20);
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// console.log(fruits);
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// const firstElement = fruits[0];
+// const secondElement = fruits[1];
+// const lastElement = fruits[fruits.length - 1];
+// console.log(firstElement);
+// console.log(secondElement);
+// console.log(lastElement);
+
+// const fruits = ["apple", "plum", "pear", "orange"];
+// fruits[1] = "peach";
+// fruits[fruits.length - 1] = "banana";
+// console.log(fruits);
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+// const fruitsArrayLength = fruits.length;
+// console.log(fruitsArrayLength);
+
+// const fruits = ["apple", "peach", "pear", "banana"];
+// const lastElementIndex = fruits.length - 1;
+// const lastElement = fruits[lastElementIndex];
+// console.log(lastElementIndex);
+// console.log(lastElement);
