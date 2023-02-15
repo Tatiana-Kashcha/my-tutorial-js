@@ -419,5 +419,6 @@ function makeArray(firstArray, secondArray, maxLength) {
     return;
 
 }
+
 makeArray(['Mango', 'Ajax', 'Poly', 'Kiwi'], ['Peach', 'Ajax', 'Houston'], 4);
 makeArray(['Mango', 'Kiwi'], ['Peach', 'Houston'], 6);  
