@@ -193,7 +193,7 @@
 // Виведіть у консоль останній елемент масиву. Код повинен працювати для масиву довільної довжини.
 // Видаліть перший елемент та виведіть його в консоль.
 // Вставте «Country» та «Reggae» на початок масиву.
-const genres = ['Jazz', 'Blues'];
+// const genres = ['Jazz', 'Blues'];
 // genres.push('Рок-н-рол')
 
 // console.log(genres[0]);
@@ -320,5 +320,104 @@ const genres = ['Jazz', 'Blues'];
 // }
 // console.log(result);
 
-// ----------------------------my stady----------
+// -------------------Це вже моє заняття по 2 модулю----------
 
+// function getExtremeElements(array) {
+  //     const first = array[0];
+  //     const last = array[array.length - 1];
+  //     console.log(first, last);
+    
+      // повертає елементи масиву
+  //   console.log(array[0], array[array.length - 1]);
+
+  //повертає масив
+//   array = [array[0], array[array.length - 1]];
+//   console.log(array);
+// }
+
+// getExtremeElements([1, 2, 3, 4, 5]);
+// getExtremeElements(['Earth', 'Mars', 'Venus']);
+
+// function splitMessage(message, delimiter) {
+//   let words;
+//   words = message.split(delimiter);
+    
+//   console.log(words);
+// }
+// splitMessage('Mango hurries to the train', ' ');
+// splitMessage('Mango', '');
+// splitMessage('best_for_week', '_');
+
+// function calculateEngravingPrice(message, pricePerWord) {
+//     console.log(message.split(' ').length * pricePerWord);
+// }
+// calculateEngravingPrice('JavaScript is in my blood', 10);
+
+// function makeStringFromArray(array, delimiter) {
+//   let string;
+//   string = array.join(delimiter);
+//   console.log(string);
+// }
+// makeStringFromArray(['Mango', 'hurries', 'to', 'the', 'train'], ' ');
+
+//  split join
+// const str = 'hello  world';
+// const result = str.split(' ');
+// console.log(result);
+// const respons = result.join('-')
+// console.log(respons);
+
+// const values = '8 11';
+// const arr = values.split(' ')
+// const first = Number(arr[0]);
+// const second = Number(arr[1]);
+// console.log(first * second);
+// console.log(typeof values);
+
+//  Array.isArray()
+// console.log(typeof arr);//object
+// console.log(Array.isArray(arr));
+
+
+
+
+// function slugify(title) {
+//     // в рядочку
+// //   let slug = title.toLowerCase().replaceAll(' ', '-');
+//     // з перетворенням на масив
+//     let slug = title.toLowerCase().split(' ').join('-');
+//   console.log(slug);
+// }
+// slugify("Arrays for begginers");
+// slugify('Ten secrets of JavaScript');
+// slugify('How to become a JUNIOR developer for TWO WEEKS');
+
+
+// const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
+
+// const firstTwoEls = fruits.slice(0, 2);
+// const nonExtremeEls = fruits.slice(1, fruits.length-1);
+// const lastThreeEls = fruits.slice(fruits.length - 3, fruits.length);
+// console.log(firstTwoEls);
+// console.log(nonExtremeEls);
+// console.log(lastThreeEls);
+
+
+// const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
+// const newClients = ['Peach', 'Houston'];
+
+// const allClients = oldClients.concat(newClients);
+// console.log(allClients);
+
+function makeArray(firstArray, secondArray, maxLength) {
+  let newArray = firstArray.concat(secondArray);
+    if (newArray.length > maxLength) {
+        console.log(newArray.slice(0, maxLength));
+        return;
+    } 
+    console.log(newArray); 
+    return;
+
+}
+makeArray(['Mango', 'Ajax', 'Poly', 'Kiwi'], ['Peach', 'Ajax', 'Houston'], 4);
+makeArray(['Mango', 'Kiwi'], ['Peach', 'Houston'], 6);  

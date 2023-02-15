@@ -469,7 +469,7 @@
 // const result = str.slice(0,5);
 // console.log(result);
 
-// ----------------------------my stady----------
+// --------------------Це вже моє заняття по 2 модулю-----------
 
 // function checkAge(age) {
 //   if (age >= 18) {
