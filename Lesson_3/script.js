@@ -481,16 +481,16 @@
 // findLongestWord("May the force be with you");
 
 
-function createArrayOfNumbers(min, max) {
-  const numbers = [];
+// function createArrayOfNumbers(min, max) {
+//   const numbers = [];
  
-  for (let i = min; i <= max; i += 1) {
-    numbers.push(i);
-  }
-  console.log(numbers);
+//   for (let i = min; i <= max; i += 1) {
+//     numbers.push(i);
+//   }
+//   console.log(numbers);
   
-}
-createArrayOfNumbers(14, 17);
+// }
+// createArrayOfNumbers(14, 17);
 
 // const values = '8 11';
 // const arr = values.split(' ')
@@ -498,3 +498,123 @@ createArrayOfNumbers(14, 17);
 // const second = Number(arr[1]);
 // console.log(first * second);
 // console.log(typeof values);
+
+// function filterArray(numbers, value) {
+//   const newArr = [];
+//   for (let i = 0; i < numbers.length; i += 1) {
+//     if (Number(numbers[i]) > value) {
+//       newArr.push(Number(numbers[i]));
+//     }
+//   }
+//   console.log(newArr);
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+
+
+// function checkFruit(fruit) {
+//   const fruits = ['apple', 'plum', 'pear', 'orange'];
+
+//   console.log(fruits.includes(fruit));
+// }
+// checkFruit('plum');
+// checkFruit('mandarin');
+
+// function getCommonElements(array1, array2) {
+//   const newArr = [];
+//   for (let i = 0; i < array2.length; i += 1) {
+//     if (array2.includes(array1[i])) {
+//       newArr.push(array1[i]);
+//     }
+//   }
+//   console.log(newArr);
+// }
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+// getCommonElements([24, 12, 27, 3], [12, 8, 3, 36, 27]);
+// getCommonElements([10, 20, 30, 40], [4, 30, 17, 10, 40]);
+
+// function calculateTotalPrice(order) {
+//   let total = 0;
+  
+//   for (const num of order) {
+//      total += num;
+//    }
+    
+//   console.log(total);
+// }
+// calculateTotalPrice([12, 85, 37, 4]);
+
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//   for (const number of numbers) {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   }
+//   // рефакторився оцей код
+//   // for (let i = 0; i < numbers.length; i += 1) {
+//   //   const number = numbers[i];
+
+//   //   if (number > value) {
+//   //     filteredNumbers.push(number);
+//   //   }
+//   // }
+
+//   console.log(filteredNumbers);
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+
+
+// function getEvenNumbers(start, end) {
+//   const numbers = [];
+
+//     for (let i = start; i <= end; i += 1) {
+//       if (!(i % 2 )) {
+//         numbers.push(i);
+//       }
+//     }
+//   console.log(numbers);
+// }
+// getEvenNumbers(2, 5);
+// getEvenNumbers(3, 11);
+
+
+// function findNumber(start, end, divisor) {
+  
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       console.log(i);
+//       return i;
+//     }
+//   }
+// }
+// findNumber(2, 6, 5);
+
+
+// function findNumber(start, end, divisor) {
+  
+//   let number;
+//   for (let i = start; i < end; i += 1) {
+//     if (i % divisor === 0) {
+//       number = i;
+//       console.log(number);
+//       break;
+//     }
+//   } 
+// }
+// findNumber(2, 6, 5);
+
+// function includes(array, value) {
+  
+//   for (let i = 0; i < array.length; i += 1) {
+//     if (array[i] === value) {
+//       console.log('true');
+//       return true;
+//       break;
+//     }
+//   }
+//   console.log('false');
+//   return false;
+  
+// }
+// includes([1, 2, 3, 4, 5], 3);

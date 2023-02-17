@@ -476,16 +476,3 @@
 // }
 // foo(1,2,3)
 
-// поясніть будь ласка 24 завдання автоперевірки чому непрацює ? 
-function checkFruit(fruit) {
-    const fruits = ["apple", "plum", "pear", "orange"];
-    return fruits.includes(fruit)
-    // for (let i = 0; i < fruits.length; i += 1) {
-    //     if (fruits.includes(fruit)) {
-    //         return true;
-    //     }
-    // }
-
-    // return false
-}
-checkFruit("mandarin")
