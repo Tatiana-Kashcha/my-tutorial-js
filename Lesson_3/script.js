@@ -359,6 +359,19 @@
 // }
 // calculateEngravingPrice('JavaScript is in my blood', 10);
 
+
+// const message = 'java script';
+// const pricePerWord = 5;
+// function calculateEngravingPrice(message, pricePerWord) {
+//   message = message.split(' ').length * pricePerWord;
+
+//   console.log(message);
+// }
+
+// calculateEngravingPrice(message, pricePerWord);
+
+
+
 // function makeStringFromArray(array, delimiter) {
 //   let string;
 //   string = array.join(delimiter);
@@ -476,8 +489,10 @@
 //     }
 //   }
 //   console.log(longestWordArr);
+//   console.log(newStringArr);
+
 // }
-// findLongestWord('Google do a rollll');
+// findLongestWord('Google do a roll');
 // findLongestWord("May the force be with you");
 
 

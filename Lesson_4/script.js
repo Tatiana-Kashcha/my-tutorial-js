@@ -630,15 +630,375 @@
 // console.log(values);
 
 
-function countProps(object) {
-  let propCount = 0;
-  for (const key in object) {
-      if (object.hasOwnProperty(key)) {
-        propCount += 1;
-    }
-      console.log(object.hasOwnProperty(key)); 
-  }
+// function countProps(object) {
+//   let propCount = 0;
+//   for (const key in object) {
+//       if (object.hasOwnProperty(key)) {
+//         propCount += 1;
+//     }
+//       console.log(object.hasOwnProperty(key));
+//   }
    
-  console.log(propCount);
+//   console.log(propCount);
+// }
+// countProps({ name: 'Mango', age: 2 });
+
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+// const values = [];
+// const keys = Object.keys(apartment);
+// for (const key of keys) {
+//     values.push(apartment[key]);
+//     console.log(key);
+//     console.log(apartment[key]);
+// }
+// console.log(values);
+
+// function countProps(object) {
+  
+//   let propCount = 0;
+//   const keys = Object.keys(object);
+//   for (const key of keys) {
+//     propCount += 1;
+//   }
+
+//   console.log(propCount);
+  
+// }
+// countProps({ name: 'Mango', age: 2 });
+
+// const apartment = {
+//   descr: 'Spacious apartment in the city center',
+//   rating: 4,
+//   price: 2153,
+// };
+
+// const keys = Object.keys(apartment);
+// const values = Object.values(apartment);
+
+// console.log(keys);
+// console.log(values);
+
+// function countTotalSalary(salaries) {
+//   let totalSalary = 0;
+//     const values = Object.values(salaries);
+
+//     for (const value of values) {
+//       totalSalary += value;
+//     }
+//   console.log(values);
+//   console.log(totalSalary);
+// }
+// countTotalSalary({ kiwi: 200, poly: 50, ajax: 150 });
+
+// const colors = [
+//   { hex: "#f44336", rgb: "244,67,54" },
+//   { hex: "#2196f3", rgb: "33,150,243" },
+//   { hex: "#4caf50", rgb: "76,175,80" },
+//   { hex: "#ffeb3b", rgb: "255,235,59" },
+// ];
+// const hexColors = [];
+// const rgbColors = [];
+// for (const color of colors) {
+//     hexColors.push(color.hex);
+//     rgbColors.push(color.rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+// /**
+//  * Find the product in the array and output the price
+//  * @param {String} productName
+//  * @returns {Number} prise || null
+//  */
+// function getProductPrice(productName) {
+    // for (const product of products) {
+    //   if (product.name === productName) {
+    //       console.log(product.price);
+    //       return;
+    //     }
+    // }
+//     console.log(null);
+// }
+// getProductPrice('Radar');
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function getAllPropValues(propName) {
+//     const values = [];
+    
+//     for (const product of products) {
+//       if (product[propName]) {
+//           values.push(product[propName]);
+//        }
+//     }
+//     console.log(values);
+// }
+// getAllPropValues("name");
+// getAllPropValues("quantity");
+// getAllPropValues("price");
+// getAllPropValues("category");
+
+
+// const products = [
+//   { name: 'Radar', price: 1300, quantity: 4 },
+//   { name: 'Scanner', price: 2700, quantity: 3 },
+//   { name: 'Droid', price: 400, quantity: 7 },
+//   { name: 'Grip', price: 1200, quantity: 9 },
+// ];
+
+// function calculateTotalPrice(productName) {
+//   for (const product of products) {
+//     if (product.name === productName) {
+//         console.log(product.price * product.quantity);
+//         return;
+//       }
+//   }
+//       console.log(0);
+// }
+// calculateTotalPrice('Radar');
+
+
+//------тема деструктурізація--------------
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+// const yesterday = highTemperatures.yesterday;
+// const today = highTemperatures.today;
+// const tomorrow = highTemperatures.tomorrow;
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+// const { yesterday, today, tomorrow } = highTemperatures;
+// // const yesterday = yesterday;
+// // const today = today;
+// // const tomorrow = tomorrow;
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(meanTemperature);
+
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+
+// const {
+//   yesterday,
+//   today,
+//   tomorrow,
+//   icon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+
+// const meanTemperature = (yesterday + today + tomorrow) / 3;
+// console.log(icon);
+
+
+// const highTemperatures = {
+//   yesterday: 28,
+//   today: 26,
+//   tomorrow: 33,
+// };
+// const {
+//   yesterday: highYesterday,
+//   today: highToday,
+//   tomorrow: highTomorrow,
+//   icon: highIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+// } = highTemperatures;
+
+// const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
+// console.log(highIcon);
+// console.log(meanTemperature);
+
+
+// const colors = [
+//   { hex: '#f44336', rgb: '244,67,54' },
+//   { hex: '#2196f3', rgb: '33,150,243' },
+//   { hex: '#4caf50', rgb: '76,175,80' },
+//   { hex: '#ffeb3b', rgb: '255,235,59' },
+// ];
+
+// const hexColors = [];
+// const rgbColors = [];
+// // варіант1 теж робочий
+// // for (const color of colors) {
+// //     const { hex, rgb } = color;
+// //     hexColors.push(hex);
+// //     rgbColors.push(rgb);
+// // }
+// // варіант2 ок для автоперевірки
+// for (const { hex, rgb } of colors) {
+//   hexColors.push(hex);
+//   rgbColors.push(rgb);
+// }
+// console.log(hexColors);
+// console.log(rgbColors);
+
+
+// const forecast = {
+//   today: {
+//     low: 28,
+//     high: 32,
+//     icon: 'https://www.flaticon.com/svg/static/icons/svg/861/861059.svg',
+//   },
+//   tomorrow: {
+//     low: 27,
+//     high: 31,
+//   },
+// };
+
+// const {
+//   today: {
+//     low: lowToday,
+//     high: highToday,
+//     icon: todayIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+//   tomorrow: {
+//     low: lowTomorrow,
+//     high: highTomorrow,
+//     icon: tomorrowIcon = 'https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg',
+//   },
+// } = forecast;
+
+// console.log(highTomorrow);
+
+
+
+// function calculateMeanTemperature(forecast) {
+//     const {
+//       today: { low: todayLow, high: todayHigh },
+//       tomorrow: { low: tomorrowLow, high: tomorrowHigh },
+//     } = forecast;
+  
+//   console.log((todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4);
+// }
+// calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } });
+
+
+//---------------тема розпділ--------------
+
+// const scores = [89, 64, 42, 17, 93, 51, 26];
+// const bestScore = Math.max(...scores);
+// const worstScore = Math.min(...scores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+
+// const firstGroupScores = [64, 42, 93];
+// const secondGroupScores = [89, 14, 51, 26];
+// const thirdGroupScores = [29, 47, 18, 97, 81];
+// const allScores = [...firstGroupScores, ...secondGroupScores, ...thirdGroupScores];
+// const bestScore = Math.max(...allScores);
+// const worstScore = Math.min(...allScores);
+// console.log(allScores);
+// console.log(bestScore);
+// console.log(worstScore);
+
+
+// const defaultSettings = {
+//   theme: 'light',
+//   public: true,
+//   withPassword: false,
+//   minNumberOfQuestions: 10,
+//   timePerQuestion: 60,
+// };
+// const overrideSettings = {
+//   public: false,
+//   withPassword: true,
+//   timePerQuestion: 30,
+// };
+// const finalSettings = { ...defaultSettings, ...overrideSettings };
+// console.log(finalSettings);
+
+
+// function makeTask(data) {
+//   const completed = false;
+//   const category = 'General';
+//   const priority = 'Normal';
+  
+//     const newTask = { completed: false, category: 'General', priority: 'Normal', ...data };
+//     console.log(newTask);
+
+// }
+// makeTask({});
+// makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' });
+
+
+// function add(...args) {
+//   let total = 0;
+//     for (let i = 0; i < args.length; i += 1) {
+//       total += Number(args[i]);
+//     }
+//   console.log(total);
+//   console.log(args);
+// }
+// add(12, 4, 11, 48);
+// add(74, 11, 62, 46, 12, 36);
+
+// 2 варіант рішення - більш оптимізоване
+
+// function add(...args) {
+//   let total = 0;
+
+//   for (const arg of args) {
+//     total += arg;
+//   }
+
+//   console.log(total);
+// }
+// add(12, 4, 11, 48);
+// add(74, 11, 62, 46, 12, 36);
+
+
+// function addOverNum(...args) {
+//   let total = 0;
+
+//     for (let i = 0; i < args.length; i += 1) {
+//       if (args[i] > args[0]) {
+//         total += Number(args[i]);
+//       }
+//     }
+
+//   console.log(total);
+// }
+// addOverNum(10, 12, 4, 11, 48, 10, 8) //повертає 71
+// addOverNum(50, 15, 27) //повертає 0
+// addOverNum(20, 74, 11, 62, 46, 12, 36) //повертає 218
+
+
+// Change code below this line
+function findMatches(...args) {
+  const matches = []; // Don't change this line
+
+  // Change code above this line
+  console.log(matches);
 }
-countProps({ name: 'Mango', age: 2 });
+findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) //повертає [1, 2]
+findMatches([63, 11, 8, 29], 4, 7, 16) //повертає []
