@@ -1005,3 +1005,163 @@
 // }
 // findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) //повертає [1, 2]
 // findMatches([63, 11, 8, 29], 4, 7, 16) //повертає []
+
+
+// const bookShelf = {
+//   books: ['The last kingdom', 'The guardian of dreams'],
+//   getBooks() {
+//     console.log('Returning all books');
+//     // return 'Returning all books'; для автоперевірки
+//   },
+//   addBook(bookName) {
+//     console.log(`Adding book ${bookName}`);
+//     // return `Adding book ${bookName}`; для автоперевірки
+//   },
+//   removeBook(bookName) {
+//     console.log(`Deleting book ${bookName}`);
+//     // return `Deleting book ${bookName}`; для автоперевірки
+//   },
+//   updateBook(oldName, newName) {
+//     console.log(`Updating book ${oldName} to ${newName}`);
+//     // return `Updating book ${oldName} to ${newName}`; для автоперевірки
+//   },
+// };
+// // Виклики методів
+// bookShelf.getBooks();
+// bookShelf.addBook('Haze');
+// bookShelf.removeBook('Red sunset');
+// bookShelf.updateBook('Sands of dune', 'Dune');
+
+
+// const bookShelf = {
+//   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
+//     updateBook(oldName, newName) {
+//         const idx = this.books.indexOf(oldName);
+//         this.books.splice(idx, 1, newName);
+      
+//         console.log(this.books);
+//     },
+// };
+// bookShelf.updateBook('Haze', 'Dungeon chronicles');
+
+
+// const atTheOldToad = {
+//     potions: [],
+// };
+// console.log(atTheOldToad.potions);
+
+
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   getPotions() {
+//     console.log(atTheOldToad.potions);
+//   }, 
+// };
+// atTheOldToad.getPotions();
+
+// робочий варіант в вскоді
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   addPotion(potionName) {
+//       atTheOldToad.potions.push(potionName);
+//       console.log(atTheOldToad.potions);
+//    },
+// };
+// atTheOldToad.addPotion('Invisibility');
+// atTheOldToad.addPotion('Power potion');
+
+// автоперевірка приймає варіант з назвою метода this.
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   addPotion(potionName) {
+//     this.potions.push(potionName);
+//     console.log(this.potions);
+//   },
+// };
+// atTheOldToad.addPotion('Invisibility');
+// atTheOldToad.addPotion('Power potion');
+
+
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//   removePotion(potionName) {
+    
+//     this.potions.splice(this.potions.indexOf(potionName), 1);
+//     console.log(this.potions);
+//   },
+// };
+// atTheOldToad.removePotion('Dragon breath');
+// atTheOldToad.removePotion('Speed potion');
+
+
+// const atTheOldToad = {
+//   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
+//     updatePotionName(oldName, newName) {
+      
+//       const idx = this.potions.indexOf(oldName);
+//         this.potions.splice(idx, 1, newName);
+//         console.log(this.potions);
+//     },
+// };
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+// atTheOldToad.updatePotionName('Stone skin', 'Invisibility');
+
+// 41 комплексне завдання автоперевірки
+// const atTheOldToad = {
+//   potions: [
+//     { name: 'Speed potion', price: 460 },
+//     { name: 'Dragon breath', price: 780 },
+//     { name: 'Stone skin', price: 520 },
+//   ],
+//   // Change code below this line
+//   getPotions() {
+//     // return this.potions; // для автопеевірки
+//     console.log(this.potions);
+//   },
+//     addPotion(newPotion) {
+
+//         for (const potion of this.potions) {
+//           if (potion.name === newPotion.name) {
+//             console.log(`Error! Potion ${newPotion.name} is already in your inventory!`);
+//             // return `Error! Potion ${newPotion.name} is already in your inventory!`;
+//           }
+//         }
+      
+//       this.potions.push(newPotion);
+//       console.log(this.potions); // проміжні результати для тестування
+//   },
+//   removePotion(potionName) {
+//     for (const potion of this.potions) {
+//       if (potion.name === potionName) {
+//         const idx = this.potions.indexOf(potion); // indexOf(potion) шукає об'єкт з потрібною строкою
+//         this.potions.splice(idx, 1);
+
+//         console.log(this.potions); // проміжні результати для тестування
+//         console.log(potion); // проміжні результати для тестування
+//       }
+//     }
+//     console.log(`Potion ${potionName} is not in inventory!`);
+//     //  return `Potion ${potionName} is not in inventory!`; // для автопеевірки
+//   },
+//   updatePotionName(oldName, newName) {
+//     for (const potion of this.potions) {
+//       if (potion.name === oldName) {
+//         const idx = this.potions.indexOf(potion);
+//         this.potions[idx].name = newName;
+
+//         console.log(this.potions); // проміжні результати для тестування
+//         // console.log(potion.name === oldName); // проміжні результати для тестування
+//       }
+//     }
+//     console.log(`Potion ${oldName} is not in inventory!`);
+//     //  return `Potion ${oldName} is not in inventory!`; // для автопеевірки
+//   },
+//   // Change code above this line
+// };
+// atTheOldToad.getPotions();
+// atTheOldToad.addPotion({ name: 'Invisibility', price: 620 });
+// atTheOldToad.addPotion({ name: 'Power potion', price: 270 });
+// atTheOldToad.addPotion({ name: 'Dragon breath', price: 700 });
+
+// atTheOldToad.removePotion('Dragon breath');
+// atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');

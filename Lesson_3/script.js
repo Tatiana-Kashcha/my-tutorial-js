@@ -615,7 +615,7 @@
 //       console.log(number);
 //       break;
 //     }
-//   } 
+//   }
 // }
 // findNumber(2, 6, 5);
 
@@ -633,3 +633,4 @@
   
 // }
 // includes([1, 2, 3, 4, 5], 3);
+
