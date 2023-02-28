@@ -451,7 +451,7 @@
 
 // const x = 1;
 // delete x;
-// console.log(x); 
+// console.log(x);
 
 // const obj ={
 //     x : 1,
@@ -508,11 +508,49 @@
 // а якщо так 30 зробити
 
 
-function findLongestWord(string) {
-    // Change code below this line
-    return string.split(' ').sort((a, b) => b.length - a.length)[0]
+// function findLongestWord(string) {
+//     // Change code below this line
+//     return string.split(' ').sort((a, b) => b.length - a.length)[0]
 
 
-    // Change code above this line
+//     // Change code above this line
+// }
+// console.log(findLongestWord("May thethethe force be with you"));
+
+//-------------6 мод Автопер тема callback функції--------------
+
+// пояснення 2 завдання - імена параметрів функцій, які є callback-ом 
+// (525, 529рядок) неважливі для параметрів самої функції callback (535рядок)
+
+// function deliverPizza(yk) {
+//     return `Delivering ${yk} pizza.`;
+// }
+
+// function makePizza(ik) {
+//     return `Pizza ${ik} is being prepared, please wait...`;
+// }
+
+// // Chande code below this line
+// function makeMessage(ppe, callback) {
+//     return callback(ppe);
+
+// }
+// console.log(makeMessage('Royal Grand', makePizza));
+// console.log(makeMessage('Ultracheese', deliverPizza));
+
+
+// ісходна умова 2 завдання
+function deliverPizza(pizzaName) {
+  return `Delivering ${pizzaName} pizza.`;
 }
-console.log(findLongestWord("May thethethe force be with you"));
+
+function makePizza(pizzaName) {
+  return `Pizza ${pizzaName} is being prepared, please wait...`;
+}
+
+// Chande code below this line
+function makeMessage(pizzaName, callback) {
+  return callback(pizzaName);
+}
+console.log(makeMessage('Royal Grand', makePizza));
+console.log(makeMessage('Ultracheese', deliverPizza));
