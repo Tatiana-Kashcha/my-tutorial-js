@@ -1055,7 +1055,7 @@
 //   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
 //   getPotions() {
 //     console.log(atTheOldToad.potions);
-//   }, 
+//   },
 // };
 // atTheOldToad.getPotions();
 
@@ -1165,3 +1165,7 @@
 
 // atTheOldToad.removePotion('Dragon breath');
 // atTheOldToad.updatePotionName('Dragon breath', 'Polymorth');
+
+// const arr = [2, 4, 6];
+// const result = arr.filter(el => el * 2);
+// console.log(result);

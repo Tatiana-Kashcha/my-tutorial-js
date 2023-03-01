@@ -517,10 +517,10 @@
 // }
 // console.log(findLongestWord("May thethethe force be with you"));
 
-//-------------6 мод Автопер тема callback функції--------------
+//-------------4 мод Автопер тема callback функції--------------
 
-// пояснення 2 завдання - імена параметрів функцій, які є callback-ом 
-// (525, 529рядок) неважливі для параметрів самої функції callback (535рядок)
+// коментар до 2 завдання - імена параметрів функцій, які є callback-ом
+// (525 deliverPizza, 529 makePizza) неважливі для параметрів самої функції callback (535)
 
 // function deliverPizza(yk) {
 //     return `Delivering ${yk} pizza.`;
@@ -540,17 +540,211 @@
 
 
 // ісходна умова 2 завдання
-function deliverPizza(pizzaName) {
-  return `Delivering ${pizzaName} pizza.`;
-}
+// function deliverPizza(pizzaName) {
+//   return `Delivering ${pizzaName} pizza.`;
+// }
 
-function makePizza(pizzaName) {
-  return `Pizza ${pizzaName} is being prepared, please wait...`;
-}
+// function makePizza(pizzaName) {
+//   return `Pizza ${pizzaName} is being prepared, please wait...`;
+// }
 
-// Chande code below this line
-function makeMessage(pizzaName, callback) {
-  return callback(pizzaName);
-}
-console.log(makeMessage('Royal Grand', makePizza));
-console.log(makeMessage('Ultracheese', deliverPizza));
+// // Chande code below this line
+// function makeMessage(pizzaName, callback) {
+//   return callback(pizzaName);
+// }
+// console.log(makeMessage('Royal Grand', makePizza));
+// console.log(makeMessage('Ultracheese', deliverPizza));
+
+
+// const pizzaPalace = {
+//   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
+//     order(pizzaName, onSuccess, onError) {
+//         for (const pizza of this.pizzas) {
+//           if (pizza === pizzaName) {
+//             return onSuccess(pizzaName);
+//           }
+//         }
+//         return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
+//     },
+ 
+// };
+
+// // Change code above this line
+
+// // Callback for onSuccess
+// function makePizza(pizzaName) {
+//   return `Your order is accepted. Cooking pizza ${pizzaName}.`;
+// }
+
+// // Callback for onError
+// function onOrderError(error) {
+//   return `Error! ${error}`;
+// }
+
+// // Method calls with callbacks
+// pizzaPalace.order('Smoked', makePizza, onOrderError);
+// pizzaPalace.order('Four meats', makePizza, onOrderError);
+// pizzaPalace.order('Big Mike', makePizza, onOrderError);
+// pizzaPalace.order('Vienna', makePizza, onOrderError);
+
+
+
+// function calculateTotalPrice(orderedItems) {
+//   let totalPrice = 0;
+//   // Change code below this line
+// // ---рефакторинг цього коду------
+// //   for (let i = 0; i < orderedItems.length; i += 1) {
+// //     totalPrice += orderedItems[i];
+// //   }
+// // -----------------------------
+//    orderedItems.forEach(element => {
+//         totalPrice += element;
+//    });
+    
+//   // Change code above this line
+//     // return totalPrice;
+//     console.log(totalPrice);
+// }
+// calculateTotalPrice([164, 48, 291]);
+
+
+// function filterArray(numbers, value) {
+//   const filteredNumbers = [];
+//
+//   // ---рефакторинг цього коду------
+//   //   for (let i = 0; i < numbers.length; i += 1) {
+//   //     if (numbers[i] > value) {
+//   //       filteredNumbers.push(numbers[i]);
+//   //     }
+//   //   }
+//  // -----------------------------------
+//     numbers.forEach(element => {
+//       if (element > value) {
+//         filteredNumbers.push(element);
+//         }
+//     });
+    
+//     // return filteredNumbers;
+//     console.log(filteredNumbers);
+// }
+// filterArray([1, 2, 3, 4, 5], 3);
+
+
+// function getCommonElements(firstArray, secondArray) {
+//   const commonElements = [];
+
+//   // ---рефакторинг цього коду------
+// //   for (let i = 0; i < firstArray.length; i += 1) {
+// //     if (secondArray.includes(firstArray[i])) {
+// //       commonElements.push(firstArray[i]);
+// //     }
+// //   }
+//   // -----------------------------------
+//     firstArray.forEach(element => {
+//       if (secondArray.includes(element)) {
+//         commonElements.push(element);
+//       }
+//     });
+    
+// //   return commonElements;
+//   console.log(commonElements);
+// }
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+
+
+// const calculateTotalPrice = (quantity, pricePerItem) => {
+  
+//     // return quantity * pricePerItem;
+//     console.log(quantity * pricePerItem);
+// }
+// calculateTotalPrice(5, 100);
+
+
+// const calculateTotalPrice = orderedItems => {
+//   let totalPrice = 0;
+
+//   orderedItems.forEach(item => {
+//     totalPrice += item;
+//   });
+
+//     // return totalPrice;
+//     console.log(totalPrice);
+// };
+// calculateTotalPrice([164, 48, 291]);
+
+
+// const filterArray = (numbers, value) => {
+//   const filteredNumbers = [];
+
+//   numbers.forEach(number => {
+//     if (number > value) {
+//       filteredNumbers.push(number);
+//     }
+//   });
+
+//   // return filteredNumbers;
+//   console.log(filteredNumbers);
+// };
+// filterArray([1, 2, 3, 4, 5], 3);
+
+
+// const getCommonElements = (firstArray, secondArray) => {
+//   const commonElements = [];
+
+//   firstArray.forEach(element => {
+//     if (secondArray.includes(element)) {
+//       commonElements.push(element);
+//     }
+//   });
+
+//   // return commonElements;
+//   console.log(commonElements);
+// };
+// getCommonElements([1, 2, 3], [2, 1, 17, 19]);
+
+
+// function changeEven(numbers, value) {
+//   const newArray = [];
+
+//   numbers.forEach(element => {
+//     if (element % 2 === 0) {
+//       newArray.push(element + value);
+//     } else if (element % 2 !== 0) {
+//       newArray.push(element);
+//     }
+//   });
+//   // return newArray;
+//   console.log(newArray);
+//   console.log(numbers);
+// }
+// changeEven([1, 2, 3, 4, 5], 10); //новий масив [1, 12, 3, 14, 5]
+
+//-------------4 мод Автопер тема методи масиву--------------
+
+// const planets = ['Earth', 'Mars', 'Venus', 'Jupiter'];
+// const planetsLengths = planets.map(planet => planet.length);
+// // console.log(planetsLengths);
+
+
+const books = [
+  {
+    title: 'The Last Kingdom',
+    author: 'Bernard Cornwell',
+    rating: 8.38,
+  },
+  {
+    title: 'Beside Still Waters',
+    author: 'Robert Sheckley',
+    rating: 8.51,
+  },
+  {
+    title: 'The Dream of a Ridiculous Man',
+    author: 'Fyodor Dostoevsky',
+    rating: 7.75,
+  },
+  { title: 'Redder Than Blood', author: 'Tanith Lee', rating: 7.94 },
+  { title: 'Enemy of God', author: 'Bernard Cornwell', rating: 8.67 },
+];
+// Change code below this line
+
+const titles = books.map(book.title);
