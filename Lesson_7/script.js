@@ -251,33 +251,33 @@
 
 // const TRANSACTION_LIMIT = 1000;
 
-const account = {
-    username: 'Jacob',
-    balance: 400,
-    withdraw(amount, onSuccess, onError) {
-        if (amount > TRANSACTION_LIMIT) {
-            onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-        } else if (amount > this.balance) {
-            onError(`Amount can't exceed account balance of ${this.balance} credits`);
-        } else {
-            this.balance -= amount;
-            onSuccess(`Account balance: ${this.balance}`);
-        }
-    },
-    deposit(amount, onSuccess, onError) {
-        if (amount > TRANSACTION_LIMIT) {
-            onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
-        } else if (amount <= 0) {
-            onError(`Amount must be more than 0 credits`);
-        } else {
-            this.balance += amount;
-            onSuccess(`Account balance: ${this.balance}`);
-        }
-    },
-    // test: () => {
-    //     console.log(this);
-    // }
-};
+// const account = {
+//     username: 'Jacob',
+//     balance: 400,
+//     withdraw(amount, onSuccess, onError) {
+//         if (amount > TRANSACTION_LIMIT) {
+//             onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//         } else if (amount > this.balance) {
+//             onError(`Amount can't exceed account balance of ${this.balance} credits`);
+//         } else {
+//             this.balance -= amount;
+//             onSuccess(`Account balance: ${this.balance}`);
+//         }
+//     },
+//     deposit(amount, onSuccess, onError) {
+//         if (amount > TRANSACTION_LIMIT) {
+//             onError(`Amount should not exceed ${TRANSACTION_LIMIT} credits`);
+//         } else if (amount <= 0) {
+//             onError(`Amount must be more than 0 credits`);
+//         } else {
+//             this.balance += amount;
+//             onSuccess(`Account balance: ${this.balance}`);
+//         }
+//     },
+//     // test: () => {
+//     //     console.log(this);
+//     // }
+// };
 // account.test()
 // const handleSuccess = message => console.log(`✅ Success! ${message}`);
 
@@ -411,7 +411,7 @@ const account = {
 
 
 
-const arr = [1, 2, 3, 4, 5];
+// const arr = [1, 2, 3, 4, 5];
 
-const result = arr.map(item =>  item * 2)
-console.log(result);
+// const result = arr.map(item =>  item * 2)
+// console.log(result);
