@@ -77,11 +77,6 @@
 // Перерва до 20.55
 
 
-
-
-
-
-
 // console.log(value);
 // var value = 10;
 
