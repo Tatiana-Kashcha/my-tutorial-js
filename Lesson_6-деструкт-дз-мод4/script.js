@@ -503,7 +503,7 @@
 //-------------4 мод Автопер тема callback функції--------------
 
 // коментар до 2 завдання - імена параметрів функцій, які є callback-ом
-// (525 deliverPizza, 529 makePizza) неважливі для параметрів самої функції callback (535)
+// (deliverPizza, makePizza) неважливі для параметрів самої функції callback 
 
 // function deliverPizza(yk) {
 //     return `Delivering ${yk} pizza.`;
