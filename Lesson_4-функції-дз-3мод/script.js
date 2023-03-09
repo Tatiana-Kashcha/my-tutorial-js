@@ -1090,6 +1090,8 @@
 //     console.log(this.potions);
 //   },
 // };
+// console.log(atTheOldToad.removePotion('Dragon breath'));
+// console.log(atTheOldToad.removePotion('Speed potion'));
 // atTheOldToad.removePotion('Dragon breath');
 // atTheOldToad.removePotion('Speed potion');
 
