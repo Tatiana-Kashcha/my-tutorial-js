@@ -33,9 +33,7 @@
 
 // add(numbers)
 
-
 // const numbers = [1, 2, 3, 4];
-
 
 // function foo(arr, callback) {
 //     let total = arr[0];
@@ -51,7 +49,6 @@
 // console.log(foo(numbers, add));
 // console.log(foo(numbers, sum));
 
-
 // function foo(a, b) {
 //     console.log(a);
 //     console.log(b);
@@ -63,7 +60,6 @@
 // function foo(a, b) {
 // console.log(a,b);
 // }
-
 
 // //expression
 // const boo = function(a,b){
@@ -77,8 +73,6 @@
 // }
 // arrow(10, 12, 1, 2, 3, 5);
 // arrow(10, 12, 1, 2, 3, 5, 2, 3, 5);
-
-
 
 // const user = {
 //     nameUser: 'Test name',
@@ -94,9 +88,6 @@
 // user.say()
 // user.sayHello()
 // console.log(this);
-
-
-
 
 // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
@@ -135,9 +126,7 @@
 // numbers.forEach(item => total = add(total,item))
 // console.log(total);
 
-
 // ПЕРЕРВА ДО 21.10
-
 
 // Example 1 - Коллбек функції
 // Напишіть наступні функції:
@@ -165,8 +154,6 @@
 
 // createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
 // createProduct({ name: '🍋', price: 20, quantity: 5 }, logTotalPrice);
-
-
 
 // Example 2 - Коллбек функції
 // Додайте об'єкт account методи withdraw(amount, onSuccess, onError) та deposit(amount, onSuccess, onError), де перший параметр це сума операції, а другий та третій - коллбеки.
@@ -233,13 +220,11 @@
 // }
 // const logProduct = ({name}) => console.log(name);
 
-
 // function logTotalPrice1(product) {
 //   console.log(product.price * product.quantity);
 // }
 
 // const logTotalPrice = ({price,quantity}) => console.log(price * quantity);
-
 
 // createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct);
 // createProduct({ name: '🍎', price: 30, quantity: 3 }, logProduct1);
@@ -290,8 +275,6 @@
 // account.deposit(0, handleSuccess, handleError);
 // account.deposit(-600, handleSuccess, handleError);
 // account.deposit(600, handleSuccess, handleError);
-
-
 
 // Example 5 - Інлайн стрілочні функції
 // Виконайте рефакторинг коду за допомогою стрілочних функцій.
@@ -359,7 +342,6 @@
 
 // const logItems = items => items.forEach((item, idx)=>console.log(`${idx + 1}- ${item}`))
 
-
 // logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
 // Example 8 - Метод forEach
@@ -409,8 +391,6 @@
 // console.log(calculateAverage(14, 8, 2)); // 8
 // console.log(calculateAverage(27, 43, 2, 8, 36)); // 23.2
 
-
-
 // const arr = [1, 2, 3, 4, 5];
 
 // const result = arr.map(item =>  item * 2)
@@ -438,7 +418,6 @@
 // console.log(pizzaPalace.order('Four meats'));
 // console.log(pizzaPalace.order('Big Mike'));
 // console.log(pizzaPalace.order('Viennese'));
-
 
 // const customer = {
 //   username: "Mango",
@@ -470,7 +449,6 @@
 // customer.addOrder(5000, "Steak");
 // console.log(customer.getBalance()); // 19750
 // console.log(customer.getOrders()); // ["Burger", "Pizza", "Salad", "Steak"]
-
 
 // const historyService = {
 //   orders: [
@@ -525,7 +503,6 @@
 // console.log(parent.hasOwnProperty('heritage'));
 // console.log(child.hasOwnProperty('name'));
 
-
 // class Car {
 //     constructor(brand, model, price) {
 //         this.brand = brand;
@@ -534,7 +511,6 @@
 //     }
 // }
 // console.log(new Car('Audi', 'Q3', 36000));
-
 
 // class User {
 //   // Синтаксис оголошення методу класу
@@ -550,14 +526,13 @@
 // const poly = new User("Poly", "poly@mail.com");
 // console.log(poly); // { name: 'Poly', email: 'poly@mail.com' }
 
-
 // class Car {
 //     constructor({ brand, model, price }) {
 //     this.brand = brand;
 //     this.model = model;
 //     this.price = price;
 //     }
-    
+
 //     getPrice() {
 //        return this.price;
 //     }
@@ -567,7 +542,6 @@
 //     }
 // }
 // console.log(new Car({ brand: 'Audi', model: 'Q3', price: 36000 }));
-
 
 // class Storage {
 //   constructor( items ) {
@@ -593,7 +567,6 @@
 // storage.removeItem("Prolonger");
 // console.log(storage.getItems()); // ["Nanitoids", "Antigravitator", "Droid"]
 
-
 // class User {
 //   // Деструктуризуємо об'єкт
 //   constructor({ name, email }) {
@@ -613,7 +586,6 @@
 //   email: "poly@mail.com",
 // });
 // console.log(poly); // { name: "Poly", email: "poly@mail.com" }
-
 
 // class StringBuilder {
 //   constructor(initialValue) {
@@ -675,7 +647,6 @@
 // console.log(mango.getEmail()); // mango@supermail.com
 // // console.log(mango.#email); // Виникне помилка, це приватна властивість
 
-
 // class Car {
 //   // Change code below this line
 //     #brand;
@@ -700,10 +671,9 @@
 // console.log(car.getBrand()); // працює!
 // console.log(car.changeBrand('Honda')); // чому не працює в вскоді?
 
-
 // class Storage {
 //     #items;
-    
+
 //   constructor(items) {
 //     this.#items = items;
 //   }
@@ -802,7 +772,6 @@
 //   // Change code above this line
 // }
 
-
 //--приклад
 // class User {
 //   #email;
@@ -836,7 +805,6 @@
 
 //   this.#email = newEmail;
 // }
-
 
 // //--приклад
 // class User {
@@ -875,11 +843,10 @@
 // mango.role = User.Roles.EDITOR;
 // console.log(mango.role); // "editor"
 
-
 // class Car {
 //   // Change code below this line
 //     static MAX_PRICE = 50000;
-    
+
 //   #price;
 
 //   constructor({ price }) {
@@ -908,7 +875,6 @@
 // audi.price = 51000;
 // console.log(audi.price); // 49000
 
-
 //--приклад
 // class User {
 //   static #takenEmails = [];
@@ -929,8 +895,6 @@
 
 // console.log(User.isEmailTaken('poly@mail.com'));
 // console.log(User.isEmailTaken('mango@mail.com'));
-
-
 
 // class Car {
 //   static #MAX_PRICE = 50000;
@@ -974,7 +938,6 @@
 // console.log(editor); // { email: "mango@mail.com" }
 // console.log(editor.email); // "mango@mail.com"
 
-
 // class User {
 //   constructor(email) {
 //     this.email = email;
@@ -997,7 +960,6 @@
 // }
 // console.log(Admin.AccessLevel.BASIC);
 // console.log(Admin.AccessLevel.SUPERUSER);
-
 
 //----приклад------
 // class User {
@@ -1025,8 +987,6 @@
 // console.log(editor); // { email: 'mango@mail.com', posts: [] }
 // console.log(editor.email); // 'mango@mail.com'
 
-
-
 // class User {
 //   email;
 
@@ -1049,7 +1009,7 @@
 //     super(email, accessLevel);
 //     this.accessLevel = accessLevel;
 //     }
-    
+
 //   static AccessLevel = {
 //     BASIC: 'basic',
 //     SUPERUSER: 'superuser',
@@ -1065,7 +1025,6 @@
 
 // console.log(mango.email); // "mango@mail.com"
 // console.log(mango.accessLevel); // "superuser"
-
 
 //----приклад------
 // Уявімо, що вище є оголошення класу User
@@ -1084,7 +1043,6 @@
 // console.log(editor.email); // 'mango@mail.com'
 // editor.addPost("post-1");
 // console.log(editor.posts); // ['post-1']
-
 
 class User {
   email;
@@ -1105,39 +1063,39 @@ class Admin extends User {
   // Change code below this line
 
   static AccessLevel = {
-    BASIC: "basic",
-    SUPERUSER: "superuser",
+    BASIC: 'basic',
+    SUPERUSER: 'superuser',
   };
 
   constructor({ email, accessLevel }) {
     super(email);
-      this.accessLevel = accessLevel;
-      this.blacklistedEmails = [];
-    }
+    this.accessLevel = accessLevel;
+    this.blacklistedEmails = [];
+  }
 
-    blacklist(email) {
-        this.blacklistedEmails.push(email);
+  blacklist(email) {
+    this.blacklistedEmails.push(email);
+  }
+
+  isBlacklisted(email) {
+    if (this.blacklistedEmails.includes(email)) {
+      return true;
     }
-    
-    isBlacklisted(email) {
-        if (this.blacklistedEmails.includes(email)) {
-          return true;
-        }
-          return false;
-    }
-    
+    return false;
+  }
+
   // Change code above this line
 }
 
 const mango = new Admin({
-  email: "mango@mail.com",
+  email: 'mango@mail.com',
   accessLevel: Admin.AccessLevel.SUPERUSER,
 });
 
 console.log(mango.email); // "mango@mail.com"
 console.log(mango.accessLevel); // "superuser"
 
-mango.blacklist("poly@mail.com");
+mango.blacklist('poly@mail.com');
 console.log(mango.blacklistedEmails); // ["poly@mail.com"]
-console.log(mango.isBlacklisted("mango@mail.com")); // false
-console.log(mango.isBlacklisted("poly@mail.com")); // true
+console.log(mango.isBlacklisted('mango@mail.com')); // false
+console.log(mango.isBlacklisted('poly@mail.com')); // true
