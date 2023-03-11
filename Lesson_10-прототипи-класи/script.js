@@ -218,7 +218,8 @@
 // console.log(poly.getInfo()); // User poly@mail.com is 19 years old and has 21 posts
 
 // Example 2 - Сховище
-// Напиши клас Storage який створює об'єкти для керування складом товарів. При виклику отримуватиме один аргумент - початковий масив товарів і записуватиме його властивість items.
+// Напиши клас Storage який створює об'єкти для керування складом товарів. При виклику
+//  отримуватиме один аргумент - початковий масив товарів і записуватиме його властивість items.
 
 // Додай методи класу:
 
@@ -262,7 +263,9 @@
 // console.table(storage.items); // [ '🍎', '🍇', '🍑', '🍌' ]
 
 // Example 3 - User
-// Напиши клас User який створює об'єкт із властивостями login та email. Оголоси приватні властивості #login та #email, доступ до яких зроби через гетер та сетер login та email.
+// Напиши клас User який створює об'єкт із властивостями login та email.
+// Оголоси приватні властивості #login та #email, доступ до яких зроби через
+// гетер та сетер login та email.
 
 // class User {
 //     #login;
@@ -311,7 +314,9 @@
 // console.log(poly.login); // Polycutie
 
 // Example 4 - Нотатки
-// Напиши клас Notes який керує колекцією нотаток у властивості items. Замітка це об'єкт із властивостями text та priority. Додай класу статичну властивість Priority, у якому зберігатиметься об'єкт із пріоритетами.
+// Напиши клас Notes який керує колекцією нотаток у властивості items.
+// Замітка це об'єкт із властивостями text та priority. Додай класу статичну
+// властивість Priority, у якому зберігатиметься об'єкт із пріоритетами.
 
 // {
 //   LOW: 'low',
@@ -382,55 +387,66 @@
 // myNotes.updateNote('Моя друга замітка', Notes.Priority.HIGH);
 // console.log(myNotes);
 
+//------------------------дз---------------------------
 // Додаткове завдання
 // Напишіть клас Toggle який приймає об'єкт налаштувань {isOpen: boolean}
 // і оголошує одну властивість on - стан вкл / викл(true / false).
 // За замовчуванням значення властивості on повинно бути false.
 
-// const firstToggle = new Toggle({ isOpen: true });
-// console.group('firstToggle');
-// console.log(firstToggle.on);
-// firstToggle.toggle();
-// console.log(firstToggle.on);
-// console.groupEnd('firstToggle');
+class Toggle {
+  constructor({ isOpen = false } = {}) {
+    this.on = isOpen;
+  }
 
-// const secondToggle = new Toggle();
-// console.group('secondToggle');
-// console.log(secondToggle.on);
-// secondToggle.toggle();
-// console.log(secondToggle.on);
-// console.groupEnd('secondToggle');
+  toggle() {
+    this.on = !this.on;
+  }
+}
+
+const firstToggle = new Toggle({ isOpen: true });
+console.group('firstToggle');
+console.log(firstToggle.on);
+firstToggle.toggle();
+console.log(firstToggle.on);
+console.groupEnd('firstToggle');
+
+const secondToggle = new Toggle();
+console.group('secondToggle');
+console.log(secondToggle.on);
+secondToggle.toggle();
+console.log(secondToggle.on);
+console.groupEnd('secondToggle');
 
 //------------------Регістрація юзерів-----------------------
-const form = document.querySelector('.js-form');
-const signIn = document.querySelector('.js-in');
-const title = document.querySelector('.js-title');
+// const form = document.querySelector('.js-form');
+// const signIn = document.querySelector('.js-in');
+// const title = document.querySelector('.js-title');
 
-form.addEventListener('submit', onSubmit);
-signIn.addEventListener('submit', onSignIn);
-const users = [];
+// form.addEventListener('submit', onSubmit);
+// signIn.addEventListener('submit', onSignIn);
+// const users = [];
 
-class User {
-  constructor(name, email) {
-    this.name = name;
-    this.email = email;
-  }
-}
+// class User {
+//   constructor(name, email) {
+//     this.name = name;
+//     this.email = email;
+//   }
+// }
 
-function onSubmit(evt) {
-  evt.preventDefault();
-  const { name, email } = evt.currentTarget.elements;
+// function onSubmit(evt) {
+//   evt.preventDefault();
+//   const { name, email } = evt.currentTarget.elements;
 
-  users.push(new User(name.value, email.value));
-  console.log(users);
-}
+//   users.push(new User(name.value, email.value));
+//   console.log(users);
+// }
 
-function onSignIn(evt) {
-  evt.preventDefault();
-  const { email } = evt.currentTarget.elements;
-  const result = users.find(({ email: userEmail }) => email.value === userEmail);
-  console.log(result);
-  if (result) {
-    title.textContent = result.name;
-  }
-}
+// function onSignIn(evt) {
+//   evt.preventDefault();
+//   const { email } = evt.currentTarget.elements;
+//   const result = users.find(({ email: userEmail }) => email.value === userEmail);
+//   console.log(result);
+//   if (result) {
+//     title.textContent = result.name;
+//   }
+// }
