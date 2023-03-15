@@ -450,3 +450,81 @@
 //     title.textContent = result.name;
 //   }
 // }
+
+//---------------------6 mod приклад з конспекта----------------------
+
+// const heading = document.createElement('h1');
+// console.log(heading); // <h1></h1>
+
+// heading.textContent = 'This is a heading';
+// console.log(heading); // <h1>This is a heading</h1>
+
+// const list = document.querySelector('.usernames');
+// console.log(list);
+// // Adds an item to the end of the list
+// const lastItem = document.createElement('li');
+// lastItem.textContent = 'Poly';
+// list.append(lastItem);
+
+//----------------------------------------
+// 2TASK
+
+// const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
+// const ingredientsList = document.querySelector('#ingredients');
+
+// for (let i = 0; i < ingredients.length; i += 1) {
+//   const ingredient = ingredients[i];
+
+//   const ingredientsItem = document.createElement('li');
+//   ingredientsItem.textContent = ingredient;
+//   ingredientsItem.classList.add('item');
+//   ingredientsList.append(ingredientsItem);
+// }
+// console.log(ingredientsList);
+
+//-------------------------------------------------------------
+//4TASK
+// let counterValue = 0;
+// const value = document.querySelector('#value');
+
+// const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
+// const decrementClick = () => {
+//   counterValue -= 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// decrementBtn.addEventListener('click', decrementClick);
+
+// const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
+// const incrementClick = () => {
+//   counterValue += 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// incrementBtn.addEventListener('click', incrementClick);
+
+//---------------------6 mod приклад з конспекта----------------------
+// const singleBtn = document.querySelector('#single');
+
+// const handleClick = () => {
+//   console.log('click event listener callback');
+// };
+
+// singleBtn.addEventListener('click', handleClick);
+
+// // ===============================================
+// const multiBtn = document.querySelector('#multiple');
+
+// const firstCallback = () => {
+//   console.log('First callback!');
+// };
+// const secondCallback = () => {
+//   console.log('Second callback!');
+// };
+// const thirdCallback = () => {
+//   console.log('Third callback!');
+// };
+
+// multiBtn.addEventListener('click', firstCallback);
+// multiBtn.addEventListener('click', secondCallback);
+// multiBtn.addEventListener('click', thirdCallback);

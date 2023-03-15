@@ -1,32 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <h1 class="js-title"></h1>
 
     <div>
-        <h2>signUP</h2>
-        <form action="submit" class="js-form">
-            <input type="text" name="name">
-            <input type="text" name="email">
-            <button type="submit">submit</button>
-        </form>
+      <h2>signUP</h2>
+      <form action="submit" class="js-form">
+        <input type="text" name="name" />
+        <input type="text" name="email" />
+        <button type="submit">submit</button>
+      </form>
     </div>
     <div>
-        <h2>signIN</h2>
-        <form action="submit" class="js-in">
-            <input type="text" name="email">
-            <button type="submit">submit</button>
-        </form>
+      <h2>signIN</h2>
+      <form action="submit" class="js-in">
+        <input type="text" name="email" />
+        <button type="submit">submit</button>
+      </form>
     </div>
-    <script src="./script.js"></script>
-</body>
 
+    <!-- 6 mod -->
+    <div class="container">
+      <ul class="usernames">
+        <li>Mango</li>
+      </ul>
+    </div>
+
+    <button id="single" class="btn">SINGLE CALLBACK</button>
+    <hr />
+    <button id="multiple" class="btn">MULTIPLE CALLBACKS</button>
+    <!-- 6 mod -->
+
+    <!-- 2TASK -->
+    <ul id="ingredients"></ul>
+    <!-- 2TASK -->
+
+    <!-- 4TASK -->
+    <div id="counter">
+      <button type="button" data-action="decrement">-1</button>
+      <span id="value">0</span>
+      <button type="button" data-action="increment">+1</button>
+    </div>
+    <!-- 4TASK -->
+
+    <script src="./script.js"></script>
+  </body>
 </html>
