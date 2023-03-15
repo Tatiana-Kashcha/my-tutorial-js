@@ -528,3 +528,35 @@
 // multiBtn.addEventListener('click', firstCallback);
 // multiBtn.addEventListener('click', secondCallback);
 // multiBtn.addEventListener('click', thirdCallback);
+
+//----------------------------------------
+// 7TASK
+const sizeInput = document.querySelector('#font-size-control');
+const textOutput = document.querySelector('#text');
+console.log(textOutput); //собі для перевірки
+console.log(sizeInput); //собі для перевірки
+console.log(sizeInput.min); //собі для перевірки
+console.log(sizeInput.max); //собі для перевірки
+
+const sizeControl = () => {
+  textOutput.style.fontSize = sizeInput.value + 'px';
+  console.log(sizeInput.value + 'px'); //собі для перевірки
+};
+sizeInput.addEventListener('input', sizeControl);
+console.log(textOutput.style); //собі для перевірки
+
+//---------------------6 mod приклади з конспекта---------------------
+// const textInput = document.querySelector('.text-input');
+// const output = document.querySelector('.output');
+
+// textInput.addEventListener('input', event => {
+//   output.textContent = event.currentTarget.value;
+// });
+
+// function fun1() {
+//   var rng = document.getElementById('r1'); //rng - это Input
+//   var p = document.getElementById('one'); // p - абзац
+//   p.innerHTML = rng.value;
+//   console.log(rng.value);
+// }
+//--------------------------------------------------------
