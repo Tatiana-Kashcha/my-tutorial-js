@@ -482,7 +482,61 @@
 // }
 // console.log(ingredientsList);
 
+//----------------------------------------
+// 3TASK
+const images = [
+  {
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+];
+const galleryImages = document.querySelector('.gallery');
+
+const itemImages = images.forEach(item => {
+  const imageItem = document.createElement('li');
+  const image = document.createElement('img');
+  image.src = item.url;
+  image.alt = item.alt;
+  image.width = 350;
+
+  galleryImages.append(imageItem);
+  imageItem.append(image);
+});
+console.log(galleryImages);
+
+// galleryImages.insertAdjacentHTML('beforeend', itemImages);
+
+// `<li>${image}</li>`;
+// console.log(item);
+
+// const image = document.createElement('img');
+// image.src = 'https://placeimg.com/640/480/nature';
+// image.alt = 'Nature';
+
+// const itemImages = images.map(item => `<li>${item}</li>`).join('');
+// console.log(item);
+
+//--------------------------------------------------------
+
 //-------------------------------------------------------------
+// const list = document.querySelector('.list');
+// const newTechnologies = ['React', 'TypeScript', 'Node.js'];
+
+// const markup = newTechnologies
+//   .map(technology => `<li class="list-item new">${technology}</li>`)
+//   .join('');
+
+// list.insertAdjacentHTML('beforeend', markup);
+// list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
+//---------------------------------------------------------------
 //4TASK
 // let counterValue = 0;
 // const value = document.querySelector('#value');
@@ -561,19 +615,19 @@
 // }
 //--------------------
 // 1TASK
-const categoriesList = document.querySelectorAll('#categories li.item');
-console.log(categoriesList); //масив li.item
-const categoriesItem = categoriesList.length;
-console.log('Number of categories:', categoriesItem); //кількість категорій 3
+// const categoriesList = document.querySelectorAll('#categories li.item');
+// console.log(categoriesList); //масив li.item
+// const categoriesItem = categoriesList.length;
+// console.log('Number of categories:', categoriesItem); //кількість категорій 3
 
-categoriesList.forEach(element => {
-  // const categoriesTitle = element.querySelectorAll('h2')[0].textContent; //альтернативний запис
-  const categoriesTitle = element.querySelector('h2').textContent;
-  console.log('Category:', categoriesTitle); //назва категорій
+// categoriesList.forEach(element => {
+//   // const categoriesTitle = element.querySelectorAll('h2')[0].textContent; //альтернативний запис
+//   const categoriesTitle = element.querySelector('h2').textContent;
+//   console.log('Category:', categoriesTitle); //назва категорій
 
-  const categoriesTitleElement = element.querySelectorAll('li').length;
-  console.log('Elements:', categoriesTitleElement); //кількість елементів в категорії
-});
+//   const categoriesTitleElement = element.querySelectorAll('li').length;
+//   console.log('Elements:', categoriesTitleElement); //кількість елементів в категорії
+// });
 
 //----------
 // orderedItems.forEach(element => {
