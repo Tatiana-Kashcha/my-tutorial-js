@@ -531,19 +531,19 @@
 
 //----------------------------------------
 // 7TASK
-const sizeInput = document.querySelector('#font-size-control');
-const textOutput = document.querySelector('#text');
-console.log(textOutput); //собі для перевірки
-console.log(sizeInput); //собі для перевірки
-console.log(sizeInput.min); //собі для перевірки
-console.log(sizeInput.max); //собі для перевірки
+// const sizeInput = document.querySelector('#font-size-control');
+// const textOutput = document.querySelector('#text');
+// console.log(textOutput); //собі для перевірки
+// console.log(sizeInput); //собі для перевірки
+// console.log(sizeInput.min); //собі для перевірки
+// console.log(sizeInput.max); //собі для перевірки
 
-const sizeControl = () => {
-  textOutput.style.fontSize = sizeInput.value + 'px';
-  console.log(sizeInput.value + 'px'); //собі для перевірки
-};
-sizeInput.addEventListener('input', sizeControl);
-console.log(textOutput.style); //собі для перевірки
+// const sizeControl = () => {
+//   textOutput.style.fontSize = sizeInput.value + 'px';
+//   console.log(sizeInput.value + 'px'); //собі для перевірки
+// };
+// sizeInput.addEventListener('input', sizeControl);
+// console.log(textOutput.style); //собі для перевірки
 
 //---------------------6 mod приклади з конспекта---------------------
 // const textInput = document.querySelector('.text-input');
@@ -559,4 +559,56 @@ console.log(textOutput.style); //собі для перевірки
 //   p.innerHTML = rng.value;
 //   console.log(rng.value);
 // }
-//--------------------------------------------------------
+//--------------------
+// 1TASK
+const categoriesList = document.querySelectorAll('#categories li.item');
+const categoriesItem = categoriesList.length;
+console.log('Number of categories:', categoriesItem); //кількість категорій 3
+
+categoriesList.forEach(element => {
+  // const categoriesTitle = element.querySelectorAll('h2')[0].textContent; //альтернативний запис
+  const categoriesTitle = element.querySelector('h2').textContent;
+  console.log('Category:', categoriesTitle); //назва категорій
+
+  const categoriesTitleElement = element.querySelectorAll('li').length;
+  console.log('Elements:', categoriesTitleElement); //кількість елементів в категорії
+});
+
+//----------
+// orderedItems.forEach(element => {
+//   totalPrice += element;
+// });
+
+// numbers.forEach(function (number, index) {
+//   console.log(`Індекс ${index}, значення ${number}`);
+// });
+//-----------
+// const calculateAverage = (...args) => {
+//   let total = 0;
+//   args.forEach(item => (total += item));
+//   return total / args.length;
+// };
+
+// firstArray.forEach(element => {
+//   if (secondArray.includes(element)) {
+//     commonElements.push(element);
+//   }
+// });
+//---------
+// const listWithId = document.querySelector('#menu');
+// listWithId.style.textTransform = 'uppercase';
+// listWithId.style.fontSize = '24px';
+// // console.log(listWithId);
+
+// const listWithClass = document.querySelector('.menu');
+// // console.log(listWithClass);
+
+// const menuItemsByTagName = document.querySelectorAll('li');
+// // console.log(menuItemsByTagName);
+
+// const menuItemsByClass = document.querySelectorAll('.menu-item');
+// // console.log(menuItemsByClass);
+
+// const firstMenuItem = document.querySelector('.menu-item');
+// firstMenuItem.style.color = 'tomato';
+// // console.log(firstMenuItem);

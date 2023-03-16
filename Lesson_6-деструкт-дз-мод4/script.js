@@ -5,13 +5,9 @@
 
 // console.log(arr === arr1);
 
-
 // const arr = [1, 2, 4];
 // const arr1 = [...arr];
 // console.log(arr == arr1);
-
-
-
 
 // const arr = [1, 2, 3];
 // const arr1 = [1, 2];
@@ -48,13 +44,6 @@
 
 // console.log(user);
 
-
-
-
-
-
-
-
 // const user = {
 //     name: 'Test',
 //     age: 12,
@@ -77,8 +66,6 @@
 // console.log(skills);
 // console.log(js);
 // console.log(audi);
-
-
 
 // const user = {
 //     name: 'Test',
@@ -148,7 +135,6 @@
 //     console.log(js);
 // }
 
-
 // const arr = [44, 11, 22, 4, 33];
 
 // const min = Math.min( 44, 11, 22, 4, 33)
@@ -176,8 +162,6 @@
 
 // console.log(user.skills === user1.skills);
 
-
-
 // const arr = [1, 2, 3, 4, 5]
 // //spread
 // const copy = [...arr];
@@ -187,8 +171,6 @@
 // console.log(first);
 // console.log(second);
 // console.log(args);
-
-
 
 // const arr = [1, 2, 3, 4, 5];
 
@@ -204,10 +186,7 @@
 // foo(1, 2, 3, 4, 5);
 // foo(11, 32, 43, 4, 5, 6, 7)
 
-
-
 // Перерва до 21.20
-
 
 // Example 1 - Деструктуризація
 // Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
@@ -233,8 +212,6 @@
 //     height: '1.95'
 // }));
 
-
-
 // Example 2 - Глибока деструктуризація
 // Перепиши функцію так, щоб вона приймала один об'єкт параметрів замість набору незалежних аргументів.
 
@@ -258,8 +235,6 @@
 //         defenceBots: 50
 //     }
 // }));
-
-
 
 // Example 3 - Деструктуризація
 // Напиши функцію так, щоб вона приймала об'єкт параметрів із властивостями companyName та stock та виводила репорт про кількість товарів на складі будь-якої компанії.
@@ -300,8 +275,6 @@
 //         },
 //     }),
 // ); // "Belacci has 35 item in stock"
-
-
 
 // Example 4 - Операція spread
 // Доповни функцію createContact(partialContact) так, щоб вона повертала новий об'єкт контакту з доданими властивостями id та createdAt, а також list зі значенням "default" якщо в partialContact немає такої властивості.
@@ -377,7 +350,6 @@
 //   }),
 // );
 
-
 // const products = [{
 //         name: "Radar",
 //         price: 1300,
@@ -431,7 +403,6 @@
 //     return x;
 //   })(1)
 
-
 // const x = 1;
 // delete x;
 // console.log(x);
@@ -445,16 +416,12 @@
 // delete obj.y
 // console.log(obj);
 
-
 // x = 1;
 // y = 100500
 // console.log(x);
 // console.log(window);
 // delete window.x
 // console.log(x);
-
-
-
 
 // const highTemperatures = {
 //     yesterday: 28,
@@ -470,7 +437,6 @@
 //     icon : highIcon = "https://www.flaticon.com/svg/static/icons/svg/2204/2204346.svg"
 // } = highTemperatures;
 // // Change code above this line
-
 
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 
@@ -490,11 +456,9 @@
 // }
 // а якщо так 30 зробити
 
-
 // function findLongestWord(string) {
 //     // Change code below this line
 //     return string.split(' ').sort((a, b) => b.length - a.length)[0]
-
 
 //     // Change code above this line
 // }
@@ -503,7 +467,7 @@
 //-------------4 мод Автопер тема callback функції--------------
 
 // коментар до 2 завдання - імена параметрів функцій, які є callback-ом
-// (deliverPizza, makePizza) неважливі для параметрів самої функції callback 
+// (deliverPizza, makePizza) неважливі для параметрів самої функції callback
 
 // function deliverPizza(yk) {
 //     return `Delivering ${yk} pizza.`;
@@ -521,7 +485,6 @@
 // console.log(makeMessage('Royal Grand', makePizza));
 // console.log(makeMessage('Ultracheese', deliverPizza));
 
-
 // ісходна умова 2 завдання
 // function deliverPizza(pizzaName) {
 //   return `Delivering ${pizzaName} pizza.`;
@@ -538,7 +501,6 @@
 // console.log(makeMessage('Royal Grand', makePizza));
 // console.log(makeMessage('Ultracheese', deliverPizza));
 
-
 // const pizzaPalace = {
 //   pizzas: ['Ultracheese', 'Smoked', 'Four meats'],
 //     order(pizzaName, onSuccess, onError) {
@@ -549,7 +511,7 @@
 //         }
 //         return onError(`There is no pizza with a name ${pizzaName} in the assortment.`);
 //     },
- 
+
 // };
 
 // // Change code above this line
@@ -570,8 +532,6 @@
 // pizzaPalace.order('Big Mike', makePizza, onOrderError);
 // pizzaPalace.order('Vienna', makePizza, onOrderError);
 
-
-
 // function calculateTotalPrice(orderedItems) {
 //   let totalPrice = 0;
 //   // Change code below this line
@@ -580,16 +540,15 @@
 // //     totalPrice += orderedItems[i];
 // //   }
 // // -----------------------------
-//    orderedItems.forEach(element => {
-//         totalPrice += element;
-//    });
-    
+// orderedItems.forEach(element => {
+//   totalPrice += element;
+// });
+
 //   // Change code above this line
 //     // return totalPrice;
 //     console.log(totalPrice);
 // }
 // calculateTotalPrice([164, 48, 291]);
-
 
 // function filterArray(numbers, value) {
 //   const filteredNumbers = [];
@@ -606,12 +565,11 @@
 //         filteredNumbers.push(element);
 //         }
 //     });
-    
+
 //     // return filteredNumbers;
 //     console.log(filteredNumbers);
 // }
 // filterArray([1, 2, 3, 4, 5], 3);
-
 
 // function getCommonElements(firstArray, secondArray) {
 //   const commonElements = [];
@@ -628,20 +586,18 @@
 //         commonElements.push(element);
 //       }
 //     });
-    
+
 // //   return commonElements;
 //   console.log(commonElements);
 // }
 // getCommonElements([1, 2, 3], [2, 1, 17, 19]);
 
-
 // const calculateTotalPrice = (quantity, pricePerItem) => {
-  
+
 //     // return quantity * pricePerItem;
 //     console.log(quantity * pricePerItem);
 // }
 // calculateTotalPrice(5, 100);
-
 
 // const calculateTotalPrice = orderedItems => {
 //   let totalPrice = 0;
@@ -654,7 +610,6 @@
 //     console.log(totalPrice);
 // };
 // calculateTotalPrice([164, 48, 291]);
-
 
 // const filterArray = (numbers, value) => {
 //   const filteredNumbers = [];
@@ -670,7 +625,6 @@
 // };
 // filterArray([1, 2, 3, 4, 5], 3);
 
-
 // const getCommonElements = (firstArray, secondArray) => {
 //   const commonElements = [];
 
@@ -684,7 +638,6 @@
 //   console.log(commonElements);
 // };
 // getCommonElements([1, 2, 3], [2, 1, 17, 19]);
-
 
 // function changeEven(numbers, value) {
 //   const newArray = [];
@@ -708,7 +661,6 @@
 // const planetsLengths = planets.map(planet => planet.length);
 // // console.log(planetsLengths);
 
-
 // const books = [
 //   {
 //     title: 'The Last Kingdom',
@@ -731,7 +683,6 @@
 // const titles = books.map(book => book.title);
 // console.log(titles);
 
-
 // const books = [
 //   {
 //     title: 'The Last Kingdom',
@@ -751,7 +702,6 @@
 // ];
 // const genres = books.flatMap(book => book.genres);
 // console.log(genres);
-
 
 // const getUserNames = users => {
 //   // return users.map(user => user.name);
@@ -842,14 +792,12 @@
 //   },
 // ]);
 
-
 // const numbers = [17, 24, 82, 61, 36, 18, 47, 52, 73];
 
 // const evenNumbers = numbers.filter(number => number % 2 === 0);
 // const oddNumbers = numbers.filter(number => number % 2 !== 0);
 // console.log(evenNumbers);
 // console.log(oddNumbers);
-
 
 // const books = [
 //   {
@@ -872,7 +820,6 @@
 // const uniqueGenres = allGenres.filter((unique, idx) => allGenres.indexOf(unique) === idx);
 // console.log(allGenres);
 // console.log(uniqueGenres);
-
 
 // const books = [
 //   {
@@ -900,7 +847,6 @@
 // const booksByAuthor = books.filter(book => book.author === AUTHOR);
 // console.log(topRatedBooks);
 // console.log(booksByAuthor);
-
 
 // const getUsersWithEyeColor = (users, color) => {
 //     // return users.filter(user => user.eyeColor === color);
@@ -976,7 +922,6 @@
 // //   'brown',
 //   'green'
 // );
-
 
 // const getUsersWithAge = (users, minAge, maxAge) => {
 //   // return users.filter(user => user.age >= minAge && user.age <= maxAge);
@@ -1058,7 +1003,6 @@
 //      30, 40
 //     // 80, 100
 //  );
-
 
 // const getUsersWithFriend = (users, friendName) => {
 //   // return users.filter(user => user.friends.includes(friendName));
@@ -1144,7 +1088,6 @@
 //   'Sharron Pace'
 // );
 
-
 // const getFriends = users => {
 //   const allFriends = users.flatMap(user => user.friends);
 //   console.log(allFriends);
@@ -1224,7 +1167,6 @@
 //   },
 // ]);
 
-
 // const getActiveUsers = users => {
 //   //   return users.filter(user => user.isActive === true);
 //   console.log(users.filter(user => user.isActive === true));
@@ -1301,7 +1243,6 @@
 //     age: 39,
 //   },
 // ]);
-
 
 // const getInactiveUsers = users => {
 //   //   return users.filter(user => user.isActive === false);
@@ -1380,12 +1321,10 @@
 //   },
 // ]);
 
-
 // задача від ментора в слаку
 // const mySet = new Set([1, 2, 1, 4, 3, 2]);
 // const result = [...mySet];
 // console.log(result);
-
 
 // const books = [
 //   {
@@ -1412,7 +1351,6 @@
 // const bookByAuthor = books.find(book => book.author === AUTHOR);
 // console.log(bookWithTitle);
 // console.log(bookByAuthor);
-
 
 // const getUserWithEmail = (users, email) => {
 //   // return users.find(user => user.email === email);
@@ -1489,7 +1427,6 @@
 //     // "blackburndotson@furnigeer.com"
 // );
 
-
 // const firstArray = [26, 94, 36, 18];
 // const secondArray = [17, 61, 23];
 // const thirdArray = [17, 26, 94, 61, 36, 23, 18];
@@ -1505,7 +1442,6 @@
 
 // console.log(eachElementInFirstIsEven);
 // console.log(eachElementInFirstIsOdd);
-
 
 // const isEveryUserActive = users => {
 //   //   return users.every(user => user.isActive === true);
@@ -1577,7 +1513,6 @@
 //   },
 // ]);
 
-
 // const firstArray = [26, 94, 36, 18];
 // const secondArray = [17, 61, 23];
 // const thirdArray = [17, 26, 94, 61, 36, 23, 18];
@@ -1590,7 +1525,6 @@
 
 // const anyElementInThirdIsEven = thirdArray.some(number => number % 2 === 0);
 // const anyElementInThirdIsOdd = thirdArray.some(number => number % 2 !== 0);
-
 
 // const isAnyUserActive = users => {
 //   // return users.some(user => user.isActive === true);
@@ -1662,7 +1596,6 @@
 //   },
 // ]);
 
-
 // const players = {
 //   mango: 1270,
 //   poly: 468,
@@ -1676,6 +1609,5 @@
 // });
 // console.log(totalPlayTime);
 // const averagePlayTime = totalPlayTime / playtimes.length;
-
 
 //-------продовження див дз35 в Lesson-8 ------------------------

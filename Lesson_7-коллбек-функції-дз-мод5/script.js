@@ -380,10 +380,10 @@
 //   return total / args.length;
 // }
 // const calculateAverage = (...args) => {
-//     let total = 0;
-//     args.forEach(item => total += item)
-//     return total / args.length
-// }
+//   let total = 0;
+//   args.forEach(item => (total += item));
+//   return total / args.length;
+// };
 
 // const calculateAverage = (...args) => args.reduce((acc, item) => acc + item, 0) / args.length;
 
