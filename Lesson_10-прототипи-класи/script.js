@@ -562,6 +562,7 @@
 //--------------------
 // 1TASK
 const categoriesList = document.querySelectorAll('#categories li.item');
+console.log(categoriesList); //масив li.item
 const categoriesItem = categoriesList.length;
 console.log('Number of categories:', categoriesItem); //кількість категорій 3
 
@@ -612,3 +613,4 @@ categoriesList.forEach(element => {
 // const firstMenuItem = document.querySelector('.menu-item');
 // firstMenuItem.style.color = 'tomato';
 // // console.log(firstMenuItem);
+//---------
