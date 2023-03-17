@@ -499,13 +499,26 @@ const images = [
   },
 ];
 const galleryImages = document.querySelector('.gallery');
+galleryImages.style.backgroundColor = '#f1b6a1';
+galleryImages.style.display = 'flex';
+galleryImages.style.listStyle = 'none';
+galleryImages.style.justifyContent = 'center';
+galleryImages.style.padding = '30px 0';
 
 const itemImages = images.forEach(item => {
   const imageItem = document.createElement('li');
   const image = document.createElement('img');
   image.src = item.url;
   image.alt = item.alt;
-  image.width = 350;
+  image.height = 200;
+  image.style.display = 'block';
+
+  // console.log(galleryImages.hasChildNodes()); //перевірка чи є вкладені вузли Children
+  // galleryImages.hasChildNodes() === false
+  //   ? (imageItem.style.marginLeft = '0')
+  //   : (imageItem.style.marginLeft = '30px');
+
+  imageItem.style.marginLeft = galleryImages.hasChildNodes() ? '30px' : '0'; // крутий тернарник від Борі
 
   galleryImages.append(imageItem);
   imageItem.append(image);
@@ -526,16 +539,20 @@ console.log(galleryImages);
 
 //--------------------------------------------------------
 
+// const text = message === messageUser ? 'True!' : "Don't you know? ECMAScript!";
+
+// text[0] === 'a' ? (message = 'yes') : (message = 'no');
+
 //-------------------------------------------------------------
-// const list = document.querySelector('.list');
-// const newTechnologies = ['React', 'TypeScript', 'Node.js'];
+const list = document.querySelector('.list');
+const newTechnologies = ['React', 'TypeScript', 'Node.js'];
 
-// const markup = newTechnologies
-//   .map(technology => `<li class="list-item new">${technology}</li>`)
-//   .join('');
+const markup = newTechnologies
+  .map(technology => `<li class="list-item new">${technology}</li>`)
+  .join('');
 
-// list.insertAdjacentHTML('beforeend', markup);
-// list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
+list.insertAdjacentHTML('beforeend', markup);
+list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
 //---------------------------------------------------------------
 //4TASK
 // let counterValue = 0;
