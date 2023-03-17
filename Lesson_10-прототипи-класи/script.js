@@ -467,6 +467,23 @@
 // list.append(lastItem);
 
 //----------------------------------------
+// 1TASK
+
+// const categoriesList = document.querySelectorAll('#categories li.item');
+// console.log(categoriesList); //масив li.item
+// const categoriesItem = categoriesList.length;
+// console.log('Number of categories:', categoriesItem); //кількість категорій 3
+
+// categoriesList.forEach(element => {
+//   // const categoriesTitle = element.querySelectorAll('h2')[0].textContent; //альтернативний запис
+//   const categoriesTitle = element.querySelector('h2').textContent;
+//   console.log('Category:', categoriesTitle); //назва категорій
+
+//   const categoriesTitleElement = element.querySelectorAll('li').length;
+//   console.log('Elements:', categoriesTitleElement); //кількість елементів в категорії
+// });
+
+//----------------------------------------
 // 2TASK
 
 // const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
@@ -483,7 +500,8 @@
 // console.log(ingredientsList);
 
 //----------------------------------------
-// 3TASK
+// 3TASK 1варіант
+
 const images = [
   {
     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
@@ -513,17 +531,63 @@ const itemImages = images.forEach(item => {
   image.height = 200;
   image.style.display = 'block';
 
-  // console.log(galleryImages.hasChildNodes()); //перевірка чи є вкладені вузли Children
-  // galleryImages.hasChildNodes() === false
+  // console.log(galleryImages.hasChildNodes()); //перевірка чи є вкладені вузли-Children
+  // galleryImages.hasChildNodes() === false   // мій початковий варіант тернарника (((
   //   ? (imageItem.style.marginLeft = '0')
   //   : (imageItem.style.marginLeft = '30px');
 
-  imageItem.style.marginLeft = galleryImages.hasChildNodes() ? '30px' : '0'; // крутий тернарник від Борі
+  imageItem.style.marginLeft = galleryImages.hasChildNodes() ? '30px' : '0'; // нормальний тернарник
 
-  galleryImages.append(imageItem);
-  imageItem.append(image);
+  // galleryImages.append(imageItem);
+  // imageItem.append(image);
+
+  imageItem.appendChild(image);
+  galleryImages.appendChild(imageItem);
 });
 console.log(galleryImages);
+
+//----------------------------------------------
+//4TASK
+
+// let counterValue = 0;
+// const value = document.querySelector('#value');
+
+// const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
+// const decrementClick = () => {
+//   counterValue -= 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// decrementBtn.addEventListener('click', decrementClick);
+
+// const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
+// const incrementClick = () => {
+//   counterValue += 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// incrementBtn.addEventListener('click', incrementClick);
+
+//----------------------------------------
+// 7TASK
+
+// const sizeInput = document.querySelector('#font-size-control');
+// const textOutput = document.querySelector('#text');
+// console.log(textOutput); //собі для перевірки
+// console.log(sizeInput); //собі для перевірки
+// console.log(sizeInput.min); //собі для перевірки
+// console.log(sizeInput.max); //собі для перевірки
+
+// const sizeControl = () => {
+//   textOutput.style.fontSize = sizeInput.value + 'px';
+//   console.log(sizeInput.value + 'px'); //собі для перевірки
+// };
+// sizeInput.addEventListener('input', sizeControl);
+// console.log(textOutput.style); //собі для перевірки
+
+//----------------------------------------
+
+//---------------------6 mod приклади з конспекта----------------------
 
 // galleryImages.insertAdjacentHTML('beforeend', itemImages);
 
@@ -554,27 +618,7 @@ const markup = newTechnologies
 list.insertAdjacentHTML('beforeend', markup);
 list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
 //---------------------------------------------------------------
-//4TASK
-// let counterValue = 0;
-// const value = document.querySelector('#value');
 
-// const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
-// const decrementClick = () => {
-//   counterValue -= 1;
-//   value.textContent = counterValue;
-//   console.log(counterValue); //собі для перевірки
-// };
-// decrementBtn.addEventListener('click', decrementClick);
-
-// const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
-// const incrementClick = () => {
-//   counterValue += 1;
-//   value.textContent = counterValue;
-//   console.log(counterValue); //собі для перевірки
-// };
-// incrementBtn.addEventListener('click', incrementClick);
-
-//---------------------6 mod приклад з конспекта----------------------
 // const singleBtn = document.querySelector('#single');
 
 // const handleClick = () => {
@@ -600,22 +644,6 @@ list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
 // multiBtn.addEventListener('click', secondCallback);
 // multiBtn.addEventListener('click', thirdCallback);
 
-//----------------------------------------
-// 7TASK
-// const sizeInput = document.querySelector('#font-size-control');
-// const textOutput = document.querySelector('#text');
-// console.log(textOutput); //собі для перевірки
-// console.log(sizeInput); //собі для перевірки
-// console.log(sizeInput.min); //собі для перевірки
-// console.log(sizeInput.max); //собі для перевірки
-
-// const sizeControl = () => {
-//   textOutput.style.fontSize = sizeInput.value + 'px';
-//   console.log(sizeInput.value + 'px'); //собі для перевірки
-// };
-// sizeInput.addEventListener('input', sizeControl);
-// console.log(textOutput.style); //собі для перевірки
-
 //---------------------6 mod приклади з конспекта---------------------
 // const textInput = document.querySelector('.text-input');
 // const output = document.querySelector('.output');
@@ -631,20 +659,6 @@ list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
 //   console.log(rng.value);
 // }
 //--------------------
-// 1TASK
-// const categoriesList = document.querySelectorAll('#categories li.item');
-// console.log(categoriesList); //масив li.item
-// const categoriesItem = categoriesList.length;
-// console.log('Number of categories:', categoriesItem); //кількість категорій 3
-
-// categoriesList.forEach(element => {
-//   // const categoriesTitle = element.querySelectorAll('h2')[0].textContent; //альтернативний запис
-//   const categoriesTitle = element.querySelector('h2').textContent;
-//   console.log('Category:', categoriesTitle); //назва категорій
-
-//   const categoriesTitleElement = element.querySelectorAll('li').length;
-//   console.log('Elements:', categoriesTitleElement); //кількість елементів в категорії
-// });
 
 //----------
 // orderedItems.forEach(element => {
