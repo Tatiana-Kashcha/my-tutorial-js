@@ -516,35 +516,35 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-const galleryImages = document.querySelector('.gallery');
-galleryImages.style.backgroundColor = '#f1b6a1';
-galleryImages.style.display = 'flex';
-galleryImages.style.listStyle = 'none';
-galleryImages.style.justifyContent = 'center';
-galleryImages.style.padding = '30px 0';
+
+const galleryImagesEl = document.querySelector('.gallery');
+galleryImagesEl.style.backgroundColor = '#f1b6a1';
+galleryImagesEl.style.display = 'flex';
+galleryImagesEl.style.listStyle = 'none';
+galleryImagesEl.style.justifyContent = 'center';
+galleryImagesEl.style.padding = '30px 0';
 
 const itemImages = images.forEach(item => {
-  const imageItem = document.createElement('li');
-  const image = document.createElement('img');
-  image.src = item.url;
-  image.alt = item.alt;
-  image.height = 200;
-  image.style.display = 'block';
+  const imageItemEl = document.createElement('li');
+  const imageEl = document.createElement('img');
+  imageEl.src = item.url;
+  imageEl.alt = item.alt;
+  imageEl.height = 200;
+  imageEl.style.display = 'block';
 
-  // console.log(galleryImages.hasChildNodes()); //перевірка чи є вкладені вузли-Children
-  // galleryImages.hasChildNodes() === false   // мій початковий варіант тернарника (((
-  //   ? (imageItem.style.marginLeft = '0')
-  //   : (imageItem.style.marginLeft = '30px');
+  // console.log(galleryImagesEl.hasChildNodes()); //перевірка чи є вкладені вузли-Children
+  // galleryImagesEl.hasChildNodes() === false   // мій початковий варіант тернарника (((
+  //   ? (imageItemEl.style.marginLeft = '0')
+  //   : (imageItemEl.style.marginLeft = '30px');
 
-  imageItem.style.marginLeft = galleryImages.hasChildNodes() ? '30px' : '0'; // нормальний тернарник
+  imageItemEl.style.marginLeft = galleryImagesEl.hasChildNodes() ? '30px' : '0'; // нормальний тернарник
 
-  // galleryImages.append(imageItem);
-  // imageItem.append(image);
-
-  imageItem.appendChild(image);
-  galleryImages.appendChild(imageItem);
+  imageItemEl.appendChild(imageEl);
+  galleryImagesEl.appendChild(imageItemEl);
 });
-console.log(galleryImages);
+console.log(galleryImagesEl);
+
+// 3TASK 2варіант
 
 //----------------------------------------------
 //4TASK
