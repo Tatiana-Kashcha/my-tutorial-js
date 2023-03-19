@@ -500,7 +500,7 @@
 // console.log(ingredientsList);
 
 //----------------------------------------
-// 3TASK 1варіант
+// 3TASK
 
 const images = [
   {
@@ -516,7 +516,7 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
+// 3TASK 1варіант
 const galleryImagesEl = document.querySelector('.gallery');
 galleryImagesEl.style.backgroundColor = '#f1b6a1';
 galleryImagesEl.style.display = 'flex';
@@ -524,29 +524,53 @@ galleryImagesEl.style.listStyle = 'none';
 galleryImagesEl.style.justifyContent = 'center';
 galleryImagesEl.style.padding = '30px 0';
 
-const itemImages = images.forEach(item => {
-  const imageItemEl = document.createElement('li');
-  const imageEl = document.createElement('img');
-  imageEl.src = item.url;
-  imageEl.alt = item.alt;
-  imageEl.height = 200;
-  imageEl.style.display = 'block';
+const makeGalleryImages = imgEl => {
+  const { url, alt } = imgEl;
+  return `<li class="list-item"><img src=${url} alt=${alt} height = 200></li>`;
+};
+const itemImages = images.map(makeGalleryImages).join('');
+galleryImagesEl.insertAdjacentHTML('beforeend', itemImages);
 
-  // console.log(galleryImagesEl.hasChildNodes()); //перевірка чи є вкладені вузли-Children
-  // galleryImagesEl.hasChildNodes() === false   // мій початковий варіант тернарника (((
-  //   ? (imageItemEl.style.marginLeft = '0')
-  //   : (imageItemEl.style.marginLeft = '30px');
-
-  imageItemEl.style.marginLeft = galleryImagesEl.hasChildNodes() ? '30px' : '0'; // нормальний тернарник
-
-  imageItemEl.appendChild(imageEl);
-  galleryImagesEl.appendChild(imageItemEl);
+const imageItemEl = galleryImagesEl.querySelectorAll('.list-item').forEach(item => {
+  item.style.display = 'block';
+  item.style.marginLeft = '30px';
 });
+galleryImagesEl.firstElementChild.style.marginLeft = '0';
+
+// console.log(galleryImagesEl.firstElementChild); //собі для перевірки
 console.log(galleryImagesEl);
 
-// 3TASK 2варіант
+//------------------------
 
-//----------------------------------------------
+// 3TASK 2варіант
+// const galleryImagesEl = document.querySelector('.gallery');
+// galleryImagesEl.style.backgroundColor = '#f1b6a1';
+// galleryImagesEl.style.display = 'flex';
+// galleryImagesEl.style.listStyle = 'none';
+// galleryImagesEl.style.justifyContent = 'center';
+// galleryImagesEl.style.padding = '30px 0';
+
+// const itemImages = images.forEach(item => {
+//   const imageItemEl = document.createElement('li');
+//   const imageEl = document.createElement('img');
+//   imageEl.src = item.url;
+//   imageEl.alt = item.alt;
+//   imageEl.height = 200;
+//   imageEl.style.display = 'block';
+
+// console.log(galleryImagesEl.hasChildNodes()); //перевірка чи є вкладені вузли-Children
+// galleryImagesEl.hasChildNodes() === false   // мій початковий варіант тернарника (((
+//   ? (imageItemEl.style.marginLeft = '0')
+//   : (imageItemEl.style.marginLeft = '30px');
+
+//   imageItemEl.style.marginLeft = galleryImagesEl.hasChildNodes() ? '30px' : '0'; // нормальний тернарник
+
+//   imageItemEl.appendChild(imageEl);
+//   galleryImagesEl.appendChild(imageItemEl);
+// });
+// console.log(galleryImagesEl);
+
+//---------------------------------------------------
 //4TASK
 
 // let counterValue = 0;
@@ -602,21 +626,31 @@ console.log(galleryImagesEl);
 // console.log(item);
 
 //--------------------------------------------------------
+// const list = document.querySelector('.list');
+// const newTechnologies = ['React', 'TypeScript', 'Node.js'];
+
+// const markup = newTechnologies
+//   .map(technology => `<li class="list-item new">${technology}</li>`)
+//   .join('');
+
+// list.insertAdjacentHTML('beforeend', markup);
+// list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
+//---------------------------------------------------------------
 
 // const text = message === messageUser ? 'True!' : "Don't you know? ECMAScript!";
 
 // text[0] === 'a' ? (message = 'yes') : (message = 'no');
 
 //-------------------------------------------------------------
-const list = document.querySelector('.list');
-const newTechnologies = ['React', 'TypeScript', 'Node.js'];
+// const list = document.querySelector('.list');
+// const newTechnologies = ['React', 'TypeScript', 'Node.js'];
 
-const markup = newTechnologies
-  .map(technology => `<li class="list-item new">${technology}</li>`)
-  .join('');
+// const markup = newTechnologies
+//   .map(technology => `<li class="list-item new">${technology}</li>`)
+//   .join('');
 
-list.insertAdjacentHTML('beforeend', markup);
-list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
+// list.insertAdjacentHTML('beforeend', markup);
+// list.insertAdjacentHTML('beforebegin', '<h2>Popular technologies</h2>');
 //---------------------------------------------------------------
 
 // const singleBtn = document.querySelector('#single');
