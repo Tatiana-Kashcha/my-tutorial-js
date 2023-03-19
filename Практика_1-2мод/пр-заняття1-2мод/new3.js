@@ -113,6 +113,7 @@
 
 // console.log(calculateTotalBalance(users));
 
+// task 6
 // Получить массив всех умений всех пользователей (поле skills), при этом не должно быть
 // повторяющихся умений и они должны быть отсортированы в алфавитном порядке.
 
@@ -124,11 +125,13 @@
 
 // console.log(newSortSkils);
 
+// task 7
 // В каждом массиве есть уникальная строка, в которой не повторяются буквы. Найдите и выведите в консоль эту строчку.должен быть такой результат
-//findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']); // === 'foo'
-// findUniq(["fghj", "ghfj", "abcd", "jhgf", "fghj", "fgjh", "ghjf"]));// === 'abcd'
+// findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']); // === 'foo'
+// findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf']); // === 'abcd'
 // findUniq(["qwe", "camp", "acmp", "pmac", "camp", "apmc", "pmac"])); // === 'qwe'
 
+// task 7 - Рішення Антона ------------------------
 // function findUniq(arr) {
 //   let newArr = arr.map(a => {
 //     return [...new Set(a.toLowerCase())].sort().join('');
@@ -138,28 +141,32 @@
 //   }
 // }
 
+// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']));
+// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf']));
 // console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac']));
-const arrayUniquse = [];
-function findUniq(arr) {
-  const newArr = arr.map(string => {
-    return string.split('').sort().join('');
-    // return [...string].sort().join("");
-  });
-  for (let i = 0; i < newArr.length; i++) {
-    const comparisonElement = newArr[i];
-    let acc = 0;
-    newArr.forEach(element => {
-      if (comparisonElement === element) {
-        acc += 1;
-      }
-    });
-    if (acc === 1) {
-      arrayUniquse.push(arr[i]);
-    }
-  }
-  return arrayUniquse;
-}
 
-console.log(
-  findUniq(['qwe', 'camp', 'acmp', 'pmac', 'hgt', 'yytr', 'yytr', 'camp', 'cp', 'apmc', 'pmac'])
-);
+// task 7 - Рішення Саші (для трошки іншого масиву) -------------------
+// const arrayUniquse = [];
+// function findUniq(arr) {
+//   const newArr = arr.map(string => {
+//     return string.split('').sort().join('');
+//     // return [...string].sort().join("");
+//   });
+//   for (let i = 0; i < newArr.length; i++) {
+//     const comparisonElement = newArr[i];
+//     let acc = 0;
+//     newArr.forEach(element => {
+//       if (comparisonElement === element) {
+//         acc += 1;
+//       }
+//     });
+//     if (acc === 1) {
+//       arrayUniquse.push(arr[i]);
+//     }
+//   }
+//   return arrayUniquse;
+// }
+
+// console.log(
+//   findUniq(['qwe', 'camp', 'acmp', 'pmac', 'hgt', 'yytr', 'yytr', 'camp', 'cp', 'apmc', 'pmac'])
+// );
