@@ -110,7 +110,6 @@
 // }
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, "b"));
 
-
 // ----------------------------2 домашка--------------------------------------
 
 //6. Напишіть функцію updateObject, яка приймає об'єкт та перелік ключів
@@ -124,7 +123,6 @@
 //   return newObject;
 // }
 // console.log(updateObject({ a: 1, b: 2, c: 3 }, 'b', 'c'));
-
 
 // 7. Напишіть функцію changeObject, яка приймає як параметр об'єкт
 // та повертає масив, в якому кожен елемент це масив, який складається
@@ -141,7 +139,6 @@
 // }
 // console.log(changeObject({ a: 1, b: 2, c: 3 }));
 // // [["a", 1], ["b", 2], ["c", 3]]
-
 
 // 8. Напиши скрипт керування особистим кабінетом інтернет банку.
 //Є об'єкт account, в якому необхідно реалізувати методи для роботи
@@ -247,15 +244,13 @@
 // console.log('DEPOSIT:', account.getTotalSumByType(TYPES_TRANSACTION.DEPOSIT)); //ok
 // console.log('WITHDRAW:', account.getTotalSumByType(TYPES_TRANSACTION.WITHDRAW)); //ok
 
-
-
 //9. Напишіть функцію isPlainObject, яка перевіряє чи є параметр
 // простим об'єктом, а не масивом або null.
 // Якщо так, то повертає true, в противному випадку false
 
 // function isPlainObject(param) {
 //     if (typeof param === 'object' && !Array.isArray(param) && param !== null) {
-      
+
 //       return true;
 //     }
 //        return false;
@@ -263,7 +258,6 @@
 // console.log(isPlainObject({ a: 1, b: 2, c: 3}));
 // console.log(isPlainObject([11, 22, 33]));
 // console.log(isPlainObject(null));
-
 
 //10. Напишіть функцію isEmpty , яка перевіряє чи порожній обєкт.
 // Якщо так, то повертає true, в противному випадку false
@@ -294,7 +288,6 @@
 // console.log(isEmpty({}));
 // console.log(isEmpty({ a: 1, b: 2 }));
 
-
 //11. Напишіть дві функції
 // letMeSeeYourName(callback) - має запитувати ім'я користувача через prompt і
 // викликати callback функцію
@@ -309,7 +302,6 @@
 //         return;
 // }
 // function greet(name) {
-//     console.log(`Привіт ${name}`); 
+//     console.log(`Привіт ${name}`);
 // }
 // letMeSeeYourName(greet);
-
