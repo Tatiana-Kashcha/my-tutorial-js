@@ -195,11 +195,11 @@
 //     if (!withoutElementArray.includes(normalizeValue)) {
 //       return array[index];
 //     }
-//     return 'not found the uniq string =(';
 //   }
+//   return 'not found the uniq string =(';
 // }
 
 // console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); //працює
-// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //не працює!
-// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //не працює!
+// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //працює!
+// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //працює!
 // console.log(findUniq(['camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // нема відрізняючого елемента //працює
