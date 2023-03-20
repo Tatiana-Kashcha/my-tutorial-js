@@ -502,20 +502,20 @@
 //----------------------------------------
 // 3TASK
 
-const images = [
-  {
-    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'White and Black Long Fur Cat',
-  },
-  {
-    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
-  },
-  {
-    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-    alt: 'Group of Horses Running',
-  },
-];
+// const images = [
+//   {
+//     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'White and Black Long Fur Cat',
+//   },
+//   {
+//     url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+//   },
+//   {
+//     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+//     alt: 'Group of Horses Running',
+//   },
+// ];
 // 3TASK 1варіант
 // const galleryImagesEl = document.querySelector('.gallery');
 // galleryImagesEl.style.backgroundColor = '#f1b6a1';
@@ -593,14 +593,19 @@ const images = [
 // incrementBtn.addEventListener('click', incrementClick);
 //---------------------------------------------------
 //5TASK
-const nameInput = document.querySelector('#name-input');
-const nameOutput = document.querySelector('#name-output');
-console.log(nameInput);
+// const nameInput = document.querySelector('#name-input');
+// const nameOutput = document.querySelector('#name-output');
 
-if (nameInput.textContent) {
-  nameOutput.textContent = nameInput.textContent;
-}
-console.log(nameOutput.textContent);
+// nameInput.addEventListener('input', event => {
+//   nameOutput.textContent = 'Anonymous';
+//   if (event.currentTarget.value) {
+//     nameOutput.textContent = event.currentTarget.value;
+//   }
+//   console.log(nameOutput.textContent);
+// });
+
+//---------------------------------------
+
 //----------------------------------------
 // 7TASK
 
@@ -688,12 +693,6 @@ console.log(nameOutput.textContent);
 // multiBtn.addEventListener('click', thirdCallback);
 
 //---------------------6 mod приклади з конспекта---------------------
-// const textInput = document.querySelector('.text-input');
-// const output = document.querySelector('.output');
-
-// textInput.addEventListener('input', event => {
-//   output.textContent = event.currentTarget.value;
-// });
 
 // function fun1() {
 //   var rng = document.getElementById('r1'); //rng - это Input
@@ -702,7 +701,13 @@ console.log(nameOutput.textContent);
 //   console.log(rng.value);
 // }
 //--------------------
+// const textInput = document.querySelector('.text-input');
+// const output = document.querySelector('.output');
 
+// textInput.addEventListener('input', event => {
+//   output.textContent = event.currentTarget.value;
+// });
+// console.log(output.textContent);
 //----------
 // orderedItems.forEach(element => {
 //   totalPrice += element;
