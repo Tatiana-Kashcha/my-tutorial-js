@@ -591,6 +591,7 @@
 //   console.log(counterValue); //собі для перевірки
 // };
 // incrementBtn.addEventListener('click', incrementClick);
+
 //---------------------------------------------------
 //5TASK
 // const nameInput = document.querySelector('#name-input');
@@ -599,13 +600,27 @@
 // nameInput.addEventListener('input', event => {
 //   nameOutput.textContent = 'Anonymous';
 //   if (event.currentTarget.value) {
-//     nameOutput.textContent = event.currentTarget.value;
+//     nameOutput.textContent = event.currentTarget.value.trim(); //метод trim прибирає пробіли по краях
 //   }
 //   console.log(nameOutput.textContent);
+//   console.log(typeof nameOutput.textContent); //string
 // });
 
 //---------------------------------------
+//6TASK
 
+// const textInput = document.querySelector('#validation-input');
+// const textLength = document.querySelector('#validation-input input[data-length="6"]');
+
+// // textInput.addEventListener('input', event => {
+// //   console.log(event.currentTarget.value);
+// //   console.log(event.currentTarget.value.length);
+// // });
+
+// textInput.addEventListener('blur', () => {
+//   console.log(textInput.value);
+//   console.log(textInput.value.length);
+// });
 //----------------------------------------
 // 7TASK
 
