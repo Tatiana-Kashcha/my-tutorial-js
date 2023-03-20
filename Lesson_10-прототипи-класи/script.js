@@ -609,18 +609,18 @@
 //---------------------------------------
 //6TASK
 
-// const textInput = document.querySelector('#validation-input');
-// const textLength = document.querySelector('#validation-input input[data-length="6"]');
+const textInput = document.querySelector('#validation-input');
+const textLength = document.querySelector('#validation-input input[data-length="6"]');
 
 // // textInput.addEventListener('input', event => {
 // //   console.log(event.currentTarget.value);
 // //   console.log(event.currentTarget.value.length);
 // // });
 
-// textInput.addEventListener('blur', () => {
-//   console.log(textInput.value);
-//   console.log(textInput.value.length);
-// });
+textInput.addEventListener('blur', () => {
+  console.log(textInput.value.trim()); //метод trim прибирає пробіли по краях
+  console.log(textInput.value.trim().length);
+});
 //----------------------------------------
 // 7TASK
 
