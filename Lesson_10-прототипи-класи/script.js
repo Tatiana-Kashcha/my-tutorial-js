@@ -500,23 +500,23 @@
 // console.log(ingredientsList);
 
 //----------------------------------------
-// 3TASK
+// 3TASK створення галереї
 
-// const images = [
-//   {
-//     url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-//     alt: 'White and Black Long Fur Cat',
-//   },
-//   {
-//     url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-//     alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
-//   },
-//   {
-//     url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
-//     alt: 'Group of Horses Running',
-//   },
-// ];
-// 3TASK 1варіант
+const images = [
+  {
+    url: 'https://images.pexels.com/photos/140134/pexels-photo-140134.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'White and Black Long Fur Cat',
+  },
+  {
+    url: 'https://images.pexels.com/photos/213399/pexels-photo-213399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Orange and White Koi Fish Near Yellow Koi Fish',
+  },
+  {
+    url: 'https://images.pexels.com/photos/219943/pexels-photo-219943.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+    alt: 'Group of Horses Running',
+  },
+];
+// // 3TASK 1варіант OLD-варіант
 // const galleryImagesEl = document.querySelector('.gallery');
 // galleryImagesEl.style.backgroundColor = '#f1b6a1';
 // galleryImagesEl.style.display = 'flex';
@@ -541,8 +541,60 @@
 // console.log(galleryImagesEl);
 
 //------------------------
+// 3TASK 1варіант
+const galleryImagesEl = document.querySelector('.gallery');
+galleryImagesEl.style.backgroundColor = '#f1b6a1';
+galleryImagesEl.style.display = 'flex';
+galleryImagesEl.style.listStyle = 'none';
+galleryImagesEl.style.justifyContent = 'center';
+galleryImagesEl.style.padding = '30px 0';
 
-// 3TASK 2варіант
+const makeGalleryImages = imgEl => {
+  const { url, alt } = imgEl;
+  return `<li class="list-item"><img class="gallery-item" src=${url} alt=${alt} height = 200></li>`;
+};
+const itemImages = images.map(makeGalleryImages).join('');
+galleryImagesEl.insertAdjacentHTML('beforeend', itemImages);
+
+const imageItemEl = galleryImagesEl.querySelectorAll('.list-item').forEach(item => {
+  item.style.marginLeft = '30px';
+});
+galleryImagesEl.firstElementChild.style.marginLeft = '0';
+
+const imageEl = galleryImagesEl.querySelectorAll('.gallery-item').forEach(el => {
+  el.style.display = 'block';
+});
+
+console.log(galleryImagesEl);
+
+//------------------------
+
+// 3TASK 2 варіант в дз
+// const galleryImagesEl = document.querySelector('.gallery');
+// galleryImagesEl.style.backgroundColor = '#f1b6a1';
+// galleryImagesEl.style.display = 'flex';
+// galleryImagesEl.style.listStyle = 'none';
+// galleryImagesEl.style.justifyContent = 'center';
+// galleryImagesEl.style.padding = '30px 0';
+
+// const itemImages = images.map(({ url, alt }) => {
+//   const imageItemEl = document.createElement('li');
+//   const imageEl = document.createElement('img');
+//   imageEl.src = url;
+//   imageEl.alt = alt;
+//   imageEl.height = 200;
+//   imageEl.style.display = 'block';
+//   imageItemEl.style.marginLeft = '30px';
+
+//   imageItemEl.append(imageEl);
+//   return imageItemEl;
+// });
+// galleryImagesEl.append(...itemImages);
+// galleryImagesEl.firstElementChild.style.marginLeft = '0';
+// console.log(galleryImagesEl);
+//------------------------
+
+// 3TASK 2 OLD-варіант //forEach додає на кожній ітерації картинку - ТАК НЕ МОЖНО!
 // const galleryImagesEl = document.querySelector('.gallery');
 // galleryImagesEl.style.backgroundColor = '#f1b6a1';
 // galleryImagesEl.style.display = 'flex';
@@ -644,7 +696,17 @@
 // console.log(textOutput.style); //собі для перевірки
 
 //----------------------------------------
+// 8TASK
 
+//----------------------------------------
+// 9TASK
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
+
+// const widgetEl = document.querySelector('.widget');
 //---------------------6 mod приклади з конспекта----------------------
 
 // galleryImages.insertAdjacentHTML('beforeend', itemImages);

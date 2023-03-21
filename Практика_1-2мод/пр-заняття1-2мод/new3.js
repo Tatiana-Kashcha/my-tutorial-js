@@ -171,9 +171,9 @@
 // console.log(
 //   findUniq(['qwe', 'camp', 'acmp', 'pmac', 'hgt', 'yytr', 'yytr', 'camp', 'cp', 'apmc', 'pmac']) //працює
 // );
-// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //не працює!
-// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //не працює!
-// console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); //не працює!
+// console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //не працює! 'foo'
+// console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //не працює! 'abcd'
+// console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); //не працює! 'qwe'
 // console.log(findUniq(['camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // нема відрізняючого елемента //не працює!
 
 // // task 7 - Рішення ментора ------------------------

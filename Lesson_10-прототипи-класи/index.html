@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <!-- для 6 TASK -->
+    <!-- для 6, 9 TASK -->
     <style>
       #validation-input {
         border: 2px solid #bdbdbd;
@@ -17,6 +17,26 @@
 
       #validation-input.invalid {
         border-color: #f44336;
+      }
+
+      .widget {
+        text-align: center;
+      }
+
+      .widget p {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-size: 48px;
+      }
+
+      .widget span {
+        font-family: monospace;
+      }
+
+      .widget button {
+        padding: 8px 12px;
+        font-size: 20px;
+        cursor: pointer;
       }
     </style>
   </head>
@@ -140,6 +160,12 @@
     <span id="text">Abracadabra!</span>
     <!-- 7TASK -->
 
+    <!-- 9TASK -->
+    <div class="widget">
+      <p>Background color: <span class="color">-</span></p>
+      <button type="button" class="change-color">Change color</button>
+    </div>
+    <!-- 9TASK -->
     <script src="./script.js"></script>
   </body>
 </html>

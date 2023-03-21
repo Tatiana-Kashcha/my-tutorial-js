@@ -420,14 +420,14 @@
 //   });
 // }
 
-const nameInStr = (str, name) =>
-  [...str.toLowerCase()].reduce(
-    (acc, item) => acc < name.length && item === name[acc].toLowerCase() ? acc + 1 : acc,
-    0
-  ) === name.length;
+// const nameInStr = (str, name) =>
+//   [...str.toLowerCase()].reduce(
+//     (acc, item) => acc < name.length && item === name[acc].toLowerCase() ? acc + 1 : acc,
+//     0
+//   ) === name.length;
 
-console.log(nameInStr('ilirptyrwdihfarboeraendebejdvo  ba y    nzxfjyeaamdfe deiablea hjlmria ui  eeeulerwnawrdnn lnea',
-'Tim')); //true
+// console.log(nameInStr('ilirptyrwdihfarboeraendebejdvo  ba y    nzxfjyeaamdfe deiablea hjlmria ui  eeeulerwnawrdnn lnea',
+// 'Tim')); //true
 // console.log(nameInStr("Next to a lake", "chris")); //false
 // console.log(nameInStr("Under a sea", "chris")); //false
 // console.log(nameInStr("A crew that boards the ship", "chris")); //false
@@ -449,10 +449,10 @@ console.log(nameInStr('ilirptyrwdihfarboeraendebejdvo  ba y    nzxfjyeaamdfe dei
 //     Contains all of the correct letters in "Allison", in order,
 //     but not enough of all of them (missing an 'l').
 
-[
-  "kd dyj rleyhrralec tayetjoxahhmiplqyd aj ttarac gbprydo riierdl n ch ttnroimdh  trbarim ej",
-  "Alexandria",
-];
+// [
+//   "kd dyj rleyhrralec tayetjoxahhmiplqyd aj ttarac gbprydo riierdl n ch ttnroimdh  trbarim ej",
+//   "Alexandria",
+// ];
 // [ 'mhbd dosadwemnd esfio cmrtsyyaoeyiseaphajw rjhsyn  trtnneacfr e irasarrmd ltsijj eneyiixedwlk  rehjnyolroo n',
 //   'Ashley' ]
 
