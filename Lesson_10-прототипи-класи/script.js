@@ -610,17 +610,22 @@
 //6TASK
 
 const textInput = document.querySelector('#validation-input');
-const textLength = document.querySelector('#validation-input input[data-length="6"]');
-
-// // textInput.addEventListener('input', event => {
-// //   console.log(event.currentTarget.value);
-// //   console.log(event.currentTarget.value.length);
-// // });
+// const textLength = document.querySelector('#validation-input input[data-length="6"]'); //не потрібне
 
 textInput.addEventListener('blur', () => {
-  console.log(textInput.value.trim()); //метод trim прибирає пробіли по краях
-  console.log(textInput.value.trim().length);
+  if (textInput.value.trim().length === Number(textInput.dataset.length)) {
+    textInput.classList.add('valid');
+    textInput.classList.remove('invalid');
+  } else {
+    textInput.classList.add('invalid');
+    textInput.classList.remove('valid');
+  }
+
+  console.log(Number(textInput.dataset.length));
+  // console.log(Number(textInput.getAttribute('data-length'))); // альтернативний запис
+  console.log(textInput.value.trim().length); //метод trim прибирає пробіли по краях
 });
+
 //----------------------------------------
 // 7TASK
 
@@ -761,4 +766,7 @@ textInput.addEventListener('blur', () => {
 // const firstMenuItem = document.querySelector('.menu-item');
 // firstMenuItem.style.color = 'tomato';
 // // console.log(firstMenuItem);
+//---------
+// const saveBtn = document.querySelector('button[data-action="save"]');
+// console.log(saveBtn.dataset.action); // "save"
 //---------
