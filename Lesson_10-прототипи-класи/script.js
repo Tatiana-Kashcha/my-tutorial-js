@@ -609,22 +609,22 @@
 //---------------------------------------
 //6TASK
 
-const textInput = document.querySelector('#validation-input');
-// const textLength = document.querySelector('#validation-input input[data-length="6"]'); //не потрібне
+// const textInput = document.querySelector('#validation-input');
+// // const textLength = document.querySelector('#validation-input input[data-length="6"]'); //не потрібне
 
-textInput.addEventListener('blur', () => {
-  if (textInput.value.trim().length === Number(textInput.dataset.length)) {
-    textInput.classList.add('valid');
-    textInput.classList.remove('invalid');
-  } else {
-    textInput.classList.add('invalid');
-    textInput.classList.remove('valid');
-  }
+// textInput.addEventListener('blur', () => {
+//   if (textInput.value.trim().length === Number(textInput.dataset.length)) {
+//     textInput.classList.add('valid');
+//     textInput.classList.remove('invalid');
+//   } else {
+//     textInput.classList.add('invalid');
+//     textInput.classList.remove('valid');
+//   }
 
-  console.log(Number(textInput.dataset.length));
-  // console.log(Number(textInput.getAttribute('data-length'))); // альтернативний запис
-  console.log(textInput.value.trim().length); //метод trim прибирає пробіли по краях
-});
+//   console.log(Number(textInput.dataset.length));
+//   // console.log(Number(textInput.getAttribute('data-length'))); // альтернативний запис
+//   console.log(textInput.value.trim().length); //метод trim прибирає пробіли по краях
+// });
 
 //----------------------------------------
 // 7TASK
