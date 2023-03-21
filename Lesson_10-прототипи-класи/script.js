@@ -516,31 +516,6 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-// // 3TASK 1варіант OLD-варіант
-// const galleryImagesEl = document.querySelector('.gallery');
-// galleryImagesEl.style.backgroundColor = '#f1b6a1';
-// galleryImagesEl.style.display = 'flex';
-// galleryImagesEl.style.listStyle = 'none';
-// galleryImagesEl.style.justifyContent = 'center';
-// galleryImagesEl.style.padding = '30px 0';
-
-// const makeGalleryImages = imgEl => {
-//   const { url, alt } = imgEl;
-//   return `<li class="list-item"><img src=${url} alt=${alt} height = 200></li>`;
-// };
-// const itemImages = images.map(makeGalleryImages).join('');
-// galleryImagesEl.insertAdjacentHTML('beforeend', itemImages);
-
-// const imageItemEl = galleryImagesEl.querySelectorAll('.list-item').forEach(item => {
-//   item.style.display = 'block';
-//   item.style.marginLeft = '30px';
-// });
-// galleryImagesEl.firstElementChild.style.marginLeft = '0';
-
-// // console.log(galleryImagesEl.firstElementChild); //собі для перевірки
-// console.log(galleryImagesEl);
-
-//------------------------
 // 3TASK 1варіант
 const galleryImagesEl = document.querySelector('.gallery');
 galleryImagesEl.style.backgroundColor = '#f1b6a1';
@@ -564,7 +539,7 @@ galleryImagesEl.firstElementChild.style.marginLeft = '0';
 const imageEl = galleryImagesEl.querySelectorAll('.gallery-item').forEach(el => {
   el.style.display = 'block';
 });
-
+// console.log(galleryImagesEl.firstElementChild); //собі для перевірки
 console.log(galleryImagesEl);
 
 //------------------------
