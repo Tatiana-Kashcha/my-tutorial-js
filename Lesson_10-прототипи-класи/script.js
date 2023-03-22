@@ -486,19 +486,19 @@
 //----------------------------------------
 // 2TASK варіант в дз
 
-const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
-const ingredientsList = document.querySelector('#ingredients');
+// const ingredients = ['Potatoes', 'Mushrooms', 'Garlic', 'Tomatos', 'Herbs', 'Condiments'];
+// const ingredientsList = document.querySelector('#ingredients');
 
-const ingredientsMarkup = ingredient => {
-  const ingredientsItem = document.createElement('li');
-  ingredientsItem.textContent = ingredient;
-  ingredientsItem.classList.add('item');
+// const ingredientsMarkup = ingredient => {
+//   const ingredientsItem = document.createElement('li');
+//   ingredientsItem.textContent = ingredient;
+//   ingredientsItem.classList.add('item');
 
-  return ingredientsItem;
-};
-const el = ingredients.map(ingredientsMarkup);
-ingredientsList.append(...el);
-console.log(ingredientsList);
+//   return ingredientsItem;
+// };
+// const el = ingredients.map(ingredientsMarkup);
+// ingredientsList.append(...el);
+// console.log(ingredientsList);
 
 //----------------------------------------
 // 2TASK OLD-варіант //for додає li на кожній ітерації - ТАК НЕ МОЖНО!
