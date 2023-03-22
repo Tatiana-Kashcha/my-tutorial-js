@@ -1,0 +1,16 @@
+/* 3TASK 1варіант */
+.gallery {
+  background-color: #f1b6a1;
+  padding: 30px 0;
+  display: flex;
+  list-style: none;
+  justify-content: center;
+}
+
+.list-item:not(:first-child) {
+  margin-left: 30px;
+}
+
+.gallery-item {
+  display: block;
+}

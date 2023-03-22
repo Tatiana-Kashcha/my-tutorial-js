@@ -516,30 +516,16 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-// 3TASK 1варіант
+// 3TASK 1 варіант в дз
 const galleryImagesEl = document.querySelector('.gallery');
-galleryImagesEl.style.backgroundColor = '#f1b6a1';
-galleryImagesEl.style.display = 'flex';
-galleryImagesEl.style.listStyle = 'none';
-galleryImagesEl.style.justifyContent = 'center';
-galleryImagesEl.style.padding = '30px 0';
 
 const makeGalleryImages = imgEl => {
   const { url, alt } = imgEl;
-  return `<li class="list-item"><img class="gallery-item" src=${url} alt=${alt} height = 200></li>`;
+  return `<li class="list-item"><img class="gallery-item" src=${url} alt=${alt} height = 200></li>`; //стилі додані в CSS
 };
 const itemImages = images.map(makeGalleryImages).join('');
 galleryImagesEl.insertAdjacentHTML('beforeend', itemImages);
 
-const imageItemEl = galleryImagesEl.querySelectorAll('.list-item').forEach(item => {
-  item.style.marginLeft = '30px';
-});
-galleryImagesEl.firstElementChild.style.marginLeft = '0';
-
-const imageEl = galleryImagesEl.querySelectorAll('.gallery-item').forEach(el => {
-  el.style.display = 'block';
-});
-// console.log(galleryImagesEl.firstElementChild); //собі для перевірки
 console.log(galleryImagesEl);
 
 //------------------------
@@ -569,6 +555,28 @@ console.log(galleryImagesEl);
 // console.log(galleryImagesEl);
 //------------------------
 
+// 3TASK 1 OLD-варіант // стил додавати через css, а не отак циклом forEach
+// const galleryImagesEl = document.querySelector('.gallery');
+
+// const makeGalleryImages = imgEl => {
+//   const { url, alt } = imgEl;
+//   return `<li class="list-item"><img class="gallery-item" src=${url} alt=${alt} height = 200></li>`;
+// };
+// const itemImages = images.map(makeGalleryImages).join('');
+// galleryImagesEl.insertAdjacentHTML('beforeend', itemImages);
+
+// const imageItemEl = galleryImagesEl.querySelectorAll('.list-item').forEach(item => {
+//   item.style.marginLeft = '30px';
+// });
+// galleryImagesEl.firstElementChild.style.marginLeft = '0';
+
+// const imageEl = galleryImagesEl.querySelectorAll('.gallery-item').forEach(el => {
+//   el.style.display = 'block';
+// });
+// // console.log(galleryImagesEl.firstElementChild); //собі для перевірки
+// console.log(galleryImagesEl);
+
+//-----------------------------
 // 3TASK 2 OLD-варіант //forEach додає на кожній ітерації картинку - ТАК НЕ МОЖНО!
 // const galleryImagesEl = document.querySelector('.gallery');
 // galleryImagesEl.style.backgroundColor = '#f1b6a1';
