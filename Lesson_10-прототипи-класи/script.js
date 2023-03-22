@@ -622,7 +622,29 @@
 // console.log(galleryImagesEl);
 
 //---------------------------------------------------
-//4TASK
+//4TASK 1 варіант в дз
+
+let counterValue = 0;
+const value = document.querySelector('#value');
+
+const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
+const decrementClick = () => {
+  counterValue -= 1;
+  value.textContent = counterValue;
+  console.log(counterValue); //собі для перевірки
+};
+decrementBtn.addEventListener('click', decrementClick);
+
+const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
+const incrementClick = () => {
+  counterValue += 1;
+  value.textContent = counterValue;
+  console.log(counterValue); //собі для перевірки
+};
+incrementBtn.addEventListener('click', incrementClick);
+//---------------------------------------------------
+
+//4TASK 2 варіант в дз
 
 // let counterValue = 0;
 // const value = document.querySelector('#value');
@@ -706,7 +728,49 @@ function getRandomHexColor() {
 }
 
 const widgetEl = document.querySelector('.widget');
-//---------------------6 mod приклади з конспекта----------------------
+// console.dir(widgetEl); //собі для перевірки
+
+const widgetColorSpan = widgetEl.children[0].firstElementChild;
+const widgetBtn = widgetEl.lastElementChild;
+// console.dir(widgetBtn); //собі для перевірки
+
+const onWidgetBtnClick = () => {
+  widgetBtn.onclick = getRandomHexColor();
+  widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+  widgetEl.style.backgroundColor = widgetColorSpan.textContent;
+
+  // console.log(widgetColorSpan.textContent); //собі для перевірки
+  // console.log(widgetEl); //собі для перевірки
+};
+widgetBtn.addEventListener('click', onWidgetBtnClick);
+
+//---------------------------------------------------
+// button.onclick = function () {
+//   alert('Клік!');
+// };
+//---------------------------------------------------
+// 4TASK
+// let counterValue = 0;
+// const value = document.querySelector('#value');
+
+// const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
+// const decrementClick = () => {
+//   counterValue -= 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// decrementBtn.addEventListener('click', decrementClick);
+
+// const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
+// const incrementClick = () => {
+//   counterValue += 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// incrementBtn.addEventListener('click', incrementClick);
+//---------------------------------------------------
 
 // galleryImages.insertAdjacentHTML('beforeend', itemImages);
 
