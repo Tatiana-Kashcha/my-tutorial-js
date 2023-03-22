@@ -699,13 +699,13 @@
 
 //----------------------------------------
 // 9TASK
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-// }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
-// const widgetEl = document.querySelector('.widget');
+const widgetEl = document.querySelector('.widget');
 //---------------------6 mod приклади з конспекта----------------------
 
 // galleryImages.insertAdjacentHTML('beforeend', itemImages);
