@@ -8,8 +8,8 @@
     <!-- для 3 TASK -->
     <link rel="stylesheet" href="./style.css" />
 
-    <!-- для 6, 9 TASK -->
     <style>
+      /* для 6 TASK */
       #validation-input {
         border: 2px solid #bdbdbd;
       }
@@ -21,7 +21,24 @@
       #validation-input.invalid {
         border-color: #f44336;
       }
+      /* для 8 TASK */
+      .login-form {
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+      }
 
+      .login-form label {
+        margin-bottom: 16px;
+      }
+
+      .login-form input,
+      .login-form button {
+        width: 100%;
+        padding: 4px;
+        font: inherit;
+      }
+      /* для 9 TASK */
       .widget {
         text-align: center;
       }
@@ -162,6 +179,20 @@
     <br />
     <span id="text">Abracadabra!</span>
     <!-- 7TASK -->
+
+    <!-- 8TASK -->
+    <form class="login-form">
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+      <button type="submit">Login</button>
+    </form>
+    <!-- 8TASK -->
 
     <!-- 9TASK -->
     <div class="widget">
