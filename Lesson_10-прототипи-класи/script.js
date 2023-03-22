@@ -624,24 +624,30 @@
 //---------------------------------------------------
 //4TASK 1 варіант в дз
 
-let counterValue = 0;
-const value = document.querySelector('#value');
+// const counterEl = document.querySelector('#counter');
+// console.log(counterEl);
+// console.log(counterEl.firstElementChild); //decrementBtn
+// console.log(counterEl.children[1]); //value
+// console.log(counterEl.lastElementChild); //incrementBtn
 
-const decrementBtn = document.querySelector('#counter button[data-action="decrement"]');
-const decrementClick = () => {
-  counterValue -= 1;
-  value.textContent = counterValue;
-  console.log(counterValue); //собі для перевірки
-};
-decrementBtn.addEventListener('click', decrementClick);
+// let counterValue = 0;
+// const value = counterEl.children[1];
 
-const incrementBtn = document.querySelector('#counter button[data-action="increment"]');
-const incrementClick = () => {
-  counterValue += 1;
-  value.textContent = counterValue;
-  console.log(counterValue); //собі для перевірки
-};
-incrementBtn.addEventListener('click', incrementClick);
+// const decrementBtn = counterEl.firstElementChild;
+// const decrementClick = () => {
+//   counterValue -= 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// decrementBtn.addEventListener('click', decrementClick);
+
+// const incrementBtn = counterEl.lastElementChild;
+// const incrementClick = () => {
+//   counterValue += 1;
+//   value.textContent = counterValue;
+//   console.log(counterValue); //собі для перевірки
+// };
+// incrementBtn.addEventListener('click', incrementClick);
 //---------------------------------------------------
 
 //4TASK 2 варіант в дз
@@ -721,30 +727,30 @@ incrementBtn.addEventListener('click', incrementClick);
 
 //----------------------------------------
 // 9TASK
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
 
-const widgetEl = document.querySelector('.widget');
-// console.dir(widgetEl); //собі для перевірки
+// const widgetEl = document.querySelector('.widget');
+// // console.dir(widgetEl); //собі для перевірки
 
-const widgetColorSpan = widgetEl.children[0].firstElementChild;
-const widgetBtn = widgetEl.lastElementChild;
-// console.dir(widgetBtn); //собі для перевірки
+// const widgetColorSpan = widgetEl.children[0].firstElementChild;
+// const widgetBtn = widgetEl.lastElementChild;
+// // console.dir(widgetBtn); //собі для перевірки
 
-const onWidgetBtnClick = () => {
-  widgetBtn.onclick = getRandomHexColor();
-  widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-  widgetEl.style.backgroundColor = widgetColorSpan.textContent;
+// const onWidgetBtnClick = () => {
+//   widgetBtn.onclick = getRandomHexColor();
+//   widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+//   widgetEl.style.backgroundColor = widgetColorSpan.textContent;
 
-  // console.log(widgetColorSpan.textContent); //собі для перевірки
-  // console.log(widgetEl); //собі для перевірки
-};
-widgetBtn.addEventListener('click', onWidgetBtnClick);
+//   // console.log(widgetColorSpan.textContent); //собі для перевірки
+//   // console.log(widgetEl); //собі для перевірки
+// };
+// widgetBtn.addEventListener('click', onWidgetBtnClick);
 
 //---------------------------------------------------
 // button.onclick = function () {
