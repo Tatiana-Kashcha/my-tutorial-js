@@ -681,7 +681,7 @@
 //   if (event.currentTarget.value) {
 //     nameOutput.textContent = event.currentTarget.value.trim(); //метод trim прибирає пробіли по краях
 //   }
-//   console.log(nameOutput.textContent);
+//   console.log(nameOutput.textContent); //собі для перевірки
 //   console.log(typeof nameOutput.textContent); //string
 // });
 
@@ -724,27 +724,29 @@
 
 //----------------------------------------
 // 8TASK
-const formEl = document.querySelector('.login-form');
+// const formEl = document.querySelector('.login-form');
 
-function onSubmit(event) {
-  event.preventDefault();
-  const {
-    elements: { email, password },
-  } = event.currentTarget;
+// function onSubmit(event) {
+//   event.preventDefault();
+//   const {
+//     elements: { email, password },
+//   } = event.currentTarget;
 
-  if (email.value === '' || password.value === '') {
-    return alert('Please fill in all the fields!');
-  }
-  const user = { Email: email.value, Password: password.value };
+//   if (email.value === '' || password.value === '') {
+//     return alert('Please fill in all the fields!');
+//   }
+//   const user = { Email: email.value, Password: password.value };
 
-  // console.log(`Email: ${email.value}, Password: ${password.value}`); //собі для перевірки
-  console.log(user);
-  // console.log(formEl.elements.email.value); //собі для перевірки
-  // console.log(formEl.elements.password.value); //собі для перевірки
-  event.currentTarget.reset();
-}
-formEl.addEventListener('submit', onSubmit);
+//   // console.log(`Email: ${email.value}, Password: ${password.value}`); //собі для перевірки
+//   console.log(user);
+//   // console.log(formEl.elements.email.value); //собі для перевірки
+//   // console.log(formEl.elements.password.value); //собі для перевірки
+//   event.currentTarget.reset();
+// }
+// formEl.addEventListener('submit', onSubmit);
+
 //----------------------------------------
+//ПРИКЛАД ФОРМИ
 // const form = document.querySelector('.form');
 
 // form.addEventListener('submit', handleSubmit);
@@ -784,11 +786,46 @@ formEl.addEventListener('submit', onSubmit);
 //     .padStart(6, 0)}`;
 //   widgetEl.style.backgroundColor = widgetColorSpan.textContent;
 
-//   // console.log(widgetColorSpan.textContent); //собі для перевірки
+//   // console.log(widgetColorSpan.textContent);
 //   // console.log(widgetEl); //собі для перевірки
 // };
 // widgetBtn.addEventListener('click', onWidgetBtnClick);
 
+//----------------------------------------
+// 10TASK
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+const controlsEl = document.querySelector('#controls');
+const boxesEl = document.querySelector('#boxes');
+
+//---------------Приклади з конспекту------------
+// Приклад з 9TASK
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
+const widgetEl = document.querySelector('.widget');
+// console.dir(widgetEl); //собі для перевірки
+
+const widgetColorSpan = widgetEl.children[0].firstElementChild;
+const widgetBtn = widgetEl.lastElementChild;
+// console.dir(widgetBtn); //собі для перевірки
+
+const onWidgetBtnClick = () => {
+  widgetBtn.onclick = getRandomHexColor();
+  widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+  widgetEl.style.backgroundColor = widgetColorSpan.textContent;
+
+  // console.log(widgetColorSpan.textContent);
+  // console.log(widgetEl); //собі для перевірки
+};
+widgetBtn.addEventListener('click', onWidgetBtnClick);
 //---------------------------------------------------
 // button.onclick = function () {
 //   alert('Клік!');
