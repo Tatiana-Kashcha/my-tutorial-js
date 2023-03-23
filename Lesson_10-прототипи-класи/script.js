@@ -799,9 +799,58 @@ function getRandomHexColor() {
     .padStart(6, 0)}`;
 }
 const controlsEl = document.querySelector('#controls');
+console.log(controlsEl);
+const quantityInput = controlsEl.firstElementChild;
+console.log(quantityInput);
+const createBtn = controlsEl.children[1];
+console.log(createBtn);
+const destroyBtn = controlsEl.lastElementChild;
+console.log(destroyBtn);
 const boxesEl = document.querySelector('#boxes');
+console.log(boxesEl);
+
+function createBoxes(amount) {
+  if (Number(quantityInput.value) > Number(quantityInput.max)) {
+    amount = Number(quantityInput.max);
+    console.log(`Sorry, maximum amount of elements: ${quantityInput.max}`);
+  } else {
+    amount = Number(quantityInput.value);
+  }
+  const boxesItem = document.createElement('div');
+
+  createBtn.onclick = getRandomHexColor();
+  boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+  boxesItem.style.width = '30px';
+  boxesItem.style.height = '30px';
+
+  boxesEl.append(boxesItem);
+  console.log(amount);
+  // console.log(Number(quantityInput.max)); //собі для перевірки
+  // console.log(Number(quantityInput.value) > Number(quantityInput.max)); //собі для перевірки
+}
+createBtn.addEventListener('click', createBoxes);
+console.log(boxesEl);
+function destroyBoxes() {}
 
 //---------------Приклади з конспекту------------
+// Приклад з 7TASK
+const sizeInput = document.querySelector('#font-size-control');
+const textOutput = document.querySelector('#text');
+console.log(textOutput); //собі для перевірки
+console.log(sizeInput); //собі для перевірки
+console.log(sizeInput.min); //собі для перевірки
+console.log(sizeInput.max); //собі для перевірки
+
+const sizeControl = () => {
+  textOutput.style.fontSize = sizeInput.value + 'px';
+  console.log(sizeInput.value + 'px'); //собі для перевірки
+};
+sizeInput.addEventListener('input', sizeControl);
+console.log(textOutput.style); //собі для перевірки
+
+//------------------------------------------------------------
 // Приклад з 9TASK
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
