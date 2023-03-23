@@ -724,7 +724,44 @@
 
 //----------------------------------------
 // 8TASK
+const formEl = document.querySelector('.login-form');
 
+function onSubmit(event) {
+  event.preventDefault();
+  const {
+    elements: { email, password },
+  } = event.currentTarget;
+
+  if (email.value === '' || password.value === '') {
+    return alert('Please fill in all the fields!');
+  }
+  const user = { Email: email.value, Password: password.value };
+
+  // console.log(`Email: ${email.value}, Password: ${password.value}`); //собі для перевірки
+  console.log(user);
+  // console.log(formEl.elements.email.value); //собі для перевірки
+  // console.log(formEl.elements.password.value); //собі для перевірки
+  event.currentTarget.reset();
+}
+formEl.addEventListener('submit', onSubmit);
+//----------------------------------------
+// const form = document.querySelector('.form');
+
+// form.addEventListener('submit', handleSubmit);
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+//   const {
+//     elements: { login, password },
+//   } = event.currentTarget;
+
+//   if (login.value === '' || password.value === '') {
+//     return console.log('Please fill in all the fields!');
+//   }
+
+//   console.log(`Login: ${login.value}, Password: ${password.value}`);
+//   event.currentTarget.reset();
+// }
 //----------------------------------------
 // 9TASK
 // function getRandomHexColor() {
