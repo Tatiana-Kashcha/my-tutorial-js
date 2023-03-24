@@ -826,6 +826,9 @@ function createBoxes(amount) {
     );
   }
 
+  let widthEl = 30;
+  let heightEl = 30;
+
   for (let i = 1; i <= amount; i += 1) {
     const boxesItem = document.createElement('div');
 
@@ -834,13 +837,10 @@ function createBoxes(amount) {
       .toString(16)
       .padStart(6, 0)}`;
 
-    // let widthEl = '30px';
-    // let heightEl = '30px';
-    let widthEl = 30;
-    let heightEl = 30;
-
-    boxesItem.style.width = widthEl + 10 + 'px';
-    boxesItem.style.height = heightEl + 10 + 'px';
+    boxesItem.style.width = widthEl + 'px';
+    boxesItem.style.height = heightEl + 'px';
+    widthEl += 10;
+    heightEl += 10;
 
     boxesEl.append(boxesItem);
     console.log(amount);
