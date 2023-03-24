@@ -742,6 +742,7 @@
 //   // console.log(formEl.elements.email.value); //собі для перевірки
 //   // console.log(formEl.elements.password.value); //собі для перевірки
 //   event.currentTarget.reset();
+
 // }
 // formEl.addEventListener('submit', onSubmit);
 
@@ -810,12 +811,17 @@ const boxesEl = document.querySelector('#boxes');
 console.log(boxesEl);
 
 function createBoxes(amount) {
-  if (Number(quantityInput.value) > Number(quantityInput.max)) {
-    amount = Number(quantityInput.max);
-    console.log(`Sorry, maximum amount of elements: ${quantityInput.max}`);
-  } else {
+  if (
+    Number(quantityInput.value) >= Number(quantityInput.min) &&
+    Number(quantityInput.value) < Number(quantityInput.max)
+  ) {
     amount = Number(quantityInput.value);
+  } else {
+    return alert(
+      `Sorry, please select the number of items from ${quantityInput.min} to ${quantityInput.max}`
+    );
   }
+
   const boxesItem = document.createElement('div');
 
   createBtn.onclick = getRandomHexColor();
@@ -827,13 +833,56 @@ function createBoxes(amount) {
 
   boxesEl.append(boxesItem);
   console.log(amount);
-  // console.log(Number(quantityInput.max)); //собі для перевірки
-  // console.log(Number(quantityInput.value) > Number(quantityInput.max)); //собі для перевірки
 }
 createBtn.addEventListener('click', createBoxes);
-console.log(boxesEl);
-function destroyBoxes() {}
 
+function destroyBoxes() {
+  boxesEl.innerHTML = '';
+}
+destroyBtn.addEventListener('click', destroyBoxes);
+
+function resetInputValue() {
+  quantityInput.value = null;
+}
+destroyBtn.addEventListener('click', resetInputValue);
+console.log(boxesEl);
+
+//------------------------
+
+//---------------------
+// const textInput = document.querySelector('.text-input');
+// const output = document.querySelector('.output');
+
+// textInput.addEventListener('input', event => {
+//   output.textContent = event.currentTarget.value;
+
+//   event.currentTarget.reset();
+// });
+
+//--------------------------------old of 10----------------
+// function quantityInputValue(amount) {
+//   if (
+//     Number(quantityInput.value) > Number(quantityInput.min) &&
+//     Number(quantityInput.value) < Number(quantityInput.max)
+//   ) {
+//     amount = Number(quantityInput.value);
+//     return amount;
+//   } else {
+//     return alert(
+//       `Sorry, please select the number of items from ${quantityInput.min} to ${quantityInput.max}`
+//     );
+//   }
+// }
+//
+// // console.log(Number(quantityInput.max)); //собі для перевірки
+// // console.log(Number(quantityInput.value) > Number(quantityInput.max)); //собі для перевірки
+//--------------------------------------------------------
+// if (Number(quantityInput.value) > Number(quantityInput.max)) {
+//   amount = Number(quantityInput.max);
+//   console.log(`Sorry, maximum amount of elements: ${quantityInput.max}`);
+// } else {
+//   amount = Number(quantityInput.value);
+// }
 //---------------Приклади з конспекту------------
 // Приклад з 7TASK
 const sizeInput = document.querySelector('#font-size-control');

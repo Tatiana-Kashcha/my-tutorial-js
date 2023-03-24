@@ -469,21 +469,20 @@
 // коментар до 2 завдання - імена параметрів функцій, які є callback-ом
 // (deliverPizza, makePizza) неважливі для параметрів самої функції callback
 
-// function deliverPizza(yk) {
-//     return `Delivering ${yk} pizza.`;
-// }
+function deliverPizza(yk) {
+  return `Delivering ${yk} pizza.`;
+}
 
-// function makePizza(ik) {
-//     return `Pizza ${ik} is being prepared, please wait...`;
-// }
+function makePizza(ik) {
+  return `Pizza ${ik} is being prepared, please wait...`;
+}
 
-// // Chande code below this line
-// function makeMessage(ppe, callback) {
-//     return callback(ppe);
-
-// }
-// console.log(makeMessage('Royal Grand', makePizza));
-// console.log(makeMessage('Ultracheese', deliverPizza));
+// Chande code below this line
+function makeMessage(ppe, callback) {
+  return callback(ppe);
+}
+console.log(makeMessage('Royal Grand', makePizza));
+console.log(makeMessage('Ultracheese', deliverPizza));
 
 // ісходна умова 2 завдання
 // function deliverPizza(pizzaName) {
