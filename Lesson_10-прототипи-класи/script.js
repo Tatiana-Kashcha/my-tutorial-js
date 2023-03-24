@@ -801,12 +801,16 @@ function getRandomHexColor() {
 }
 const controlsEl = document.querySelector('#controls');
 console.log(controlsEl);
+
 const quantityInput = controlsEl.firstElementChild;
+quantityInput.setAttribute('placeholder', `${quantityInput.min} - ${quantityInput.max}`);
 console.log(quantityInput);
+
 const createBtn = controlsEl.children[1];
 console.log(createBtn);
 const destroyBtn = controlsEl.lastElementChild;
 console.log(destroyBtn);
+
 const boxesEl = document.querySelector('#boxes');
 console.log(boxesEl);
 
@@ -818,7 +822,7 @@ function createBoxes(amount) {
     amount = Number(quantityInput.value);
   } else {
     return alert(
-      `Sorry, please select the number of items from ${quantityInput.min} to ${quantityInput.max}`
+      `Sorry, please enter the number of items from ${quantityInput.min} to ${quantityInput.max}`
     );
   }
 
