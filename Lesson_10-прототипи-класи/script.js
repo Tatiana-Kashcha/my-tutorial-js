@@ -813,7 +813,7 @@ console.log(boxesEl);
 function createBoxes(amount) {
   if (
     Number(quantityInput.value) >= Number(quantityInput.min) &&
-    Number(quantityInput.value) < Number(quantityInput.max)
+    Number(quantityInput.value) <= Number(quantityInput.max)
   ) {
     amount = Number(quantityInput.value);
   } else {
