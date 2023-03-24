@@ -794,92 +794,78 @@
 
 //----------------------------------------
 // 10TASK
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
-const controlsEl = document.querySelector('#controls');
-console.log(controlsEl);
+// function getRandomHexColor() {
+//   return `#${Math.floor(Math.random() * 16777215)
+//     .toString(16)
+//     .padStart(6, 0)}`;
+// }
+// const controlsEl = document.querySelector('#controls');
+// console.log(controlsEl);
 
-const quantityInput = controlsEl.firstElementChild;
-quantityInput.setAttribute('placeholder', `${quantityInput.min} - ${quantityInput.max}`);
-console.log(quantityInput);
+// const quantityInput = controlsEl.firstElementChild;
+// // Додавання плейсхолдера для інпута
+// quantityInput.setAttribute('placeholder', `${quantityInput.min} - ${quantityInput.max}`);
+// console.log(quantityInput);
 
-const createBtn = controlsEl.children[1];
-console.log(createBtn);
-const destroyBtn = controlsEl.lastElementChild;
-console.log(destroyBtn);
+// const createBtn = controlsEl.children[1];
+// console.log(createBtn);
+// const destroyBtn = controlsEl.lastElementChild;
+// console.log(destroyBtn);
 
-const boxesEl = document.querySelector('#boxes');
-console.log(boxesEl);
+// const boxesEl = document.querySelector('#boxes');
+// console.log(boxesEl);
 
-function createBoxes(amount) {
-  if (
-    Number(quantityInput.value) >= Number(quantityInput.min) &&
-    Number(quantityInput.value) <= Number(quantityInput.max)
-  ) {
-    amount = Number(quantityInput.value);
-  } else {
-    return alert(
-      `Sorry, please enter the number of items from ${quantityInput.min} to ${quantityInput.max}`
-    );
-  }
+// function createBoxes(amount) {
+//   // Перевірка введеного значення інпута на валідність
+//   if (
+//     Number(quantityInput.value) >= Number(quantityInput.min) &&
+//     Number(quantityInput.value) <= Number(quantityInput.max)
+//   ) {
+//     amount = Number(quantityInput.value);
+//   } else {
+//     return alert(
+//       `Sorry, please enter the number of items from ${quantityInput.min} to ${quantityInput.max}`
+//     );
+//   }
 
-  let widthEl = 30;
-  let heightEl = 30;
+//   // Початкові розміри елемента
+//   let widthEl = 30;
+//   let heightEl = 30;
 
-  for (let i = 1; i <= amount; i += 1) {
-    const boxesItem = document.createElement('div');
+//   // Циклом, мабуть не правильно це робити, але не знаю як по-іншому
+//   for (let i = 1; i <= amount; i += 1) {
+//     const boxesItem = document.createElement('div');
 
-    createBtn.onclick = getRandomHexColor();
-    boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-      .toString(16)
-      .padStart(6, 0)}`;
+//     createBtn.onclick = getRandomHexColor();
+//     boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
+//       .toString(16)
+//       .padStart(6, 0)}`;
 
-    boxesItem.style.width = widthEl + 'px';
-    boxesItem.style.height = heightEl + 'px';
-    widthEl += 10;
-    heightEl += 10;
+//     boxesItem.style.width = widthEl + 'px';
+//     boxesItem.style.height = heightEl + 'px';
 
-    boxesEl.append(boxesItem);
-    console.log(amount);
-  }
-}
-createBtn.addEventListener('click', createBoxes);
+//     // Збільшення розмірів наступного елемента
+//     widthEl += 10;
+//     heightEl += 10;
 
-function destroyBoxes() {
-  boxesEl.innerHTML = '';
-}
-destroyBtn.addEventListener('click', destroyBoxes);
+//     boxesEl.append(boxesItem);
+//     console.log(amount);
+//   }
+// }
+// createBtn.addEventListener('click', createBoxes);
 
-function resetInputValue() {
-  quantityInput.value = null;
-}
-destroyBtn.addEventListener('click', resetInputValue);
-console.log(boxesEl);
+// // Очистка галереї
+// function destroyBoxes() {
+//   boxesEl.innerHTML = '';
+// }
+// destroyBtn.addEventListener('click', destroyBoxes);
 
-//-----------частина коду 10дз-------------
-// const boxesItem = document.createElement('div');
-
-// createBtn.onclick = getRandomHexColor();
-// boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-//   .toString(16)
-//   .padStart(6, 0)}`;
-// boxesItem.style.width = '30px';
-// boxesItem.style.height = '30px';
-
-// boxesEl.append(boxesItem);
-// console.log(amount);
-//---------------------
-// const textInput = document.querySelector('.text-input');
-// const output = document.querySelector('.output');
-
-// textInput.addEventListener('input', event => {
-//   output.textContent = event.currentTarget.value;
-
-//   event.currentTarget.reset();
-// });
+// // Очистка інпута
+// function resetInputValue() {
+//   quantityInput.value = null;
+// }
+// destroyBtn.addEventListener('click', resetInputValue);
+// console.log(boxesEl);
 
 //--------------------------------old of 10----------------
 // function quantityInputValue(amount) {
@@ -906,46 +892,6 @@ console.log(boxesEl);
 //   amount = Number(quantityInput.value);
 // }
 //---------------Приклади з конспекту------------
-// Приклад з 7TASK
-const sizeInput = document.querySelector('#font-size-control');
-const textOutput = document.querySelector('#text');
-console.log(textOutput); //собі для перевірки
-console.log(sizeInput); //собі для перевірки
-console.log(sizeInput.min); //собі для перевірки
-console.log(sizeInput.max); //собі для перевірки
-
-const sizeControl = () => {
-  textOutput.style.fontSize = sizeInput.value + 'px';
-  console.log(sizeInput.value + 'px'); //собі для перевірки
-};
-sizeInput.addEventListener('input', sizeControl);
-console.log(textOutput.style); //собі для перевірки
-
-//------------------------------------------------------------
-// Приклад з 9TASK
-function getRandomHexColor() {
-  return `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-}
-const widgetEl = document.querySelector('.widget');
-// console.dir(widgetEl); //собі для перевірки
-
-const widgetColorSpan = widgetEl.children[0].firstElementChild;
-const widgetBtn = widgetEl.lastElementChild;
-// console.dir(widgetBtn); //собі для перевірки
-
-const onWidgetBtnClick = () => {
-  widgetBtn.onclick = getRandomHexColor();
-  widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-  widgetEl.style.backgroundColor = widgetColorSpan.textContent;
-
-  // console.log(widgetColorSpan.textContent);
-  // console.log(widgetEl); //собі для перевірки
-};
-widgetBtn.addEventListener('click', onWidgetBtnClick);
 //---------------------------------------------------
 // button.onclick = function () {
 //   alert('Клік!');
