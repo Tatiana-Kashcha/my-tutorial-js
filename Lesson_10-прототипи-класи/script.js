@@ -826,17 +826,25 @@ function createBoxes(amount) {
     );
   }
 
-  const boxesItem = document.createElement('div');
+  for (let i = 1; i <= amount; i += 1) {
+    const boxesItem = document.createElement('div');
 
-  createBtn.onclick = getRandomHexColor();
-  boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
-    .toString(16)
-    .padStart(6, 0)}`;
-  boxesItem.style.width = '30px';
-  boxesItem.style.height = '30px';
+    createBtn.onclick = getRandomHexColor();
+    boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
+      .toString(16)
+      .padStart(6, 0)}`;
 
-  boxesEl.append(boxesItem);
-  console.log(amount);
+    // let widthEl = '30px';
+    // let heightEl = '30px';
+    let widthEl = 30;
+    let heightEl = 30;
+
+    boxesItem.style.width = widthEl + 10 + 'px';
+    boxesItem.style.height = heightEl + 10 + 'px';
+
+    boxesEl.append(boxesItem);
+    console.log(amount);
+  }
 }
 createBtn.addEventListener('click', createBoxes);
 
@@ -851,8 +859,18 @@ function resetInputValue() {
 destroyBtn.addEventListener('click', resetInputValue);
 console.log(boxesEl);
 
-//------------------------
+//-----------частина коду 10дз-------------
+// const boxesItem = document.createElement('div');
 
+// createBtn.onclick = getRandomHexColor();
+// boxesItem.style.backgroundColor = `#${Math.floor(Math.random() * 16777215)
+//   .toString(16)
+//   .padStart(6, 0)}`;
+// boxesItem.style.width = '30px';
+// boxesItem.style.height = '30px';
+
+// boxesEl.append(boxesItem);
+// console.log(amount);
 //---------------------
 // const textInput = document.querySelector('.text-input');
 // const output = document.querySelector('.output');
