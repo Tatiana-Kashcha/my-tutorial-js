@@ -1,5 +1,5 @@
 import { galleryItems } from './gallery-items.js';
-// Change code below this line
+
 // Шаблон розмітки галереї
 {
   /* <li class="gallery__item">
