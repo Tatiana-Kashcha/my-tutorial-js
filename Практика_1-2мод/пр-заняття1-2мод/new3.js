@@ -171,6 +171,9 @@
 // console.log(
 //   findUniq(['qwe', 'camp', 'acmp', 'pmac', 'hgt', 'yytr', 'yytr', 'camp', 'cp', 'apmc', 'pmac']) //працює
 // );
+
+// Працює, але на одному масиві. Якщо на всіх масивах, то додає попередній результат до наступного!!!!
+
 // console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //не працює! 'foo'
 // console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //не працює! 'abcd'
 // console.log(findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); //не працює! 'qwe'
@@ -203,3 +206,56 @@
 // console.log(findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba'])); //працює!
 // console.log(findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf'])); //працює!
 // console.log(findUniq(['camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'])); // нема відрізняючого елемента //працює
+
+// // task 7 - Рішення Надін -----------------------------------------------
+// const items = ['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac'];
+
+// const numbers = items.map(items => {
+//   return items.charCodeAt(0);
+// });
+// console.log(numbers);
+
+// // const dublicats = numbers.filter((number, index, numbers) => {
+// //   return numbers.indexOf(number) !== index;
+// // });
+// // console.log(dublicats);
+
+// let uniqueNumber = numbers[0];
+
+// for (const number of numbers) {
+//   if (number === uniqueNumber) {
+//     uniqueNumber = number;
+//   }
+// }
+
+// console.log(uniqueNumber);
+// console.log(items[numbers.indexOf(uniqueNumber)]);
+
+// function findUniq(array) {
+//   const numbers = array.map(array => {
+//     return array.charCodeAt(0);
+//   });
+//   console.log(numbers);
+
+//   let uniqueNumber = numbers[0];
+
+//   for (const number of numbers) {
+//     if (number === uniqueNumber) {
+//       uniqueNumber = number;
+//     }
+//   }
+
+//   console.log(uniqueNumber);
+
+//   const item = numbers.indexOf(uniqueNumber);
+//   console.log(item);
+
+//   const finish = array.find((element, index) => index === item);
+//   console.log(finish);
+// }
+
+// --------дивний результат виконання!!!? але зайвий елемент знаходить---------------------------------
+// findUniq(['qwe', 'camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac']); //працює
+// findUniq(['abc', 'acb', 'bac', 'foo', 'bca', 'cab', 'cba']); //працює!
+// findUniq(['fghj', 'ghfj', 'abcd', 'jhgf', 'fghj', 'fgjh', 'ghjf']); //працює!
+// findUniq(['camp', 'acmp', 'pmac', 'camp', 'apmc', 'pmac']);
