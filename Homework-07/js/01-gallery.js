@@ -30,5 +30,25 @@ const makeGalleryItems = itemsEl => {
 };
 const itemsImages = galleryItems.map(makeGalleryItems).join('');
 galleryItemsEl.insertAdjacentHTML('beforeend', itemsImages);
-console.log(galleryItemsEl);
+
+galleryItemsEl.addEventListener('click', onImgGalleryClick);
+
+function onImgGalleryClick(evt) {
+  evt.preventDefault();
+  const ImgGalleryEl = evt.target.classList.contains('gallery__image');
+
+  if (!ImgGalleryEl) {
+    return;
+  }
+
+  const imgElsource = evt.target.dataset.source;
+  const instance = basicLightbox.create(`
+      <img src='${imgElsource}'>
+  `);
+
+  instance.show();
+  // console.log(imgElsource); //собі для перевірки
+}
+
+// console.log(galleryItemsEl); //собі для перевірки
 console.log(galleryItems);
