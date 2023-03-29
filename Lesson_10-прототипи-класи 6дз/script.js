@@ -767,30 +767,30 @@
 // }
 //----------------------------------------
 // 9TASK
-// function getRandomHexColor() {
-//   return `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-// }
+function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+}
 
-// const widgetEl = document.querySelector('.widget');
-// // console.dir(widgetEl); //собі для перевірки
+const widgetEl = document.querySelector('.widget');
+// console.dir(widgetEl); //собі для перевірки
 
-// const widgetColorSpan = widgetEl.children[0].firstElementChild;
-// const widgetBtn = widgetEl.lastElementChild;
-// // console.dir(widgetBtn); //собі для перевірки
+const widgetColorSpan = widgetEl.children[0].firstElementChild;
+const widgetBtn = widgetEl.lastElementChild;
+// console.dir(widgetBtn); //собі для перевірки
 
-// const onWidgetBtnClick = () => {
-//   widgetBtn.onclick = getRandomHexColor();
-//   widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
-//     .toString(16)
-//     .padStart(6, 0)}`;
-//   widgetEl.style.backgroundColor = widgetColorSpan.textContent;
+const onWidgetBtnClick = () => {
+  widgetBtn.onclick = getRandomHexColor();
+  widgetColorSpan.textContent = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+  widgetEl.style.backgroundColor = widgetColorSpan.textContent;
 
-//   // console.log(widgetColorSpan.textContent);
-//   // console.log(widgetEl); //собі для перевірки
-// };
-// widgetBtn.addEventListener('click', onWidgetBtnClick);
+  // console.log(widgetColorSpan.textContent);
+  // console.log(widgetEl); //собі для перевірки
+};
+widgetBtn.addEventListener('click', onWidgetBtnClick);
 
 //----------------------------------------
 // 10TASK

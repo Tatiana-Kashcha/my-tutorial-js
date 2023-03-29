@@ -35,6 +35,7 @@ galleryItemsEl.addEventListener('click', onImgGalleryClick);
 
 function onImgGalleryClick(evt) {
   evt.preventDefault();
+
   const ImgGalleryEl = evt.target.classList.contains('gallery__image');
 
   if (!ImgGalleryEl) {
@@ -42,13 +43,46 @@ function onImgGalleryClick(evt) {
   }
 
   const imgElsource = evt.target.dataset.source;
-  const instance = basicLightbox.create(`
+
+  const instance = basicLightbox.create(
+    `
       <img src='${imgElsource}'>
-  `);
+  `,
+    {
+      onShow: instance => {
+        onOpenInstance();
+
+        if (onEscKeyDown(evt)) {
+          instance.close();
+        }
+        console.log(onEscKeyDown(evt));
+      },
+    }
+  );
 
   instance.show();
-  // console.log(imgElsource); //собі для перевірки
+  console.log(imgElsource); //собі для перевірки
 }
 
 // console.log(galleryItemsEl); //собі для перевірки
 console.log(galleryItems);
+
+function onOpenInstance() {
+  window.addEventListener('keydown', onEscKeyDown);
+}
+
+function onCloseInstance() {
+  window.removeEventListener('keydown', onEscKeyDown);
+}
+
+function onEscKeyDown(evt) {
+  // console.log(evt); //собі для перевірки
+  console.log(evt.code); //собі для перевірки
+  const isEscKey = evt.code === 'Escape';
+
+  if (isEscKey) {
+    onCloseInstance();
+  }
+  console.log(isEscKey); //собі для перевірки
+  return isEscKey;
+}
