@@ -33,9 +33,6 @@ galleryItemsEl.insertAdjacentHTML('beforeend', itemsImages);
 
 galleryItemsEl.addEventListener('click', onImgGalleryClick);
 
-// const onEscKey = onEscKeyDown(event);
-//   console.log(onEscKey); //собі для перевірки
-
 function onImgGalleryClick(evt) {
   evt.preventDefault();
 
@@ -48,45 +45,82 @@ function onImgGalleryClick(evt) {
   }
 
   const imgElsource = evt.target.dataset.source;
+  console.log(imgElsource); //собі для перевірки
 
-  const instance = basicLightbox.create(
-    `
-      <img src='${imgElsource}'>
-  `,
-    {
-      onShow: instance => {
-        onOpenInstance();
+  const onEscKeyDown = event => {
+    console.log(event); //собі для перевірки
+    console.log(event.code); //собі для перевірки
+    const isEscKey = event.code === 'Escape';
 
-        if (isEscKey) {
-          instance.close();
-        }
-      },
+    if (isEscKey) {
+      instance.close();
+      window.removeEventListener('keydown', onEscKeyDown);
     }
-  );
+    console.log(isEscKey); //собі для перевірки
+    return isEscKey;
+  };
+
+  const instance = basicLightbox.create(`<img src='${imgElsource}'>`, {
+    onShow: () => window.addEventListener('keydown', onEscKeyDown),
+  });
 
   instance.show();
-  console.log(imgElsource); //собі для перевірки
 }
 
 // console.log(galleryItemsEl); //собі для перевірки
 console.log(galleryItems);
 
-function onOpenInstance() {
-  window.addEventListener('keydown', onEscKeyDown);
-}
+//-----розбиття на функції-- не працює((((--------
 
-function onCloseInstance() {
-  window.removeEventListener('keydown', onEscKeyDown);
-}
+// const itemsImages = galleryItems.map(makeGalleryItems).join('');
+// galleryItemsEl.insertAdjacentHTML('beforeend', itemsImages);
 
-function onEscKeyDown(event) {
-  console.log(event); //собі для перевірки
-  console.log(event.code); //собі для перевірки
-  const isEscKey = event.code === 'Escape';
+// galleryItemsEl.addEventListener('click', onImgGalleryClick);
 
-  if (isEscKey) {
-    onCloseInstance();
-  }
-  console.log(isEscKey); //собі для перевірки
-  return isEscKey;
-}
+// function onImgGalleryClick(evt) {
+//   evt.preventDefault();
+//   const ImgGalleryEl = evt.target.classList.contains('gallery__image');
+
+//   if (!ImgGalleryEl) {
+//     return;
+//   }
+
+//   const imgElsource = evt.target.dataset.source;
+
+//   const instance = basicLightbox.create(
+//     `
+//       <img src='${imgElsource}'>
+//   `,
+//     {
+//       onShow: instance => {
+//         onOpenInstance();
+
+//         // if (isEscKey) {
+//         //   instance.close();
+//         // }
+//       },
+//     }
+//   );
+//   instance.show();
+// }
+// console.log(galleryItems);
+
+// function onOpenInstance() {
+//   window.addEventListener('keydown', onEscKeyDown);
+// }
+
+// function onCloseInstance() {
+//   window.removeEventListener('keydown', onEscKeyDown);
+// }
+
+// function onEscKeyDown(event) {
+//   console.log(event.code); // для перевірки
+//   const isEscKey = event.code === 'Escape';
+
+//   if (isEscKey) {
+//     onCloseInstance();
+//   }
+//   console.log(isEscKey); // для перевірки
+//   return isEscKey;
+// }
+// --------------------------------------------------
