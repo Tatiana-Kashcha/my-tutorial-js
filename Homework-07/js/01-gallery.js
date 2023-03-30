@@ -54,7 +54,6 @@ function onImgGalleryClick(evt) {
 
     if (isEscKey) {
       instance.close();
-      // window.removeEventListener('keydown', onEscKeyDown);
     }
     console.log(isEscKey); //собі для перевірки
     return isEscKey;
@@ -66,6 +65,8 @@ function onImgGalleryClick(evt) {
   });
 
   instance.show();
+  const elem = instance.element(); //собі для перевірки - це === (imgElsource)
+  console.log(elem); //собі для перевірки
 }
 
 // console.log(galleryItemsEl); //собі для перевірки
