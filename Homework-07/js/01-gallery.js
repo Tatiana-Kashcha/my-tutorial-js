@@ -33,8 +33,13 @@ galleryItemsEl.insertAdjacentHTML('beforeend', itemsImages);
 
 galleryItemsEl.addEventListener('click', onImgGalleryClick);
 
+// const onEscKey = onEscKeyDown(event);
+//   console.log(onEscKey); //собі для перевірки
+
 function onImgGalleryClick(evt) {
   evt.preventDefault();
+
+  console.log(evt); //собі для перевірки
 
   const ImgGalleryEl = evt.target.classList.contains('gallery__image');
 
@@ -52,10 +57,9 @@ function onImgGalleryClick(evt) {
       onShow: instance => {
         onOpenInstance();
 
-        if (onEscKeyDown(evt)) {
+        if (isEscKey) {
           instance.close();
         }
-        console.log(onEscKeyDown(evt));
       },
     }
   );
@@ -75,10 +79,10 @@ function onCloseInstance() {
   window.removeEventListener('keydown', onEscKeyDown);
 }
 
-function onEscKeyDown(evt) {
-  // console.log(evt); //собі для перевірки
-  console.log(evt.code); //собі для перевірки
-  const isEscKey = evt.code === 'Escape';
+function onEscKeyDown(event) {
+  console.log(event); //собі для перевірки
+  console.log(event.code); //собі для перевірки
+  const isEscKey = event.code === 'Escape';
 
   if (isEscKey) {
     onCloseInstance();
