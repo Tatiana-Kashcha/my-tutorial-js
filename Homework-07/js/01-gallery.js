@@ -1,6 +1,6 @@
 import { galleryItems } from './gallery-items.js';
 
-// Шаблон розмітки галереї
+// Шаблон розмітки галереї 01
 {
   /* <li class="gallery__item">
   <a class="gallery__link" href="large-image.jpg">
@@ -54,7 +54,7 @@ function onImgGalleryClick(evt) {
 
     if (isEscKey) {
       instance.close();
-      window.removeEventListener('keydown', onEscKeyDown);
+      // window.removeEventListener('keydown', onEscKeyDown);
     }
     console.log(isEscKey); //собі для перевірки
     return isEscKey;
@@ -62,6 +62,7 @@ function onImgGalleryClick(evt) {
 
   const instance = basicLightbox.create(`<img src='${imgElsource}'>`, {
     onShow: () => window.addEventListener('keydown', onEscKeyDown),
+    onClose: () => window.removeEventListener('keydown', onEscKeyDown),
   });
 
   instance.show();
