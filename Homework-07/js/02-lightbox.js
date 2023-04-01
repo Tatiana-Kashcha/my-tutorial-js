@@ -29,29 +29,29 @@ galleryItemsEl.insertAdjacentHTML('beforeend', itemsImages);
 
 galleryItemsEl.addEventListener('click', onImgGalleryClick);
 
-function onImgGalleryClick(evt) {
-  evt.preventDefault();
-  console.log(evt); //собі для перевірки
+// function onImgGalleryClick(evt) {  //не потрібна
+//   evt.preventDefault();
+//   console.log(evt); //собі для перевірки
 
-  const ImgGalleryEl = evt.target.classList.contains('gallery__image');
+//   const ImgGalleryEl = evt.target.classList.contains('gallery__image');
 
-  if (!ImgGalleryEl) {
-    return;
-  }
+//   if (!ImgGalleryEl) {
+//     return;
+//   }
 
-  //   console.log(evt.target); //собі для перевірки
-  //   const imgElcaptions = evt.target.getAttribute('alt'); //не знадобилося
-  //   console.log(imgElcaptions); //собі для перевірки
+//   console.log(evt.target); //собі для перевірки
+//   const imgElcaptions = evt.target.getAttribute('alt'); //не знадобилося
+//   console.log(imgElcaptions); //собі для перевірки
 
-  const galleryLightBox = new SimpleLightbox('.gallery a', {
-    // captions: true, // Default значення
-    // captionSelector: 'img', // Default значення
-    // captionType: 'attr', // Default значення
-    // captionPosition: 'bottom',// Default значення
-    captionsData: 'alt',
-    captionDelay: 250,
-  });
-  //   galleryLightBox.on('show.simplelightbox', function () {}); //не знадобилося
-}
+const galleryLightBox = new SimpleLightbox('.gallery a', {
+  // captions: true, // Default значення
+  // captionSelector: 'img', // Default значення
+  // captionType: 'attr', // Default значення
+  // captionPosition: 'bottom',// Default значення
+  captionsData: 'alt',
+  captionDelay: 250,
+});
+//   galleryLightBox.on('show.simplelightbox', function () {}); //не знадобилося
+// }
 
-console.log(galleryItems);
+// console.log(galleryItems);
