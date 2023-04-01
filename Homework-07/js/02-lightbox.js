@@ -30,7 +30,6 @@ galleryItemsEl.addEventListener('click', onImgGalleryClick);
 
 function onImgGalleryClick(evt) {
   evt.preventDefault();
-
   console.log(evt); //собі для перевірки
 
   const ImgGalleryEl = evt.target.classList.contains('gallery__image');
@@ -39,28 +38,10 @@ function onImgGalleryClick(evt) {
     return;
   }
 
-  const imgElsource = evt.target.dataset.source;
-  console.log(imgElsource); //собі для перевірки
-
-  const onEscKeyDown = event => {
-    console.log(event); //собі для перевірки
-    console.log(event.code); //собі для перевірки
-    const isEscKey = event.code === 'Escape';
-
-    if (isEscKey) {
-      instance.close();
-      window.removeEventListener('keydown', onEscKeyDown);
-    }
-    console.log(isEscKey); //собі для перевірки
-    return isEscKey;
-  };
-
-  const instance = basicLightbox.create(`<img src='${imgElsource}'>`, {
-    onShow: () => window.addEventListener('keydown', onEscKeyDown),
+  const galleryLightBox = new SimpleLightbox('.gallery a');
+  galleryLightBox.on('show.simplelightbox', function () {
+    // необхідні налаштування з секції JavaScript Options
   });
-
-  instance.show();
 }
 
-// console.log(galleryItemsEl); //собі для перевірки
 console.log(galleryItems);

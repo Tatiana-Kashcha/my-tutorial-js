@@ -72,7 +72,7 @@ function onImgGalleryClick(evt) {
 // console.log(galleryItemsEl); //собі для перевірки
 console.log(galleryItems);
 
-//-----розбиття на функції-- не працює((((--------
+//-----розбиття на функції не виходить((((--------
 
 // const itemsImages = galleryItems.map(makeGalleryItems).join('');
 // galleryItemsEl.insertAdjacentHTML('beforeend', itemsImages);

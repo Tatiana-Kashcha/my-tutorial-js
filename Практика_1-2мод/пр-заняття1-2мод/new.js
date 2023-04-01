@@ -44,13 +44,13 @@ alert(text);
 //    }
 // }
 
-//4. Напишіть код, який буде запитувати логін за допомогою prompt "Hello, 
+//4. Напишіть код, який буде запитувати логін за допомогою prompt "Hello,
 // please enter your login!" і виводити результат у консоль браузера
 
-//Якщо під час вводу login нажали клавішу Esc, то вивести у консоль рядок 
+//Якщо під час вводу login нажали клавішу Esc, то вивести у консоль рядок
 // "Authorization has been cancelled"
-    //Якщо користувач вводить "admin", то prompt запитує пароль 
-    // (Please enter your password)
+//Якщо користувач вводить "admin", то prompt запитує пароль
+// (Please enter your password)
 //Якщо користувач вводить щось відмінне від "admin", то вивести рядок "Goodbye!"
 
 //Пароль перевіряти так:
@@ -123,10 +123,9 @@ alert(text);
 //       total += enterNumber;
 //     } else {
 //       break;
-//     } 
+//     }
 // }
 // alert(`The total sum of the entered numbers is ${total}.`);
-
 
 //7. Напишіть цикл, який пропонує ввести
 //число більше 100 через prompt 'Hello, enter please the number greater then 100.'
@@ -146,17 +145,16 @@ alert(text);
 //   } else {
 //       alert(`${enterNumber}`);
 //       break;
-//   } 
+//   }
 // }
 
-
-// 8. При завантаженні сторінки користувачу у prompt пропонується ввести число 
+// 8. При завантаженні сторінки користувачу у prompt пропонується ввести число
 // від 0 до 59 'Hello, enter please the number between  0 and 59'.
-//Зроби перевірку на відповідність введеного числа вказаному діапазону (0-59). 
+//Зроби перевірку на відповідність введеного числа вказаному діапазону (0-59).
 // Якщо число не відповідає виведіть
 //alert з повідомленням "The [number] is outside 0 and 59"
 // Визначте в яку чверть години попаде
-// це число(в першу, другу, третю чи четверту) та виведіть це повідомлення у 
+// це число(в першу, другу, третю чи четверту) та виведіть це повідомлення у
 // консоль, наприклад, "Number [number] refers to 2 quarters".
 // 0 - 15 1ша чверть
 // 16 - 30 2га чверть
@@ -181,7 +179,6 @@ alert(text);
 // }
 // console.log(message);
 
-
 //9. Дано рядок, що складається із символів, наприклад, 'a1abcde'.
 // Перевір, що першим символом цього рядка є літера 'a'.
 // Якщо так - виведи 'yes' у консоль, в противному випадку виведи 'no'.
@@ -190,7 +187,6 @@ alert(text);
 // let message = '';
 // text[0] === 'a' ? (message = 'yes') : (message = 'no');
 // console.log(message);
-
 
 // 10. Напишіть функцію, яка приймає два параметри довжину і елемент-заповнювач та
 //  повертає масив з вказаною довжиною і заповнює його переданим елементом
@@ -205,24 +201,22 @@ alert(text);
 // }
 // fillArray(3, 'a')
 
-
-// 11. Написати функцію, яка буде видаляти з масива усі значення, які приводяться 
+// 11. Написати функцію, яка буде видаляти з масива усі значення, які приводяться
 // до false
 // undefined, null, false, '', 0, NaN
 
 // -----Варіант рішення 1 ------------------------------------------------
 
 // function cleanArray(arr) {
-//   for (let i = arr.length - 1; i >= 0; i -= 1) {
-//     if (!arr[i]) {
-//       arr.splice(i, 1);
-//     }
+// for (let i = arr.length - 1; i >= 0; i -= 1) {
+//   if (!arr[i]) {
+//     arr.splice(i, 1);
 //   }
+// }
 //   console.log(arr);
 // }
 // cleanArray([1, undefined, 2, null, 3, false, 4, '', 5, 0, 6, NaN]);
 // cleanArray([12, undefined, 22, null, 33, false, 44, '', 55, 0, 66, NaN]);
-
 
 // ------Варіант рішення 2 ----------------------------------------------
 
@@ -238,3 +232,24 @@ alert(text);
 // }
 // cleanArray([1, undefined, 2, null, 3, false, 4, '', 5, 0, 6, NaN]);
 // cleanArray([12, undefined, 22, null, 33, false, 44, '', 55, 0, 66, NaN]);
+
+//----------------від Олексія-----
+function arrWithoutFalseElements(array, falseArray) {
+  for (let i = 0; i < array.length; i += 1) {
+    const commonElement = falseArray.includes(array[i]);
+
+    if (commonElement) {
+      array.splice(i, 1);
+      i -= 1;
+    }
+  }
+
+  return array;
+}
+
+console.log(
+  arrWithoutFalseElements(
+    [10, '', 20, false, 0, 37, null, 12, undefined, 54, false, '', 0, NaN, 40],
+    [false, undefined, null, false, '', 0, NaN]
+  )
+);
