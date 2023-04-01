@@ -234,22 +234,22 @@ alert(text);
 // cleanArray([12, undefined, 22, null, 33, false, 44, '', 55, 0, 66, NaN]);
 
 //----------------від Олексія-----
-function arrWithoutFalseElements(array, falseArray) {
-  for (let i = 0; i < array.length; i += 1) {
-    const commonElement = falseArray.includes(array[i]);
+// function arrWithoutFalseElements(array, falseArray) {
+//   for (let i = 0; i < array.length; i += 1) {
+//     const commonElement = falseArray.includes(array[i]);
 
-    if (commonElement) {
-      array.splice(i, 1);
-      i -= 1;
-    }
-  }
+//     if (commonElement) {
+//       array.splice(i, 1);
+//       i -= 1;
+//     }
+//   }
 
-  return array;
-}
+//   return array;
+// }
 
-console.log(
-  arrWithoutFalseElements(
-    [10, '', 20, false, 0, 37, null, 12, undefined, 54, false, '', 0, NaN, 40],
-    [false, undefined, null, false, '', 0, NaN]
-  )
-);
+// console.log(
+//   arrWithoutFalseElements(
+//     [10, '', 20, false, 0, 37, null, 12, undefined, 54, false, '', 0, NaN, 40],
+//     [false, undefined, null, false, '', 0, NaN]
+//   )
+// );
