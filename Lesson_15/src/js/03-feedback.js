@@ -54,6 +54,7 @@ function notEmptyForm() {
   if (savedValue) {
     console.log(savedValue);
     const setValueForm = JSON.parse(savedValue);
+    formData = { email: setValueForm.email, message: setValueForm.message };
     console.log(setValueForm);
 
     if (setValueForm.email) {
