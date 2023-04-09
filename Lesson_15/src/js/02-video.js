@@ -34,15 +34,17 @@ const playerSetItem = function (data) {
 };
 
 const secondsItem = JSON.parse(localStorage.getItem(STORAGE_KEY));
-const playerGetItem = function (seconds) {
-  secondsItem;
-};
+//--не потрібна функція----
+// const playerGetItem = function (seconds) {
+//   JSON.parse(localStorage.getItem(STORAGE_KEY));
+// };
+//------------------
 
 player.on('timeupdate', throttle(playerSetItem, 1000));
 
 player
   .setCurrentTime(secondsItem)
-  .then(playerGetItem)
+  // .then(playerGetItem)
   .catch(function (error) {
     switch (error.name) {
       case 'RangeError':
