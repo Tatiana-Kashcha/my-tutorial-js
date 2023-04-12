@@ -143,60 +143,60 @@
 // а ті обє'кти в яких айді співпав видалити з масиву.
 // (Потрібно мутувати масив, створювати новий не потрібно)
 
-const products = [
-  {
-    id: 'sku1',
-    qty: 1,
-  },
-  {
-    id: 'sku1',
-    qty: 1,
-  },
-  {
-    id: 'sku2',
-    qty: 2,
-  },
-  {
-    id: 'sku3',
-    qty: 3,
-  },
-  {
-    id: 'sku1',
-    qty: 6,
-  },
-  {
-    id: 'sku1',
-    qty: 8,
-  },
-  {
-    id: 'sku1',
-    qty: 6,
-  },
-  {
-    id: 'sku2',
-    qty: 19,
-  },
-  {
-    id: 'sku4',
-    qty: 1,
-  },
-  {
-    id: 'sku4',
-    qty: 1,
-  },
-  {
-    id: 'sku1',
-    qty: 8,
-  },
-  {
-    id: 'sku1',
-    qty: 1,
-  },
-  {
-    id: 'sku1',
-    qty: 1,
-  },
-];
+// const products = [
+//   {
+//     id: 'sku1',
+//     qty: 1,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 1,
+//   },
+//   {
+//     id: 'sku2',
+//     qty: 2,
+//   },
+//   {
+//     id: 'sku3',
+//     qty: 3,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 6,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 8,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 6,
+//   },
+//   {
+//     id: 'sku2',
+//     qty: 19,
+//   },
+//   {
+//     id: 'sku4',
+//     qty: 1,
+//   },
+//   {
+//     id: 'sku4',
+//     qty: 1,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 8,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 1,
+//   },
+//   {
+//     id: 'sku1',
+//     qty: 1,
+//   },
+// ];
 // const arr = [false, undefined, null, false, 1, false, false, '', 0, NaN, 1, false, false];
 // for (let i = arr.length - 1; i >= 0; i -= 1) {
 //   if (!arr[i]) {
@@ -234,3 +234,18 @@ const products = [
 // }
 // foo(products);
 // console.log(products);
+//-----------------------------------------------------------------------------
+
+// const date = new Date();
+// console.log(date.getTime());
+// const ms = date.getTime() - 1624021654154;
+// console.log(ms);
+// console.log(date.toString());
+
+// const foo = () => console.log('First');
+// const bar = () => setTimeout(() => console.log('Second'), 500);
+// const baz = () => console.log('Third');
+
+// bar();
+// foo();
+// baz();
