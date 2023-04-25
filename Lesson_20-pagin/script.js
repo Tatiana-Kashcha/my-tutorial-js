@@ -70,30 +70,30 @@
 //   );
 // }
 
-// getTrending()
-//   .then((data) => {
-//     list.insertAdjacentHTML("beforeend", createMarkup(data.results));
-//     if (data.page !== data.total_pages) {
-//         paginationBtn.hidden = false;
-//     }
-//   })
-//   .catch((err) => console.log(err));
+getTrending()
+  .then(data => {
+    list.insertAdjacentHTML('beforeend', createMarkup(data.results));
+    if (data.page !== data.total_pages) {
+      paginationBtn.hidden = false;
+    }
+  })
+  .catch(err => console.log(err));
 
-// function createMarkup(arr) {
-//   return arr
-//     .map(
-//       ({ poster_path, title, vote_average }) => `<li>
-//     <img src="${
-//       poster_path
-//         ? "https://image.tmdb.org/t/p/w400" + poster_path // "https://image.tmdb.org/t/p/w400null"
-//         : "https://www.reelviews.net/resources/img/default_poster.jpg"
-//     }" width="400" alt="${title}">
-//     <p>${vote_average || "Not found"}</p>
-//     <h2>${title || "No name"}</h2>
-// </li>`
-//     )
-//     .join("");
-// }
+function createMarkup(arr) {
+  return arr
+    .map(
+      ({ poster_path, title, vote_average }) => `<li>
+    <img src="${
+      poster_path
+        ? 'https://image.tmdb.org/t/p/w400' + poster_path // "https://image.tmdb.org/t/p/w400null"
+        : 'https://www.reelviews.net/resources/img/default_poster.jpg'
+    }" width="400" alt="${title}">
+    <p>${vote_average || 'Not found'}</p>
+    <h2>${title || 'No name'}</h2>
+</li>`
+    )
+    .join('');
+}
 
 // // Перерва до 21.20
 
@@ -135,14 +135,14 @@
 //   );
 // }
 
-// getTrending()
-//   .then((data) => {
-//     list.insertAdjacentHTML("beforeend", createMarkup(data.results));
-//     if (data.page !== data.total_pages) {
-//       observer.observe(guard);
-//     }
-//   })
-//   .catch((err) => console.log(err));
+getTrending()
+  .then(data => {
+    list.insertAdjacentHTML('beforeend', createMarkup(data.results));
+    if (data.page !== data.total_pages) {
+      observer.observe(guard);
+    }
+  })
+  .catch(err => console.log(err));
 
 // function createMarkup(arr) {
 //   return arr
@@ -176,74 +176,37 @@
 //   });
 // }
 
+//--------------------------------------------------------------------
 // const mySet = new Set([1, 2, 1, 4, 3, 2]);
 // console.log('mySet', mySet);
 // const result = [...mySet];
 // console.log(result);
 
-// чому не працює fetchСountries? Це з використанням RESTCountries
+//------------------------------------------------------------------------
+// const form = document.querySelector("form");
+// const KEY = "form-data";
+// let data = JSON.parse(sessionStorage.getItem(KEY)) ?? {};
 
-//Input selector
-// const inputElement = document.querySelector('input');
-// const list = document.querySelector('.countries-list');
-// console.log(`${inputElement}`);
-// //Url
-// const BASE_URL = `https://restcountries.com/v3.1/`;
+// form.addEventListener("submit", onSubmit);
+// form.addEventListener("input", onInput);
 
-// //JSON
-// const END_POINT = `/name/${inputElement}.json`;
-
-// //Event listener for the input
-// inputElement.addEventListener('input', onInput);
+// function onSubmit(evt) {
+//   evt.preventDefault();
+//   console.log(data);
+//   data = {};
+//   sessionStorage.removeItem(KEY)
+//   evt.currentTarget.reset();
+// }
+// // https://developer.mozilla.org/en-US/docs/Glossary/IIFE?retiredLocale=uk
+// (function(){
+// const {email, message} = form.elements;
+// email.value = data.email || '';
+// message.value = data.message || '';
+// })()
 
 // function onInput(evt) {
-//   evt.preventDefault();
-//   const name = evt.currentTarget.value;
-//   const END_POINT = `/name/${name}.json`;
+//   const { name, value } = evt.target;
+//   data[name] = value;
 
-//   fetchCountries(name)
-//     .then(data => (list.innerHTML = createMarkup(data.name)))
-//     .catch(err => console.log(err));
+//   sessionStorage.setItem(KEY, JSON.stringify(data));
 // }
-
-// function fetchCountries(name) {
-//   const URL = `${BASE_URL}${END_POINT}?&name=${name}`;
-//   return fetch(URL)
-//   .then(resp => {
-//       if (!resp.ok) {
-//         // resp.ok === false
-//         throw new Error(resp.statusText);
-//       }
-//       return resp.json();
-//     });
-//   }
-
-const form = document.querySelector("form");
-const KEY = "form-data";
-let data = JSON.parse(sessionStorage.getItem(KEY)) ?? {};
-
-form.addEventListener("submit", onSubmit);
-form.addEventListener("input", onInput);
-
-function onSubmit(evt) {
-  evt.preventDefault();
-  console.log(data);
-  data = {};
-  sessionStorage.removeItem(KEY)
-  evt.currentTarget.reset();
-}
-// https://developer.mozilla.org/en-US/docs/Glossary/IIFE?retiredLocale=uk
-(function(){
-const {email, message} = form.elements;
-email.value = data.email || '';
-message.value = data.message || '';
-})()
-
-
-function onInput(evt) {
-  const { name, value } = evt.target;
-  data[name] = value;
-
-  sessionStorage.setItem(KEY, JSON.stringify(data));
-}
-    

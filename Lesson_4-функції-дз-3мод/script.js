@@ -15,7 +15,6 @@
 // console.log(arr);
 // console.log(arr1);
 
-
 // expression
 
 // const someName = function (arr, value) {
@@ -28,7 +27,6 @@
 // someName(arr1, 4)
 // console.log(arr);
 // console.log(arr1);
-
 
 // const arr = [423, 56, 23, 4];
 // const arr1 = [1, 45, 1, 2]
@@ -43,13 +41,8 @@
 // console.log(add(arr));
 // console.log(add(arr1));
 
-
-
-
-
 // const arr = [1, 2, 3];
 // const arr1 = [4, 5, 6];
-
 
 // function someName(arr, value = 1) {
 //     for (let i = 0; i < arr.length; i += 1) {
@@ -62,8 +55,6 @@
 // console.log(arr);
 // console.log(arr1);
 
-
-
 // function add() {
 
 //     // const arr = Array.from(arguments);
@@ -71,13 +62,9 @@
 //     // console.log(arr);
 // }
 
-
 // add(1, 2, 3, ['a', 'b']);
 // add(4, 5, 6, 7);
 // add(7, 8, 9, 1, 1, 2);
-
-
-
 
 // function checkValue(a, b) {
 //     const result = a + b;
@@ -106,11 +93,6 @@
 // foo()
 // console.log(a);
 
-
-
-
-
-
 // let a = 10;
 
 // function foo(){
@@ -123,8 +105,6 @@
 
 // console.log(a);
 
-
-
 // let a = 10;
 
 // function foo() {
@@ -136,7 +116,6 @@
 // a = 19;
 
 // console.log(a);
-
 
 // let a = 10;
 
@@ -164,11 +143,7 @@
 // foo(arr)
 // console.log(arr);
 
-
-
-
 // let a = 15;
-
 
 // function foo(x) {
 //     x = 10;
@@ -177,13 +152,9 @@
 // console.log(foo(a));
 // console.log('a', a);
 
-
-
-
 // function add(a, b) {
 //     return a + b
 // }
-
 
 // function checkValue(a, b) {
 //     const value = add(a, b)
@@ -198,7 +169,6 @@
 
 // checkValue(1, 1)
 
-
 // function foo() {
 //     boo()
 // }
@@ -208,12 +178,10 @@
 // }
 // foo()
 
-
 // якщо після двох функцій записати функцію що буде результатом перших двох яким буде правильний синтакс - до прикладу function add (a,b) + function checkVelue (a,b)?
 
 // const result = add(1, 2) + checkValue(4, -3)
 // console.log(result);
-
 
 // Example 1 - Індекс маси тіла
 // Напиши функцію calcBMI(weight, height) яка розраховує та повертає індекс маси тіла людини. Для цього необхідно розділити вагу в кілограмах на квадрат висоти людини в метрах.
@@ -234,11 +202,8 @@
 // const bmi = calcBMI('88,3', '1.75');
 // console.log(bmi); // 28.8
 
-
-
 // Example 2 - Найменше з чисел
 // Напиши функцію min(a,b), яка повертає найменше з чисел a та b.
-
 
 // function min(a, b) {
 //     if (a > b) {
@@ -251,10 +216,6 @@
 // console.log(min(2, 5)); // 2
 // console.log(min(3, -1)); // -1
 // console.log(min(1, 1)); // 1
-
-
-
-
 
 // Example 3 - Площа прямокутника
 // Напиши функцію getRectArea(dimensions) для обчислення площі прямокутника зі сторонами, значення яких будуть передані до параметра dimensions у вигляді рядка. Значення гарантовано розділені пробілом.
@@ -274,9 +235,6 @@
 // console.log(getRectArea('8 11'));
 // console.log(getRectArea('18 11'));
 
-
-
-
 // Example 4 - Логування елементів
 // Напиши функцію logItems(items), яка отримує масив та використовує цикл for, який для кожного елемента масиву буде виводити в консоль повідомлення у форматі <номер елемента> - <значення елемента>. Нумерація елементів повинна починатися з 1.
 
@@ -294,10 +252,6 @@
 
 // logItems(['Mango', 'Poly', 'Ajax']);
 // logItems(['🍎', '🍇', '🍑', '🍌', '🍋']);
-
-
-
-
 
 // Example 5 - Логування контактів
 // Напиши функцію printContactsInfo(names, phones) яка виводить у консоль ім'я та телефонний номер користувача. У параметри names та phones будуть передані рядки імен та телефонних номерів, розділені комами. Порядковий номер імен та телефонів у рядках вказують на відповідність. Кількість імен та телефонів гарантовано однакова.
@@ -322,9 +276,6 @@
 //     '89001234567,89001112233,890055566377,890055566378',
 // );
 
-
-
-
 // Example 6 - Пошук найбільшого елемента
 // Напиши функцію findLargestNumber(numbers)яка шукає найбільше число в масиві.
 
@@ -343,9 +294,6 @@
 
 // console.log(findLargestNumber(2, 17, 94, 1, 23, 37)); // 94
 // console.log(findLargestNumber(49, 4, 7, 83, 12)); // 83
-
-
-
 
 // Example 7 - Середнє значення
 // Напишіть функцію calAverage() яка приймає довільну кількість аргументів і повертає їхнє середнє значення. Усі аргументи будуть лише числами.
@@ -367,13 +315,8 @@
 // console.log(calAverage(14, 8, 2)); // 8
 // console.log(calAverage(27, 43, 2, 8, 36)); // 23.2
 
-
-
-
-
 // Example 8 - Форматування часу
 // Напиши функцію formatTime(minutes) яка переведе значення minutes (кількість хвилин) у рядок у форматі годин та хвилин HH:MM.
-
 
 // function formatTime(minutes) {
 //     const hours = Math.floor(minutes / 60).toString().padStart(2,'0');
@@ -385,9 +328,6 @@
 // console.log(formatTime(70)); // "01:10"
 // console.log(formatTime(450)); // "07:30"
 // console.log(formatTime(1441)); // "24:01"
-
-
-
 
 // Example 9 - Колекція курсів (includes, i ndexOf,push і т. д.)
 // Напишіть функції для роботи з колекцією навчальних курсів courses:
@@ -424,7 +364,6 @@
 //     return "Курс із таким ім'ям не знайдено"
 // }
 
-
 // const arr = ['a', 'b', 'c'];
 // // const idx = arr.indexOf('a');//0 => false
 // // console.log(!!~idx);//-1 => true
@@ -438,8 +377,6 @@
 // } else {
 //     console.log('no');
 // }
-
-
 
 // removeCourse('React');
 // console.log(courses); // ['HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Express']
@@ -608,7 +545,6 @@
 // console.log(keys);
 // console.log(values);
 
-
 // const keys = [];
 // const values = [];
 // const advert = {
@@ -629,7 +565,6 @@
 // console.log(keys);
 // console.log(values);
 
-
 // function countProps(object) {
 //   let propCount = 0;
 //   for (const key in object) {
@@ -638,7 +573,7 @@
 //     }
 //       console.log(object.hasOwnProperty(key));
 //   }
-   
+
 //   console.log(propCount);
 // }
 // countProps({ name: 'Mango', age: 2 });
@@ -658,7 +593,7 @@
 // console.log(values);
 
 // function countProps(object) {
-  
+
 //   let propCount = 0;
 //   const keys = Object.keys(object);
 //   for (const key of keys) {
@@ -666,7 +601,7 @@
 //   }
 
 //   console.log(propCount);
-  
+
 // }
 // countProps({ name: 'Mango', age: 2 });
 
@@ -709,7 +644,6 @@
 // console.log(hexColors);
 // console.log(rgbColors);
 
-
 // const products = [
 //   { name: 'Radar', price: 1300, quantity: 4 },
 //   { name: 'Scanner', price: 2700, quantity: 3 },
@@ -722,12 +656,12 @@
 //  * @returns {Number} prise || null
 //  */
 // function getProductPrice(productName) {
-    // for (const product of products) {
-    //   if (product.name === productName) {
-    //       console.log(product.price);
-    //       return;
-    //     }
-    // }
+// for (const product of products) {
+//   if (product.name === productName) {
+//       console.log(product.price);
+//       return;
+//     }
+// }
 //     console.log(null);
 // }
 // getProductPrice('Radar');
@@ -741,7 +675,7 @@
 
 // function getAllPropValues(propName) {
 //     const values = [];
-    
+
 //     for (const product of products) {
 //       if (product[propName]) {
 //           values.push(product[propName]);
@@ -753,7 +687,6 @@
 // getAllPropValues("quantity");
 // getAllPropValues("price");
 // getAllPropValues("category");
-
 
 // const products = [
 //   { name: 'Radar', price: 1300, quantity: 4 },
@@ -773,7 +706,6 @@
 // }
 // calculateTotalPrice('Radar');
 
-
 //------тема деструктурізація--------------
 
 // const highTemperatures = {
@@ -788,7 +720,6 @@
 
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 
-
 // const highTemperatures = {
 //   yesterday: 28,
 //   today: 26,
@@ -802,7 +733,6 @@
 
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 // console.log(meanTemperature);
-
 
 // const highTemperatures = {
 //   yesterday: 28,
@@ -820,7 +750,6 @@
 // const meanTemperature = (yesterday + today + tomorrow) / 3;
 // console.log(icon);
 
-
 // const highTemperatures = {
 //   yesterday: 28,
 //   today: 26,
@@ -836,7 +765,6 @@
 // const meanTemperature = (highYesterday + highToday + highTomorrow) / 3;
 // console.log(highIcon);
 // console.log(meanTemperature);
-
 
 // const colors = [
 //   { hex: '#f44336', rgb: '244,67,54' },
@@ -860,7 +788,6 @@
 // }
 // console.log(hexColors);
 // console.log(rgbColors);
-
 
 // const forecast = {
 //   today: {
@@ -889,18 +816,15 @@
 
 // console.log(highTomorrow);
 
-
-
 // function calculateMeanTemperature(forecast) {
 //     const {
 //       today: { low: todayLow, high: todayHigh },
 //       tomorrow: { low: tomorrowLow, high: tomorrowHigh },
 //     } = forecast;
-  
+
 //   console.log((todayLow + todayHigh + tomorrowLow + tomorrowHigh) / 4);
 // }
 // calculateMeanTemperature({ today: { low: 28, high: 32 }, tomorrow: { low: 25, high: 29 } });
-
 
 //---------------тема розпділ--------------
 
@@ -909,7 +833,6 @@
 // const worstScore = Math.min(...scores);
 // console.log(bestScore);
 // console.log(worstScore);
-
 
 // const firstGroupScores = [64, 42, 93];
 // const secondGroupScores = [89, 14, 51, 26];
@@ -920,7 +843,6 @@
 // console.log(allScores);
 // console.log(bestScore);
 // console.log(worstScore);
-
 
 // const defaultSettings = {
 //   theme: 'light',
@@ -937,19 +859,17 @@
 // const finalSettings = { ...defaultSettings, ...overrideSettings };
 // console.log(finalSettings);
 
-
 // function makeTask(data) {
 //   const completed = false;
 //   const category = 'General';
 //   const priority = 'Normal';
-  
+
 //     const newTask = { completed: false, category: 'General', priority: 'Normal', ...data };
 //     console.log(newTask);
 
 // }
 // makeTask({});
 // makeTask({ category: 'Homemade', priority: 'Low', text: 'Take out the trash' });
-
 
 // function add(...args) {
 //   let total = 0;
@@ -976,7 +896,6 @@
 // add(12, 4, 11, 48);
 // add(74, 11, 62, 46, 12, 36);
 
-
 // function addOverNum(...args) {
 //   let total = 0;
 
@@ -992,7 +911,6 @@
 // addOverNum(50, 15, 27) //повертає 0
 // addOverNum(20, 74, 11, 62, 46, 12, 36) //повертає 218
 
-
 // function findMatches(array, ...args) {
 //   const matches = []; // Don't change this line
 //    for (const arr of array) {
@@ -1000,12 +918,11 @@
 //        matches.push(arr);
 //      }
 //    }
-  
+
 //   console.log(matches);
 // }
 // findMatches([1, 2, 3, 4, 5], 1, 8, 2, 7) //повертає [1, 2]
 // findMatches([63, 11, 8, 29], 4, 7, 16) //повертає []
-
 
 // const bookShelf = {
 //   books: ['The last kingdom', 'The guardian of dreams'],
@@ -1032,24 +949,21 @@
 // bookShelf.removeBook('Red sunset');
 // bookShelf.updateBook('Sands of dune', 'Dune');
 
-
 // const bookShelf = {
 //   books: ['The last kingdom', 'Haze', 'The guardian of dreams'],
 //     updateBook(oldName, newName) {
 //         const idx = this.books.indexOf(oldName);
 //         this.books.splice(idx, 1, newName);
-      
+
 //         console.log(this.books);
 //     },
 // };
 // bookShelf.updateBook('Haze', 'Dungeon chronicles');
 
-
 // const atTheOldToad = {
 //     potions: [],
 // };
 // console.log(atTheOldToad.potions);
-
 
 // const atTheOldToad = {
 //   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
@@ -1081,11 +995,10 @@
 // atTheOldToad.addPotion('Invisibility');
 // atTheOldToad.addPotion('Power potion');
 
-
 // const atTheOldToad = {
 //   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
 //   removePotion(potionName) {
-    
+
 //     this.potions.splice(this.potions.indexOf(potionName), 1);
 //     console.log(this.potions);
 //   },
@@ -1095,11 +1008,10 @@
 // atTheOldToad.removePotion('Dragon breath');
 // atTheOldToad.removePotion('Speed potion');
 
-
 // const atTheOldToad = {
 //   potions: ['Speed potion', 'Dragon breath', 'Stone skin'],
 //     updatePotionName(oldName, newName) {
-      
+
 //       const idx = this.potions.indexOf(oldName);
 //         this.potions.splice(idx, 1, newName);
 //         console.log(this.potions);
@@ -1128,7 +1040,7 @@
 //             // return `Error! Potion ${newPotion.name} is already in your inventory!`;
 //           }
 //         }
-      
+
 //       this.potions.push(newPotion);
 //       console.log(this.potions); // проміжні результати для тестування
 //   },

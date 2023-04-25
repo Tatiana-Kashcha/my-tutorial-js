@@ -535,10 +535,10 @@
 // 3TASK 1 варіант в дз
 // const galleryImagesEl = document.querySelector('.gallery');
 
-// const makeGalleryImages = imgEl => {
-//   const { url, alt } = imgEl;
-//   return `<li class="list-item"><img class="gallery-item" src=${url} alt=${alt} height = 200></li>`; //стилі додані в CSS
-// };
+const makeGalleryImages = imgEl => {
+  const { url, alt } = imgEl;
+  return `<li class="list-item"><img class="gallery-item" src=${url} alt=${alt} height = 200></li>`; //стилі додані в CSS
+};
 // const itemImages = images.map(makeGalleryImages).join('');
 // galleryImagesEl.insertAdjacentHTML('beforeend', itemImages);
 
