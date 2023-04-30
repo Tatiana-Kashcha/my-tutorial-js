@@ -186,75 +186,73 @@
 
 // Перерва до 21.12
 
-// const addComment = document.querySelector(".add-comment");
-// const list = document.querySelector(".js-list");
-// const errText = document.querySelector(".js-error-message");
-// const formContainer = document.querySelector(".js-form-container");
+const addComment = document.querySelector('.add-comment');
+const list = document.querySelector('.js-list');
+const errText = document.querySelector('.js-error-message');
+const formContainer = document.querySelector('.js-form-container');
 
-// addComment.addEventListener("click", handlerAddComment);
+addComment.addEventListener('click', handlerAddComment);
 
-// function handlerAddComment() {
-//   formContainer.innerHTML = `<form action="submit" class="js-form">
-//     <input type="text" name="title">
-//     <textarea name="comment" cols="30" rows="10"></textarea>
-//     <button>Додати Відгук</button>
-// </form>`;
+function handlerAddComment() {
+  formContainer.innerHTML = `<form action="submit" class="js-form">
+    <input type="text" name="title">
+    <textarea name="comment" cols="30" rows="10"></textarea>
+    <button>Додати Відгук</button>
+</form>`;
 
-//   const form = document.querySelector(".js-form");
-//   form.addEventListener("submit", handlerSubmitForm);
-// }
+  const form = document.querySelector('.js-form');
+  form.addEventListener('submit', handlerSubmitForm);
+}
 
-// function handlerSubmitForm(evt) {
-//   evt.preventDefault();
-//   const { title, comment } = evt.currentTarget.elements;
-//   const data = {
-//     userId: 1,
-//     title: title.value,
-//     body: comment.value,
-//   };
+function handlerSubmitForm(evt) {
+  evt.preventDefault();
+  const { title, comment } = evt.currentTarget.elements;
+  const data = {
+    userId: 1,
+    title: title.value,
+    body: comment.value,
+  };
 
-//   addCommentService(data)
-//     .then((data) => {
-//       list.insertAdjacentHTML("beforeend", createCommentMarkup(data));
-//     })
-//     .catch(() => {
-//       errText.textContent = "Сервіс не доступний";
-//       setTimeout(() => {
-//         errText.textContent = "";
-//       }, 2000);
-//     })
-//     .finally(() => {
-//       formContainer.innerHTML = "";
-//     });
-// }
+  addCommentService(data)
+    .then(data => {
+      list.insertAdjacentHTML('beforeend', createCommentMarkup(data));
+    })
+    .catch(() => {
+      errText.textContent = 'Сервіс не доступний';
+      setTimeout(() => {
+        errText.textContent = '';
+      }, 2000);
+    })
+    .finally(() => {
+      formContainer.innerHTML = '';
+    });
+}
 
-// function createCommentMarkup({ title, body, id }) {
-//   return `<li data-id="${id}">
-//     <h2>${title}</h2>
-//     <p>${body}</p>
-//     <button>Видалити відгук</button>
-//     </li>`;
-// }
+function createCommentMarkup({ title, body, id }) {
+  return `<li data-id="${id}">
+    <h2>${title}</h2>
+    <p>${body}</p>
+    <button>Видалити відгук</button>
+    </li>`;
+}
 
-// function addCommentService(data) {
-//   const options = {
-//     method: "POST",
-//     headers: {
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   };
+function addCommentService(data) {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(data),
+  };
 
-//   return fetch("https://jsonplaceholder.typicode.com/posts", options).then(
-//     (resp) => {
-//       if (!resp.ok) {
-//         throw new Error(resp.statusText);
-//       }
+  return fetch('https://jsonplaceholder.typicode.com/posts', options).then(resp => {
+    if (!resp.ok) {
+      throw new Error(resp.statusText);
+    }
 
-//       return resp.json();
-//     }
-//   );
-// }
+    return resp.json();
+  });
+}
 
 // CRUD
 
@@ -354,17 +352,17 @@
 //   );
 // }
 
-function getPictures(pictureName, page) {
-  const URL = `https://pixabay.com/api/?key=35723548-55cce6d92fe2b0376e8aa06a2&q="${pictureName}"
-    &image_type="photo"&orientation="horizontal"&safesearch="true"&per_page=200&page=${page}`;
-  return fetch(URL).then((resp) => {
-    if (!resp.ok) {
-      throw new Error(resp.statusText);
-    }
-    return resp.json();
-  }).then(data => console.log(data));
-}
-getPictures("cat", 3);
+// function getPictures(pictureName, page) {
+//   const URL = `https://pixabay.com/api/?key=35723548-55cce6d92fe2b0376e8aa06a2&q="${pictureName}"
+//     &image_type="photo"&orientation="horizontal"&safesearch="true"&per_page=200&page=${page}`;
+//   return fetch(URL).then((resp) => {
+//     if (!resp.ok) {
+//       throw new Error(resp.statusText);
+//     }
+//     return resp.json();
+//   }).then(data => console.log(data));
+// }
+// getPictures("cat", 3);
 
 // let counter = 0;
 
