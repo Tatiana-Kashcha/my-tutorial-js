@@ -37,38 +37,36 @@
 //   .catch((err) => console.log(err));
 
 // --------------------------------------------------------------------------------------------//
-// const list = document.querySelector(".js-list");
-// const paginationBtn = document.querySelector(".js-pagination");
-// const BASE_URL = "https://api.themoviedb.org/3";
-// const ENDPOINT = "/trending/movie/week";
-// const API_KEY = "345007f9ab440e5b86cef51be6397df1";
-// let currentPage = 1;
+const list = document.querySelector('.js-list');
+const paginationBtn = document.querySelector('.js-pagination');
+const BASE_URL = 'https://api.themoviedb.org/3';
+const ENDPOINT = '/trending/movie/week';
+const API_KEY = '345007f9ab440e5b86cef51be6397df1';
+let currentPage = 1;
 
-// paginationBtn.addEventListener("click", onPagination);
+paginationBtn.addEventListener('click', onPagination);
 
-// function onPagination() {
-//   currentPage += 1;
-//   getTrending(currentPage)
-//     .then((data) => {
-//       list.insertAdjacentHTML("beforeend", createMarkup(data.results));
-//       if (data.page === data.total_pages) {
-//         paginationBtn.hidden = true;
-//       }
-//     })
-//     .catch((err) => console.log(err));
-// }
+function onPagination() {
+  currentPage += 1;
+  getTrending(currentPage)
+    .then(data => {
+      list.insertAdjacentHTML('beforeend', createMarkup(data.results));
+      if (data.page === data.total_pages) {
+        paginationBtn.hidden = true;
+      }
+    })
+    .catch(err => console.log(err));
+}
 
-// function getTrending(page = 1) {
-//   return fetch(`${BASE_URL}${ENDPOINT}?api_key=${API_KEY}&page=${page}`).then(
-//     (resp) => {
-//       if (!resp.ok) {
-//         throw new Error(resp.statusText);
-//       }
+function getTrending(page = 1) {
+  return fetch(`${BASE_URL}${ENDPOINT}?api_key=${API_KEY}&page=${page}`).then(resp => {
+    if (!resp.ok) {
+      throw new Error(resp.statusText);
+    }
 
-//       return resp.json();
-//     }
-//   );
-// }
+    return resp.json();
+  });
+}
 
 getTrending()
   .then(data => {
