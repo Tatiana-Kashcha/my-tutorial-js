@@ -133,14 +133,14 @@ function createMarkup(arr) {
 //   );
 // }
 
-getTrending()
-  .then(data => {
-    list.insertAdjacentHTML('beforeend', createMarkup(data.results));
-    if (data.page !== data.total_pages) {
-      observer.observe(guard);
-    }
-  })
-  .catch(err => console.log(err));
+// getTrending()
+//   .then(data => {
+//     list.insertAdjacentHTML('beforeend', createMarkup(data.results));
+//     if (data.page !== data.total_pages) {
+//       observer.observe(guard);
+//     }
+//   })
+//   .catch(err => console.log(err));
 
 // function createMarkup(arr) {
 //   return arr

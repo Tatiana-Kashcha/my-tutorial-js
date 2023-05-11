@@ -1,10 +1,8 @@
 // https://github.com/ArtemRysich/Group_77
 
-
 // https://developer.mozilla.org/en-US/
 // https://uk.javascript.info/
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing
-
 
 // console.log('Hello world');
 // let value;
@@ -28,7 +26,6 @@
 
 // var
 
-
 // const a = 10;
 // // a = 15
 // let b; // undefined
@@ -39,8 +36,6 @@
 // var a = 10;
 // console.log(a);
 
-
-
 // Примітивні типи даних - імутабельні типи даних
 // 1 Number
 // 2 String
@@ -48,16 +43,11 @@
 // 4 Undefined
 // 5 Null
 
-
 // const a = 10;
 
 // a = a + 2;
 // a = 12;
 // a += 2
-
-
-
-
 
 // Example 1 - Математичні оператори
 // Виведи на екран загальну кількість яблук та винограду. Різницю яблук та винограду.
@@ -69,8 +59,6 @@
 // const diff = grapes - apples;
 // console.log(diff)
 
-
-
 // Example 2 - Комбіновані оператори
 // Заміни вираз перевизначення комбінованим оператором +=.
 
@@ -79,16 +67,16 @@
 // students += 50;
 // console.log(students);
 
-
 // Example 3 - Пріоритет операторів
 // Розбери пріоритет операторів в інструкції привласнення значення змінної result.
 
 // const result = 108 + 223 - 2 * 5;
 // console.log(result);
 
-
 // Example 4 - Клас Math
-// Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д. значення змінної value. Використовуй методи Math.floor(), Math.ceil() та Math.round(). Перевір що буде в консолі при значеннях 27.3 та 27.9.
+// Напиши скрипт, який виводить у консоль заокруглені вгору/вниз і т.д. значення змінної value.
+// Використовуй методи Math.floor(), Math.ceil() та Math.round().Перевір що буде в консолі при
+// значеннях 27.3 та 27.9.
 
 // const value = 27.5;
 
@@ -112,16 +100,13 @@
 // const a = 2 * "3";
 // console.log(typeof a);
 
-
 // const b = 6 - '3';
 // console.log(typeof b);
-
 
 // const value = 10;
 // const value_2 = '15';
 
 // const result = value - Number(value_2);
-
 
 // const companyName = 'Cyberdyne Systems';
 // const repairBots = 150;
@@ -129,7 +114,6 @@
 // // const message = companyName + " " + 'has' + " " + (repairBots + defenceBots) + " bots in stock ";
 // const message = `${companyName} has ${repairBots + defenceBots} bots in stock`;
 // console.log(message); // "Cyberdyne Systems has 200 bots in stock"
-
 
 // Example 6 - Методи рядків та чейнінг
 // Напиши скрипт, який розраховує індекс маси тіла людини. Для цього необхідно розділити вагу в кілограмах на квадрат висоти людини у метрах.
@@ -154,7 +138,6 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 // const bmi = Number((weight / height ** 2).toFixed(1));
 // console.log(bmi); // 28.8
-
 
 // Example 7 - Оператори порівняння та приведення типів
 // Яким буде результат виразів?
@@ -187,7 +170,6 @@
 
 // console.log('Papaya' === 'papaya'); 50 === 70
 
-
 // console.log('papaya' < 'papaub'); //false
 // p 70
 // a 61
@@ -198,7 +180,6 @@
 // console.log(undefined == null); 0 0
 
 // console.log(undefined === null);
-
 
 // Example 8 - Логічні оператори
 // Яким буде результат виразів?
@@ -211,7 +192,6 @@
 // console.log(true && 4 && 'kiwi');//kiwi
 // true   true   true
 // console.log(true && 0 && 'kiwi'); // 0
-
 
 // || АБО
 // Або повертає перше значення яке приведеться до true або останій false
@@ -243,10 +223,7 @@
 // 5 3 => true
 // 3 || 4 => 3
 
-
-
 // Example 9 - Значення за замовчуванням та оператор нульового злиття (??)
-
 
 //  || АБО він працює на 6 значень які повертають false
 // 1 undefined => false
@@ -255,7 +232,6 @@
 // 4 NaN       => false
 // 5 ''       => false
 // 6 false     => false
-
 
 // ?? він працює на 2 значення null undefined
 
@@ -270,7 +246,6 @@
 // const defaultValue = 10;
 // const value = result || defaultValue;
 // console.log(value);
-
 
 // ------------Це вже моє заняття по 1 модулю-----------------
 
@@ -290,11 +265,10 @@
 // }
 // sayHi();
 
-
 // function add(a, b, c) {
 //     const result = (a + b + c);
 //   console.log(`Addition result equals ${result}`);
-  
+
 // }
 
 // add(15, 27, 10);
@@ -319,11 +293,11 @@
 // calculateTotalPrice(4, 900);
 
 // function makeOrderMessage(orderedQuantity, pricePerDroid, deliveryFee) {
-  
+
 //   const message = `You ordered droids worth ${
 //       orderedQuantity * pricePerDroid + deliveryFee} credits.
 //     Delivery (${deliveryFee} credits) is included in total price.`;
-    
+
 //   console.log(message);
 //   return message;
 // }
@@ -331,10 +305,8 @@
 // makeOrderMessage(2, 100, 30);
 // makeOrderMessage(3, 400, 30);
 
-
 // function isAdult(age) {
 //   const passed = age >= 18;
-
 
 //   console.log(passed);
 //   return passed;
@@ -369,7 +341,6 @@
 // }
 // checkStorage(3, 3);
 // checkStorage(3, 5);
-
 
 // function makeTransaction(pricePerDroid, orderedQuantity, customerCredits) {
 //   let message;
@@ -437,7 +408,7 @@
 //   const SILVER_DISCOUNT = 0.05;
 //   const GOLD_DISCOUNT = 0.1;
 //   let discount;
-  
+
 //     if (totalSpent > 50000 || totalSpent === 50000) {
 //       discount = GOLD_DISCOUNT;
 //     } else if (totalSpent >= 20000 && totalSpent < 50000) {
@@ -445,13 +416,11 @@
 //     } else if (totalSpent >= 5000 && totalSpent < 20000) {
 //       discount = BRONZE_DISCOUNT;
 //     } else discount = BASE_DISCOUNT;
-    
+
 //   console.log(discount);
 //   return discount;
 // }
 // getDiscount(26000);
-
-
 
 // function isNumberInRange(start, end, number) {
 //   const isInRange = number >= start && number <= end;
@@ -484,8 +453,6 @@
 // }
 // checkStorage(100, 50);
 
-
-
 // function getSubscriptionPrice(type) {
 //   let price;
 
@@ -517,11 +484,11 @@
 //         case null:
 //             message = "Canceled by user!";
 //             break;
-        
+
 //         case ADMIN_PASSWORD:
 //             message = "Welcome!";
 //             break;
-        
+
 //         default:
 //             message = "Access denied, wrong password!";
 //     }
@@ -535,7 +502,7 @@
 
 // function getShippingCost(country) {
 //   let message;
-  // Change code below this line
+// Change code below this line
 //    switch (country) {
 //      case "China":
 //        message = `Shipping to ${country} will cost 100 credits`;
@@ -556,7 +523,7 @@
 //      default:
 //        message = "Sorry, there is no delivery to your country";
 //    }
-  // Change code above this line
+// Change code above this line
 //  console.log(message);
 //   return message;
 // }
@@ -582,10 +549,9 @@
 // console.log(firstElement);
 // console.log(lastElement);
 
-
 // function getSubstring(string, length) {
 //     const substring = string.slice(0, length);
-    
+
 //     console.log(substring);
 //   return substring;
 // }
@@ -593,26 +559,24 @@
 
 // function formatMessage(message, maxLength) {
 //   let result;
-  
+
 //     if (message.length <= maxLength) {
 //     result = message;
 //   } else result = message.slice(0, maxLength) + "...";
-    
+
 //    console.log(result);
 //   return result;
 // }
 // formatMessage("Nunc sed turpis a felis in nunc fringilla", 15);
 // formatMessage("Vestibulum facilisis purus nec", 20);
 
-
 // function normalizeInput(input) {
 //     const normalizedInput = input.toUpperCase();
-    
+
 //    console.log(normalizedInput);
 //   return normalizedInput;
 // }
 // normalizeInput("HEllo");
-
 
 // function normalizeInput(input) {
 //   const normalizedInput = input.toLowerCase();
@@ -622,7 +586,6 @@
 // }
 // normalizeInput("HEllo");
 
-
 // function checkForName(fullName, name) {
 //   const result = (fullName.includes(name));
 //   console.log(result);
@@ -631,10 +594,9 @@
 // checkForName("Egor Kolbasov", "Egor");
 // checkForName("Egor Kolbasov", "egor");
 
-
 // function checkForSpam(message) {
 //   let result;
- 
+
 //     if (
 //       message.toLowerCase().includes("spam") ||
 //       message.toUpperCase().includes("spam")) {
@@ -644,7 +606,7 @@
 //       message.toUpperCase().includes("sale")) {
 //       result = true;
 //     } else result = false;
-  
+
 //   console.log(result);
 //   return result;
 // }
