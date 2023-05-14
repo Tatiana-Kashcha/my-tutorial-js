@@ -258,7 +258,7 @@ const container = document.querySelector('.js-cars');
 // cars.forEach(({ img, model, price, type },idx) => {
 //   const li = document.createElement("li");
 // li.id = idx + 1;
-li.setAttribute('li', idx + 1);
+// li.setAttribute('li', idx + 1);
 //   const image = document.createElement("img");
 //   const h2 = document.createElement("h2");
 //   const h3 = document.createElement("h3");

@@ -11,7 +11,6 @@
 //     skills: ['node.js', 'express']
 // }]
 
-
 // const arr = [1, 2, 3, 4, 5, 6, 7];
 // // const result = arr.map((item, idx,arr)=>{
 // //     return item * 2
@@ -36,7 +35,6 @@
 //     skills: ['node.js', 'express']
 // }]
 
-
 // flatMap
 // const result = users.flatMap((item)=>{
 //     return item.skills
@@ -52,8 +50,6 @@
 // result = [...result, ...item.skills]
 // })
 // console.log(result);
-
-
 
 //filter
 // const arr = [1, 2, 3, 4, 5, 6, 7];
@@ -73,8 +69,6 @@
 // const result = arr.filter(item => item > 3 && item < 6)
 // console.log(result);
 
-
-
 // const users = [{
 //     name: 'User1',
 //     skills: ['html', 'css']
@@ -88,7 +82,6 @@
 
 // const result = users.filter(({skills}) =>skills.includes('js')).map(({name}) => name)
 // console.log(result);
-
 
 //find
 
@@ -114,40 +107,41 @@
 // const result = arr.indexOf(5)
 // console.log(result);
 
+const users = [
+  {
+    name: 'User1',
+    skills: ['html', 'css'],
+  },
+  {
+    name: 'User2',
+    skills: ['js', 'react'],
+  },
+  {
+    name: 'User3',
+    skills: ['js', 'express'],
+  },
+  {
+    name: 'User2',
+    skills: ['js', 'react'],
+  },
+  {
+    name: 'User2',
+    skills: ['js', 'react'],
+  },
+];
 
-// const users = [{
-//     name: 'User1',
-//     skills: ['html', 'css']
-// }, {
-//     name: 'User2',
-//     skills: ['js', 'react']
-// }, {
-//     name: 'User3',
-//     skills: ['js', 'express']
-// }, {
-//     name: 'User2',
-//     skills: ['js', 'react']
-// }, {
-//     name: 'User2',
-//     skills: ['js', 'react']
-// }]
-
-// const result = [];
-// users.forEach(({
-//     name
-// }, idx) => {
-//     if (name === 'User2') {
-//         result.push(idx)
-//     }
-// })
-// console.log(result);
+const result = [];
+users.forEach(({ name }, idx) => {
+  if (name === 'User2') {
+    result.push(idx);
+  }
+});
+console.log(result);
 
 // const result = users.indexOf('User2')
 // const result = users.findIndex(({name}) => name ==='User2')
 // // // const result = arr.findIndex(item => item === 5);
 // console.log(result);
-
-
 
 // every some
 // const users = [{
@@ -167,7 +161,6 @@
 
 // console.log(result);
 
-
 // sort
 
 // const numbers = [5, 2, 7, 12, 9, 1];
@@ -185,19 +178,14 @@
 
 // console.log(result);
 
-
 // const test = [  'black','apple', 'car', 'red', 'js'];
-
 
 // test.sort((a,b) => b.length - a.length)
 // console.log(test);
 // 1, 1111, 111, 1111,11
 // 1 11 111 1111 1111
 
-
-
 // reduce
-
 
 // const numbers = [5, 2, 7, 12, 9, 1];
 // let total = 0;
@@ -212,7 +200,6 @@
 //     acc.push(item * 2)
 //     return acc
 // }, [])
-
 
 // console.log(result2);
 
@@ -301,7 +288,6 @@
 //     }
 // ];
 
-
 // Example 1 - Метод map
 // Нехай функція getModels повертає масив моделей (поле model) всіх автомобілів.
 //[ {
@@ -342,17 +328,13 @@
 //     return result
 // };
 
-
 // const makeCarsWithDiscount = (cars, discount) => cars.map(car => ({
 //     ...car,
 //     price: car.price * (1 -discount),
 // }))
 
-
 // console.log(makeCarsWithDiscount(cars, 0.2));
 // console.log(makeCarsWithDiscount(cars, 0.4));
-
-
 
 // Example 3 - Метод filter
 // Нехай функція filterByPrice повертає масив автомобілів ціна яких менша ніж значення параметра threshold.
@@ -370,11 +352,8 @@
 // };
 // const filterByPrice = (cars, threshold) => cars.filter(({price})=> price < threshold)
 
-
 // console.table(filterByPrice(cars, 30000));
 // console.table(filterByPrice(cars, 25000));
-
-
 
 // Example 4 - Метод filter
 // Нехай функція getCarsWithDiscount повертає масив автомобілів властивість onSale яких true.
@@ -390,8 +369,6 @@
 
 // console.table(getCarsWithDiscount(cars));
 
-
-
 // Example 5 - Метод filter
 // Нехай функція getCarsWithType повертає масив автомобілів тип яких збігається зі значенням параметра type.
 //[ {
@@ -406,8 +383,6 @@
 
 // console.table(getCarsWithType(cars, 'suv'));
 // console.table(getCarsWithType(cars, 'sedan'));
-
-
 
 // Example 6 - Метод find
 //[ {
@@ -425,15 +400,12 @@
 // console.log(getCarByModel(cars, 'F-150'));
 // console.log(getCarByModel(cars, 'CX-9'));
 
-
 // Example 7 - Метод sort
 // Нехай функція sortByAscendingAmount повертає новий масив автомобілів відсортований за зростанням значення якості amount.
 // console.log(cars);
 // const sortByAscendingAmount = cars =>  cars.sort((a,b) => a.amount - b.amount)
 
-
 // console.table(sortByAscendingAmount(cars));
-
 
 // Example 8 - Метод sort
 // Нехай функція sortByDescendingPrice повертає новий масив автомобілів відсортований за зменшенням значення властивості price.
@@ -442,7 +414,6 @@
 
 // console.log(cars);
 // console.table(sortByDescendingPrice(cars));
-
 
 // Example 9 - Метод sort
 // Нехай функція sortByModel повертає новий масив автомобілів відсортований за назвою моделі в алфавітному та зворотному алфавітному порядку, в залежності від значення параметра order.
@@ -469,11 +440,8 @@
 //         model: b
 //     }) => order === 'asc' ? a.localeCompare(b) : b.localeCompare(a))
 
-
-
 // console.table(sortByModel(cars, 'asc'));
 // console.table(sortByModel(cars, 'desc'));
-
 
 // Example 10 - Метод reduce
 // Нехай функція getTotalAmount повертає загальну кількість автомобілів (значення властивостей amount).
@@ -490,7 +458,6 @@
 // }) => acc + amount, 0);
 
 // console.log(getTotalAmount(cars));
-
 
 // Example 11 - Ланцюжки методів
 // Нехай функція getAvailableCarNames повертає масив моделей автомобілів, але тільки тих, які зараз на розпродажі.
@@ -517,7 +484,6 @@
 
 // console.log(getModelsOnSale(cars));
 
-
 // Example 12 - Ланцюжки методів
 // Нехай функція getSortedCarsOnSale повертає масив автомобілів на розпродажі (Властивість onSale), відсортованих за зростанням ціни.
 //[ {
@@ -534,8 +500,6 @@
 // .sort((a,b) => a.price - b.price)
 // console.log(cars);
 // console.table(getSortedCarsOnSale(cars));
-
-
 
 // const str = 'sdkghsuiokdhvikoahfozh';
 // // {
@@ -554,7 +518,6 @@
 //     return acc
 // }, {})
 
-
 // console.log(foo(str));
 
 // const cars2 = ["Ford", "Honda", "Mazda", "Toyota"]
@@ -566,7 +529,6 @@
 // 4 Toyota
 
 // Нажаль авто відсутні
-
 
 // const boo = arr => arr.reduce((acc, car, idx) => {
 //     acc += `${idx + 1} - ${car}\n`
@@ -581,7 +543,6 @@
 // const arr = [1, 2, 3, 4, 5];
 // const result = arr.filter(item => item !== 3)
 // console.log(result);
-
 
 //-------------4 мод початок автопер 1-34 в Lesson-6  35дз--------------
 
@@ -1129,7 +1090,7 @@
 // const getSortedFriends = users => {
 //   //  return [...users].flatMap(user => user.friends)
 //         // .filter((unique, idx, thisArray) => thisArray.indexOf(unique) === idx).sort()
-    
+
 //     console.log([...users].flatMap(user => user.friends)
 //         .filter((unique, idx, thisArray) => thisArray.indexOf(unique) === idx).sort());
 // };
@@ -1204,7 +1165,7 @@
 //     // return [...users]
 //     //   .filter(({ gender: myGender }) => gender === myGender)
 //     //     .reduce((total, user) => (total += user.balance), 0);
-    
+
 //     console.log([...users].filter(({ gender: myGender }) => gender === myGender)
 //         .reduce((total, user) => (total += user.balance), 0));
 
