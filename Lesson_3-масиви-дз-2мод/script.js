@@ -14,7 +14,6 @@
 // console.log(typeof arr);//object
 // console.log(Array.isArray(arr));
 
-
 // for(let item of arr){
 //     if(typeof item === 'boolean'){
 //         item = 'world'
@@ -25,8 +24,6 @@
 //     // console.log(item);
 // }
 // console.log(arr);
-
-
 
 // // index     0    1     2      3
 // const arr = [1, null, true, 'hello'];
@@ -39,7 +36,6 @@
 // }
 // console.log(arr);
 
-
 // let a = 10;
 // let b = a;
 
@@ -47,7 +43,6 @@
 
 // console.log(a);
 // console.log(b);
-
 
 // const a = [1, 2, 3];
 // const b = a;
@@ -61,9 +56,6 @@
 // console.log(a);
 // console.log(b);
 
-
-
-
 // let a = false
 
 // let b = a;
@@ -75,16 +67,13 @@
 // console.log(a);
 // console.log(b);
 
-
 // const a = [1, 2, 3];
 // const b = a;
-
 
 // a.push(4)
 // b.push(77)
 // console.log(a);
 // console.log(b);
-
 
 // let number = 10;
 // number += 12;
@@ -97,19 +86,12 @@
 // arr.shift()
 // console.log(arr);
 
-
-
-
-
-
 //  split join
 // const str = 'hello  world';
 // const result = str.split(' ');
 // console.log(result);
 // const respons = result.join('-')
 // console.log(respons);
-
-
 
 // indexof includes
 // const arr = [1, 2, 3, 4, 5, 6];
@@ -130,8 +112,6 @@
 
 // }
 
-
-
 // pop push
 // const arr = [1, 2, 3, 4, 5, 6];
 // arr.push(7, 8, 9);
@@ -141,7 +121,6 @@
 // arr.pop()
 // console.log(arr);
 
-
 // shift unshift
 // const arr = [1, 2, 3, 4, 5, 6];
 
@@ -150,14 +129,12 @@
 // arr.shift()
 // console.log(arr);
 
-
 // splice
 
 // const arr = [1, 2, 3, 4, 5, 6];
 
 // arr.splice(2, 2, 99)
 // console.log(arr);
-
 
 // slice
 //       0  1  2  3  4  5
@@ -166,25 +143,18 @@
 // console.log(arr);
 // console.log(result);
 
-
 // const arr = [1, 2, 3, 4, 5, 6];
 // const copy = arr.slice();
 // const result = [...arr]
 // // console.log(result);
 // console.log(result === copy);
 
-
 // const arr = [1, 2, 3, 4, 5, 6];
 // const result = arr.concat([9, 10], [7, 8])
 // const result = [...arr, ...[7, 8], ...[9, 10]]
 // console.log(result);
 
-
-
-
 // Перерва до 21.20
-
-
 
 // Example 1 - Базові операції з масивом
 // Створіть масив genres з елементами «Jazz» та «Blues».
@@ -204,7 +174,6 @@
 // // genres.splice(0, 1)
 // // genres.splice(0, 0, 'Country', 'Reggae')
 
-
 // genres.splice(0, 1, 'Country', 'Reggae')
 // console.log(genres);
 
@@ -216,8 +185,6 @@
 // const first = Number(arr[0]);
 // const second = Number(arr[1]);
 // console.log(first * second);
-
-
 
 // Example 3 - Перебір масиву
 // Напиши скрипт для перебору масиву fruits циклом for. Для кожного елемента масиву виведи в консоль
@@ -232,7 +199,6 @@
 // for(let i = 0, num = 1; i < fruits.length; i+=1, num+=1){
 //     console.log(`${num} - ${fruits[i]}`);
 // }
-
 
 // Example 4 - Масиви та цикли
 // Напиши скрипт, який виводить у консоль ім'я та телефонний номер користувача. У змінних names
@@ -255,8 +221,6 @@
 //     }
 // console.log(phones);
 
-
-
 // Example 5 - Масиви та рядки
 // Напиши скрипт, який виводить у консоль усі слова рядка крім першого і останнього.
 // Результуючий рядок не повинен починатися або закінчуватися символ пробілу.Скрипт
@@ -274,7 +238,6 @@
 // const arr = string.split(' ').slice(1, -1);
 // console.log(arr.join(' '));
 
-
 // Example 6 - Масиви та рядки
 // Напиши скрипт, який «розгортає» рядок (зворотний порядок букв) і виводить
 // його в консоль.
@@ -283,9 +246,6 @@
 // const arr = string.split('').reverse().join('');
 // console.log(arr);
 
-
-
-
 // Example 7 - Сортування масиву із циклом
 // Напиши скрипт сортування масиву рядків в алфавітному порядку за першою
 // літерою елемента.
@@ -293,12 +253,6 @@
 // const langs = ['python', 'javascript', 'c++', 'haskel', 'php', 'ruby'];
 // langs.sort((a, b) => a.localeCompare(b));
 // console.log(langs);
-
-
-
-
-
-
 
 // Example 8 - Пошук елемента
 // Напиши скрипт пошуку найменшого числа у масиві. Код повинен працювати
@@ -315,7 +269,6 @@
 // }
 // console.log(min); // 1
 
-
 // const str = "hello, world  my, name"
 // const result = str.replaceAll(',', '').split(' ')
 
@@ -329,14 +282,14 @@
 // -------------------прдовження Це вже моє заняття по 2 модулю----------
 
 // function getExtremeElements(array) {
-  //     const first = array[0];
-  //     const last = array[array.length - 1];
-  //     console.log(first, last);
-    
-      // повертає елементи масиву
-  //   console.log(array[0], array[array.length - 1]);
+//     const first = array[0];
+//     const last = array[array.length - 1];
+//     console.log(first, last);
 
-  //повертає масив
+// повертає елементи масиву
+//   console.log(array[0], array[array.length - 1]);
+
+//повертає масив
 //   array = [array[0], array[array.length - 1]];
 //   console.log(array);
 // }
@@ -347,7 +300,7 @@
 // function splitMessage(message, delimiter) {
 //   let words;
 //   words = message.split(delimiter);
-    
+
 //   console.log(words);
 // }
 // splitMessage('Mango hurries to the train', ' ');
@@ -359,7 +312,6 @@
 // }
 // calculateEngravingPrice('JavaScript is in my blood', 10);
 
-
 // const message = 'java script';
 // const pricePerWord = 5;
 // function calculateEngravingPrice(message, pricePerWord) {
@@ -369,8 +321,6 @@
 // }
 
 // calculateEngravingPrice(message, pricePerWord);
-
-
 
 // function makeStringFromArray(array, delimiter) {
 //   let string;
@@ -397,9 +347,6 @@
 // console.log(typeof arr);//object
 // console.log(Array.isArray(arr));
 
-
-
-
 // function slugify(title) {
 //     // в рядочку
 // //   let slug = title.toLowerCase().replaceAll(' ', '-');
@@ -411,7 +358,6 @@
 // slugify('Ten secrets of JavaScript');
 // slugify('How to become a JUNIOR developer for TWO WEEKS');
 
-
 // const fruits = ['apple', 'plum', 'pear', 'orange', 'banana'];
 
 // const firstTwoEls = fruits.slice(0, 2);
@@ -420,7 +366,6 @@
 // console.log(firstTwoEls);
 // console.log(nonExtremeEls);
 // console.log(lastThreeEls);
-
 
 // const oldClients = ['Mango', 'Ajax', 'Poly', 'Kiwi'];
 // const newClients = ['Peach', 'Houston'];
@@ -458,14 +403,12 @@
 // }
 // calculateTotal(3);
 
-
 // const fruits = ['apple', 'plum', 'pear', 'orange'];
 
 // for (let i = 0; i < fruits.length; i+=1) { // Change this line
 //   const fruit = fruits[i]; // Change this line
 //   console.log(fruit);
 // }
-
 
 // function calculateTotalPrice(order) {
 //   let total = 0;
@@ -476,7 +419,6 @@
 // }
 // calculateTotalPrice([12, 85, 37, 4]);
 // calculateTotalPrice([164, 48, 291]);
-
 
 // function findLongestWord(string) {
 //   const newStringArr = string.split(' ');
@@ -495,15 +437,14 @@
 // findLongestWord('Google do a roll');
 // findLongestWord("May the force be with you");
 
-
 // function createArrayOfNumbers(min, max) {
 //   const numbers = [];
- 
+
 //   for (let i = min; i <= max; i += 1) {
 //     numbers.push(i);
 //   }
 //   console.log(numbers);
-  
+
 // }
 // createArrayOfNumbers(14, 17);
 
@@ -524,7 +465,6 @@
 //   console.log(newArr);
 // }
 // filterArray([1, 2, 3, 4, 5], 3);
-
 
 // function checkFruit(fruit) {
 //   const fruits = ['apple', 'plum', 'pear', 'orange'];
@@ -549,15 +489,14 @@
 
 // function calculateTotalPrice(order) {
 //   let total = 0;
-  
+
 //   for (const num of order) {
 //      total += num;
 //    }
-    
+
 //   console.log(total);
 // }
 // calculateTotalPrice([12, 85, 37, 4]);
-
 
 // function filterArray(numbers, value) {
 //   const filteredNumbers = [];
@@ -579,7 +518,6 @@
 // }
 // filterArray([1, 2, 3, 4, 5], 3);
 
-
 // function getEvenNumbers(start, end) {
 //   const numbers = [];
 
@@ -593,9 +531,8 @@
 // getEvenNumbers(2, 5);
 // getEvenNumbers(3, 11);
 
-
 // function findNumber(start, end, divisor) {
-  
+
 //   for (let i = start; i < end; i += 1) {
 //     if (i % divisor === 0) {
 //       console.log(i);
@@ -605,9 +542,8 @@
 // }
 // findNumber(2, 6, 5);
 
-
 // function findNumber(start, end, divisor) {
-  
+
 //   let number;
 //   for (let i = start; i < end; i += 1) {
 //     if (i % divisor === 0) {
@@ -620,7 +556,7 @@
 // findNumber(2, 6, 5);
 
 // function includes(array, value) {
-  
+
 //   for (let i = 0; i < array.length; i += 1) {
 //     if (array[i] === value) {
 //       console.log('true');
@@ -630,7 +566,106 @@
 //   }
 //   console.log('false');
 //   return false;
-  
+
 // }
 // includes([1, 2, 3, 4, 5], 3);
 
+// const min = Math.min(...[1, 5, -1, -10]);
+// console.log(min);
+
+// const name = 'bob';
+// const age = 20;
+// const obj = {
+//   name,
+//   age,
+// };
+
+// console.log(obj);
+
+// const piece = {
+//   x: 0,
+//   y: 0,
+//   move(x, y) {
+//     this.x = x;
+//     this.y = y;
+//   },
+// };
+
+// piece.move(10, 10);
+// console.log(piece);
+
+// const [a, , b] = 'JavaScript is awesome'.split(' ');
+// console.log(a, b);
+
+// const {
+//   name,
+//   age,
+//   gender = 'm',
+//   hairColor: color,
+// } = {
+//   name: 'Jacob',
+//   age: 20,
+//   hairColor: 'blue',
+// };
+
+// console.log(name, age, gender, color);
+
+// const dog = { name: 'Poly' };
+
+// function showDogName() {
+//   console.log(this.name);
+// }
+
+// const boundShowDogName = showDogName.bind(dog);
+// boundShowDogName();
+
+// const userA = {
+//   name: 'Mango',
+//   age: 5,
+// };
+
+// const userB = {
+//   ...userA,
+//   age: 10,
+//   happy: true,
+// };
+
+// console.log(userB);
+
+// const person = {
+//     firstName: 'Jacob',
+//     showName() {
+//     console.log(this.firstName);
+//     },
+//     };
+
+//     const foo = function(callback) {
+//     callback();
+//     };
+
+//     foo(person.showName);
+
+// const add = (a = 0, b = 10) => a + b;
+// const result = add(10);
+// console.log(result);
+
+// const sum = (...numbers) => numbers.reduce((total, number) => total + number, 2);
+// const result = sum(1, 5, 20, 10);
+// console.log(result);
+
+// const multiplyByValue = (value, base, ...numbers) => {
+//   return numbers.map(number => number * value + base);
+// };
+// console.log(multiplyByValue(2, 100, 1, 5, 20, 10));
+
+// const names = ['bob', ...['donald'], 'suzy', 'lacy', ...['richard', 'alex']];
+// console.log(names);
+
+// const confused = 'no';
+// const myKey = confused;
+
+// const obj = {
+//   [myKey]: false,
+// };
+
+// console.log(obj);

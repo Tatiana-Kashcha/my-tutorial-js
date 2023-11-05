@@ -3,8 +3,7 @@ import { common } from './helpers/common';
 import { findProduct } from './helpers/findProduct';
 import { createModal } from './helpers/createModal';
 
-const arrFavorite =
-  JSON.parse(localStorage.getItem(common.favoriteItems)) ?? [];
+const arrFavorite = JSON.parse(localStorage.getItem(common.favoriteItems)) ?? [];
 
 const list = document.querySelector('.js-list');
 createMarkup(list, arrFavorite);
